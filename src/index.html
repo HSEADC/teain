@@ -1,22 +1,39 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<!doctype html>
+<html lang="ru">
   <head>
-    <meta charset="utf-8" />
-    <title>static-site-boilerplate index</title>
-    <analytics></analytics>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--  <analytics></analytics> -->
   </head>
-
-  <body class="index">
-    <div class="images">
-      <div class="image" id="bgPNG"></div>
-      <div class="image" id="bgJPG"></div>
-      <div class="image" id="bgSVG"></div>
-      <img src="images/image.png" />
-      <img src="images/image.jpg" />
-      <img src="images/image.svg" />
-    </div>
-
-    <div>This is a landing page</div>
-    <a href="./pages/page.html">Go to an internal page</a>
+  <body class="body-index">
+    <section class="plug">
+      <img class="line1" src="/src/images/line1.svg" alt="" />
+      <img class="line2" src="/src/images/line2.svg" alt="" />
+      <img class="line3" src="/src/images/line3.svg" alt="" />
+      <img class="line4" src="/src/images/line4.svg" alt="" />
+      <div class="container">
+        <a class="plug__link" href="./about.html">о проекте</a>
+        <div class="plug__text">
+          <h1 class="plug__title">teatime</h1>
+          <p class="plug__subtitle">Погрузись в мир чая</p>
+        </div>
+        <form action="#" class="email">
+          <label class="email__label" for="email">
+            Узнай первым о запуске
+            <div class="email__wrapper">
+              <input
+                class="email__input"
+                id="email"
+                name="email"
+                type="email"
+                placeholder="Ваш email"
+              />
+              <button class="email__button">OK</button>
+            </div>
+          </label>
+        </form>
+      </div>
+    </section>
   </body>
 </html>
