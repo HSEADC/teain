@@ -3,24 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Заглушка</title>
     <!--  <analytics></analytics> -->
   </head>
   <body class="body-index">
-    <section class="plug">
-      <img class="line1" src="/src/images/line1.svg" alt="" />
+    <div class="fullscreen-index">
+      <img class="verticalLine-top line1" src="/src/images/line1.svg" alt="" />
       <img class="line2" src="/src/images/line2.svg" alt="" />
       <img class="line3" src="/src/images/line3.svg" alt="" />
-      <img class="line4" src="/src/images/line4.svg" alt="" />
-      <div class="container">
-        <a class="plug__link" href="./about.html">о проекте</a>
-        <div class="plug__text">
-          <h1 class="plug__title">teatime</h1>
-          <p class="plug__subtitle">Погрузись в мир чая</p>
-        </div>
-        <form action="#" class="email">
-          <label class="email__label" for="email">
-            Узнай первым о запуске
+
+      <img
+        class="verticalLine-bottom line4"
+        src="/src/images/line4.svg"
+        alt=""
+      />
+      <section class="plug">
+        <div class="container">
+          <a class="plug__link" href="./about.html">о проекте</a>
+          <div class="plug__text">
+            <h1 class="plug__title">teatime</h1>
+            <p class="plug__subtitle">Погрузись в мир чая</p>
+          </div>
+          <form
+            id="my-form"
+            action="https://formspree.io/f/xnqkwole"
+            method="POST"
+            class="email"
+          >
+            <label id="my-form-status" class="email__label" for="email">
+              Узнай первым о запуске
+            </label>
+
             <div class="email__wrapper">
               <input
                 class="email__input"
@@ -29,11 +42,11 @@
                 type="email"
                 placeholder="Ваш email"
               />
-              <button class="email__button">OK</button>
+              <button id="my-form-button" class="email__button">OK</button>
             </div>
-          </label>
-        </form>
-      </div>
-    </section>
+          </form>
+        </div>
+      </section>
+    </div>
   </body>
 </html>

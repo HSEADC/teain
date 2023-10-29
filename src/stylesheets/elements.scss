@@ -1,0 +1,21 @@
+.verticalLine-top {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  //width: 1.22vw;
+  height: 25.9vh;
+  max-width: 23px;
+  max-height: 319px;
+}
+
+.verticalLine-bottom {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  //width: 1.22vw;
+  height: 25.9vh;
+  z-index: 0;
+  max-width: 23px;
+}

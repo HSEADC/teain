@@ -1,333 +1,673 @@
-html,
-body {
-  height: 100%;
-}
+.body-about {
+  .h2-about {
+    color: #fff;
+    font-family: 'Lemony Personal Use', serif;
+    font-style: normal;
+    font-size: clamp(2.3125rem, 12vw, 14rem);
+    font-weight: 400;
+    line-height: 99.99%; /* 224.089px */
+  }
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background-image: url('/src/images/gradient.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
+  .text-about {
+    color: #fff;
+    font-family: 'TT Commons Pro Edu', sans-serif;
+    font-style: normal;
+    font-size: clamp(0.681875rem, 2.5vw, 2.9578125rem);
+    font-weight: 300;
+    line-height: 118.331%;
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url('/src/images/gradient.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
 
-.fullscreen {
-  background-image: url('/src/images/fullscreen.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  display: flex;
-  min-height: 100vh;
-  padding: 3.28vw 1.48vw 0;
-  position: relative;
+  .fullscreen {
+    background-image: url('/src/images/fullscreen.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    min-height: 100vh;
+    padding: 3.28vw 1.48vw 0;
+    position: relative;
 
-  &__body {
-    flex: 1 1 auto;
+    filter: blur(0);
+    animation: blur 1s ease;
+
+    @keyframes blur {
+      from {
+        filter: blur(20px);
+      }
+    }
+
+    &__body {
+      flex: 1 1 auto;
+      max-width: 1893px;
+      margin: 0 auto;
+      width: 100%;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__text {
+      top: 50%;
+      left: 50%;
+      transform: translateY(-25%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+    }
+
+    &__title {
+      font-size: clamp(6.25rem, 4.6734rem + 7.883vw, 14rem);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 99.99%;
+      font-family: 'Lemony Personal Use', serif;
+    }
+
+    &__subtitle {
+      font-size: clamp(1.5rem, 1.2076rem + 1.4622vw, 2.9375rem);
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      font-family: 'TT Commons Pro Edu', sans-serif;
+    }
+  }
+
+  .header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1vw 5.86vw 0;
     max-width: 1893px;
     margin: 0 auto;
-    width: 100%;
+    &__link {
+      color: #fff;
+      font-family: 'TT Commons Pro Edu', sans-serif;
+      font-size: clamp(1.5rem, 1.3733rem + 0.6333vw, 2.122625rem);
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      text-decoration: none;
+      cursor: pointer;
+      padding: 15px 10px;
+      border-radius: 17.688px;
+
+      &:hover {
+        transition: background 0.2s ease;
+        background-color: rgba(217, 217, 217, 0.3);
+      }
+    }
+  }
+
+  .description {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 
-  &__text {
-    //position: absolute;
-    top: 50%;
-    left: 50%;
-    //transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: var(--white);
-  }
-
-  &__title {
-    font-size: clamp(6.25rem, 4.6734rem + 7.883vw, 14rem);
-    font-style: normal;
-    font-weight: 400;
-    line-height: 99.99%; /* 224.049px */
-    font-family: 'Lemony Personal Use', serif;
-  }
-
-  &__subtitle {
-    font-size: clamp(1.5rem, 1.2076rem + 1.4622vw, 2.9375rem);
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    font-family: 'TT Commons Pro Edu', sans-serif;
-  }
-}
-
-.header {
-  position: absolute;
-  top: 0;
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
-
-  &__link {
-    color: #fff;
-    font-family: 'TT Commons Pro Edu', sans-serif;
-    font-size: 33.968px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    text-decoration: none;
-    padding: 10px 32px;
-    cursor: pointer;
-    // border-radius: 17.692px;
-    // background: rgba(217, 217, 217, 0.3);
-  }
-}
-
-.description {
-  position: relative;
-  &__body {
-    padding: 6.87vw 4.6vw 0;
-  }
-
-  &__text {
-    margin-top: 1.85vw;
-    display: flex;
-    flex-direction: column;
-    gap: 77px;
-
-    & p:nth-child(1) {
-      max-width: 1200px;
+    &__body {
+      padding: 6.87vw 4.6vw 0;
+      max-width: 1893px;
+      margin: 0 auto;
+      @media (min-width: 1893px) {
+        padding: 130px 87px 0;
+      }
     }
-    & p:nth-child(2) {
-      max-width: 1300px;
+
+    &__text {
+      margin-top: 1.85vw;
+      display: flex;
+      flex-direction: column;
+      gap: 2.64vw;
+
+      & p:nth-child(1) {
+        width: 61.27vw;
+        max-width: 1156px;
+        @media (max-width: 1024px) {
+          width: 81.93vw;
+        }
+        @media (max-width: 439px) {
+          width: 100%;
+        }
+      }
+
+      & p:nth-child(2) {
+        width: 68.88vw;
+        max-width: 1297px;
+        @media (max-width: 439px) {
+          width: 100%;
+        }
+      }
+    }
+
+    &__line {
+      position: absolute;
+      right: 0;
+      top: 12.5vw;
+      width: 43.37vw;
+      @media (min-width: 1893px) {
+        top: 245px;
+      }
     }
   }
 
-  &__line {
-    position: absolute;
-    right: 0;
-    top: 37%;
-    width: 43.37vw;
-  }
-}
-
-.h2-about {
-  color: #fff;
-  font-family: 'Lemony Personal Use', serif;
-  font-size: 224.111px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 99.99%; /* 224.089px */
-}
-
-.text-about {
-  color: #fff;
-  font-family: 'TT Commons Pro Edu', sans-serif;
-  font-size: 47.325px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 56px; /* 118.331% */
-}
-
-.problem {
-  position: relative;
-  &__body {
-    padding: 6.87vw 4.6vw;
-  }
-
-  &__title {
-    float: right;
-    margin-right: 19.58vw;
-  }
-
-  &__text {
-    margin-top: 4.38vw;
-    float: right;
-    max-width: 1255px;
-  }
-
-  &__line {
-    position: absolute;
-    left: 0;
-    top: 97%;
-    width: 26.04vw;
-  }
-}
-
-.solution {
-  position: relative;
-  height: 2097px;
-  &__body {
-    padding: 22vw 4.6vw 0;
-  }
-  &__line {
-    position: absolute;
-    right: 0;
-    top: 27%;
-    width: 43.37vw;
-  }
-
-  &__figure {
+  .problem {
     position: relative;
-  }
 
-  &__figcaption {
-    color: #fff;
-    font-family: 'TT Commons Pro Edu', sans-serif;
-    font-size: 47.325px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    position: absolute;
-    bottom: 30px;
-    left: 33px;
-    transform: rotate(3.556deg);
-    p {
-      max-width: 343px;
+    &__body {
+      padding: 6.87vw 4.6vw;
+      max-width: 1893px;
+      margin: 0 auto;
+      @media (min-width: 1893px) {
+        padding: 130px 87px 0;
+      }
+    }
+
+    &__title {
+      @media (min-width: 1893px) {
+        margin-right: 276px;
+      }
+    }
+
+    &__textBlock {
+      float: right;
+      @media (max-width: 1024px) {
+        float: left;
+      }
+    }
+
+    &__text {
+      margin-top: 4.38vw;
+      float: right;
+      max-width: 1255px;
+      width: 66.3vw;
+
+      @media (max-width: 439px) {
+        width: 100%;
+      }
+    }
+
+    &__line {
+      position: absolute;
+      left: 0;
+      top: 12vw;
+      width: 26.1vw;
+      @media (min-width: 1893px) {
+        top: 227px;
+      }
+      @media (max-width: 1024px) {
+        right: 0;
+        left: initial;
+        transform: rotate(180deg);
+        width: 41.37vw;
+      }
     }
   }
 
-  .china__arrow {
-    position: absolute;
-    //transform: rotate(-56.162deg);
-    right: -135px;
-    bottom: 37px;
-  }
-}
-
-.solution__china {
-  position: absolute;
-  margin-top: 111px;
-}
-
-.recipe__china {
-  position: absolute;
-  margin-top: 225px;
-  right: 65px;
-}
-
-.matcha__china {
-  position: absolute;
-  margin-top: 857px;
-  margin-left: 100px;
-}
-
-.recipe {
-  &__figcaption {
-    transform: rotate(-4.706deg);
-    left: 74px;
-  }
-
-  &__arrow {
-    position: absolute;
-    right: -374px;
-    bottom: 37px;
-  }
-}
-
-.matcha {
-  &__figcaption {
-    transform: rotate(-4.319deg);
-  }
-
-  &__arrow {
-    position: absolute;
-    right: -186px;
-    bottom: 5px;
-  }
-}
-
-.gray_text {
-  color: #fff;
-  font-family: 'TT Commons Pro Edu', sans-serif;
-  font-size: 47.325px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: normal;
-  border-radius: 35.494px;
-  padding: 40px 55px;
-  background: rgba(217, 217, 217, 0.4);
-  display: flex;
-  width: fit-content;
-  gap: 25px;
-}
-
-.stress {
-  position: absolute;
-  right: 30px;
-  transform: rotate(5.032deg);
-}
-
-.where {
-  position: absolute;
-  margin-top: 638px;
-  transform: rotate(-3.052deg);
-}
-
-.tasty {
-  position: absolute;
-  right: 30px;
-  transform: rotate(6.161deg);
-  margin-top: 925px;
-}
-
-.conclusion {
-  border-top: 4.5px solid white;
-  border-bottom: 4.5px solid white;
-
-  &__body {
-    padding: 6.87vw 10.57vw;
-  }
-
-  &__text {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    max-width: 1562px;
-    color: #fff;
-    font-family: 'TT Commons Pro Edu', sans-serif;
-    font-size: 67px;
-    font-style: normal;
-    font-weight: 300;
-    justify-content: center;
-    align-items: center;
-    line-height: normal;
-    gap: 97px;
-
-    p:nth-child(2) {
-      max-width: 1407px;
+  .solution {
+    position: relative;
+    height: 110.78vw;
+    @media (min-width: 1893px) {
+      height: 2220px;
     }
-    p:nth-child(3) {
+    @media (max-width: 1024px) {
+      height: 252vw;
+    }
+    &__body {
+      padding: 24vw 4.6vw 0;
+      max-width: 1893px;
+      position: relative;
+      margin: 0 auto;
+      @media (min-width: 1893px) {
+        padding: 580px 87px 0;
+      }
+    }
+
+    &__line {
+      position: absolute;
+      right: 0;
+      top: 29.5vw;
+      width: 43.37vw;
+      @media (min-width: 1893px) {
+        top: 684px;
+      }
+    }
+
+    &__figure {
+      position: relative;
+      & > img {
+        width: 100%;
+      }
+    }
+
+    &__figcaption {
+      color: #fff;
+      font-family: 'TT Commons Pro Edu', sans-serif;
+      //font-size: 47.325px;
+      font-size: 2.48vw;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      position: absolute;
+
+      @media (min-width: 1893px) {
+        font-size: 47px;
+      }
+    }
+
+    &__arrow {
+      position: absolute;
+      width: 1.85vw;
+      max-width: 35px;
+
+      @media (max-width: 1024px) {
+        width: 3.91vw;
+      }
+    }
+  }
+
+  .collect {
+    position: absolute;
+    margin-top: 5.86vw;
+    width: 29.79vw;
+    max-width: 564px;
+
+    @media (min-width: 1893px) {
+      margin-top: 111px;
+    }
+
+    @media (max-width: 1024px) {
+      width: 60.94vw;
+      left: 21.58vw;
+      right: inherit;
+      z-index: 999;
       max-width: none;
+      margin-top: 76vw;
+    }
+
+    &__figcaption {
+      bottom: 2.2vw;
+      left: 1.74vw;
+      transform: rotate(3.556deg);
+      @media (min-width: 1893px) {
+        bottom: 41px;
+        left: 33px;
+      }
+
+      @media (max-width: 1024px) {
+        font-size: 5.27vw;
+        bottom: 4.2vw;
+        left: 3.74vw;
+      }
+
+      p {
+        max-width: 343px;
+        width: 18.12vw;
+
+        @media (max-width: 1024px) {
+          max-width: 392px;
+          width: 38.28vw;
+        }
+      }
+    }
+
+    &__arrow {
+      right: -7.13vw;
+      bottom: 1.2vw;
+
+      @media (min-width: 1893px) {
+        bottom: 22px;
+        right: -135px;
+      }
+
+      @media (max-width: 1024px) {
+        right: -13.13vw;
+        bottom: 1.2vw;
+      }
     }
   }
-}
 
-.footer {
-  &__body {
-    padding: 6.87vw 3.75vw;
+  .recipe {
+    position: absolute;
+    margin-top: 11.89vw;
+    right: 3.43vw;
+    max-width: 819px;
+    width: 43.26vw;
+
+    @media (min-width: 1893px) {
+      margin-top: 225px;
+      right: 65px;
+    }
+    @media (max-width: 1024px) {
+      width: 63.57vw;
+      left: 8.89vw;
+      right: inherit;
+      margin-top: 20vw;
+    }
+
+    &__figcaption {
+      bottom: 2.2vw;
+      left: 3.91vw;
+      transform: rotate(-4.706deg);
+
+      @media (min-width: 1893px) {
+        bottom: 41px;
+        left: 74px;
+      }
+
+      @media (max-width: 1024px) {
+        font-size: 5.27vw;
+      }
+    }
+
+    &__arrow {
+      position: absolute;
+      right: -17.39vw;
+      bottom: 0.95vw;
+      width: 1.85vw;
+      max-width: 35px;
+      @media (min-width: 1893px) {
+        right: -329px;
+        bottom: 18px;
+      }
+      @media (max-width: 1024px) {
+        right: -14.39vw;
+        bottom: 1.95vw;
+      }
+    }
   }
 
-  &__persons {
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
+  .matcha {
+    position: absolute;
+    left: 13.52vw;
+    margin-top: 45.27vw;
+    max-width: 561px;
+    width: 29.64vw;
+
+    @media (max-width: 1024px) {
+      max-width: none;
+      width: 62.11vw;
+      left: 11.13vw;
+      z-index: 999;
+      margin-top: 144vw;
+    }
+
+    @media (min-width: 1893px) {
+      margin-top: 857px;
+      left: 256px;
+    }
+    &__figcaption {
+      transform: rotate(-4.319deg);
+      position: relative;
+      bottom: 5.3vw;
+      left: 2.5vw;
+
+      @media (min-width: 1893px) {
+        bottom: 100px;
+        left: 47px;
+      }
+
+      @media (max-width: 1024px) {
+        font-size: 5.27vw;
+        bottom: 10.3vw;
+        left: 5.5vw;
+      }
+    }
+
+    &__arrow {
+      position: absolute;
+      right: 4.12vw;
+      bottom: 0.79vw;
+
+      @media (min-width: 1893px) {
+        right: 78px;
+        bottom: 15px;
+      }
+
+      @media (max-width: 1024px) {
+        right: 9.12vw;
+      }
+    }
   }
 
-  &__person {
-    display: flex;
-    gap: 56px;
+  .gray_text {
     color: #fff;
     font-family: 'TT Commons Pro Edu', sans-serif;
-    font-size: 53.241px;
     font-style: normal;
     font-weight: 300;
-    line-height: 82.819px; /* 155.556% */
-    align-items: center;
+    line-height: normal;
+    border-radius: 35.494px;
+    background: rgba(217, 217, 217, 0.4);
+    display: flex;
+    width: fit-content;
 
-    img {
-      border-radius: 100%;
+    font-size: 2.48vw;
+    padding: 2.11vw 2.91vw;
+    gap: 1.32vw;
+
+    @media (min-width: 1893px) {
+      font-size: 47.325px;
+      padding: 40px 55px;
+      gap: 25px;
+    }
+
+    &__arrow {
+      width: 1.64vw;
+
+      @media (min-width: 1893px) {
+        width: 31px;
+      }
+    }
+  }
+
+  .stress {
+    position: absolute;
+    right: 1.58vw;
+    transform: rotate(5.032deg);
+
+    @media (min-width: 1893px) {
+      right: 30px;
+    }
+    @media (max-width: 1024px) {
+      font-size: clamp(0.75rem, 0.0114rem + 3.6932vw, 2.375rem);
+
+      & img {
+        width: 2.93vw;
+      }
+      margin-top: 7vw;
+      right: 8.98vw;
+    }
+  }
+
+  .where {
+    position: absolute;
+    margin-top: 33.7vw;
+    transform: rotate(-3.052deg);
+
+    @media (min-width: 1893px) {
+      margin-top: 638px;
+    }
+
+    @media (max-width: 1024px) {
+      font-size: clamp(1.0625rem, 0.0114rem + 5.2557vw, 3.375rem);
+
+      & img {
+        width: 2.93vw;
+      }
+
+      margin-top: 131vw;
+
+      left: 21.58vw;
+    }
+  }
+
+  .tasty {
+    position: absolute;
+    right: 1.58vw;
+    transform: rotate(6.161deg);
+    margin-top: 48.86vw;
+
+    @media (min-width: 1893px) {
+      margin-top: 925px;
+      right: 30px;
+    }
+
+    @media (max-width: 1024px) {
+      font-size: clamp(0.6875rem, 0.0057rem + 3.4091vw, 2.1875rem);
+
+      & img {
+        width: 2.93vw;
+      }
+
+      margin-top: 193vw;
+      left: 21vw;
+    }
+  }
+
+  .conclusion {
+    border-top: 4.5px solid white;
+    border-bottom: 4.5px solid white;
+
+    &__body {
+      padding: 6.87vw 10.57vw;
+
+      @media (max-width: 462px) {
+        padding: 6.87vw 4.6vw;
+      }
+    }
+
+    &__text {
+      display: flex;
+      margin: 0 auto;
+      flex-direction: column;
+      text-align: center;
+      max-width: 1562px;
+      color: #fff;
+      font-family: 'TT Commons Pro Edu', sans-serif;
+
+      font-size: clamp(1rem, 3.3vw, 4.1875rem);
+      font-style: normal;
+      font-weight: 300;
+      justify-content: center;
+      align-items: center;
+      line-height: normal;
+      gap: 5.12vw;
+
+      @media (min-width: 1893px) {
+        font-size: 67px;
+        gap: 97px;
+      }
+
+      @media (max-width: 1024px) {
+        text-align: start;
+        align-items: start;
+      }
+
+      p:nth-child(2) {
+        max-width: 1407px;
+      }
+
+      p:nth-child(3) {
+        max-width: none;
+      }
+    }
+  }
+
+  .footer {
+    &__body {
+      max-width: 1893px;
+      margin: 0 auto;
+      padding: 6.87vw 3.75vw;
+      display: flex;
+      justify-content: space-between;
+      @media (max-width: 1024px) {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: start;
+        gap: 3.17vw;
+      }
+    }
+
+    &__persons {
+      display: flex;
+      flex-direction: column;
+      gap: 3.17vw;
+
+      @media (min-width: 1893px) {
+        gap: 60px;
+      }
+    }
+
+    &__person {
+      display: flex;
+      gap: 2.96vw;
+      color: #fff;
+      font-family: 'TT Commons Pro Edu', sans-serif;
+      //font-size: 53.241px;
+      font-size: clamp(1.8125rem, 1.5074rem + 1.5257vw, 3.3125rem);
+
+      font-style: normal;
+      font-weight: 300;
+      line-height: 155.556%; /* 155.556% */
+      align-items: center;
+
+      @media (min-width: 1893px) {
+        gap: 56px;
+      }
+
+      img {
+        border-radius: 100%;
+        width: 6.39vw;
+        max-width: 121px;
+      }
+    }
+    .socials {
+      display: flex;
+
+      gap: 1.37vw;
+
+      @media (min-width: 1893px) {
+        gap: 26px;
+      }
+
+      &__link {
+        background: rgba(217, 217, 217, 0.3);
+        border-radius: 100%;
+        padding: 1% 3%;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        width: 6.5vw;
+        height: 6.08vw;
+        min-width: 35px;
+        min-height: 40px;
+        transition: box-shadow 0.2s ease;
+        &:hover {
+          box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+        }
+
+        @media (min-width: 1893px) {
+          width: 123px;
+          height: 115px;
+          gap: 26px;
+        }
+
+        & > img {
+          width: 100%;
+        }
+      }
     }
   }
 }

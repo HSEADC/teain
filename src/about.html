@@ -3,12 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>О проекте</title>
     <!--  <analytics></analytics> -->
   </head>
-  <body>
+  <body class="body-about">
     <div class="wrapper">
       <section class="fullscreen">
+        <img class="verticalLine-top" src="/src/images/line1.svg" alt="" />
+        <img class="verticalLine-bottom" src="/src/images/line4.svg" alt="" />
+
         <div class="fullscreen__body">
           <header class="header">
             <nav class="header__nav">
@@ -23,7 +26,7 @@
       </section>
       <div class="content">
         <div class="content__body">
-          <section class="description section-about-left">
+          <section class="description">
             <img
               class="description__line"
               src="/src/images/line-horizontal.svg"
@@ -44,20 +47,22 @@
               </div>
             </div>
           </section>
-          <section class="problem section-about-left">
+          <section class="problem">
             <img
               class="problem__line"
               src="/src/images/line-horizontal-short.svg"
               alt=""
             />
             <div class="problem__body">
-              <h2 class="problem__title h2-about">проблема</h2>
-              <div class="problem__text text-about">
-                <p>
-                  Сортов чая много, в них сложно разобраться. <br />
-                  Даже если очень хочется, у людей нет возможности уделить время
-                  большому объему информации в разных источниках.
-                </p>
+              <div class="problem__textBlock">
+                <h2 class="problem__title h2-about">проблема</h2>
+                <div class="problem__text text-about">
+                  <p>Сортов чая много, в них сложно разобраться.</p>
+                  <p>
+                    Даже если очень хочется, у людей нет возможности уделить
+                    время большому объему информации в разных источниках.
+                  </p>
+                </div>
               </div>
             </div>
           </section>
@@ -70,34 +75,37 @@
             <div class="solution__body">
               <h2 class="solution__title h2-about">решение</h2>
 
-              <figure class="solution__china solution__figure">
+              <figure class="collect solution__figure">
                 <img src="/src/images/china.png" alt="" />
-                <figcaption class="solution__figcaption">
+                <figcaption class="collect__figcaption solution__figcaption">
                   <p>Как собирается чай в Китае?</p>
                   <img
-                    class="china__arrow"
+                    class="collect__arrow solution__arrow"
                     src="/src/images/Arrow.svg"
                     alt=""
                   />
                 </figcaption>
               </figure>
-              <figure class="recipe__china solution__figure">
-                <img src="/src/images/recepie.png" alt="" />
+              <figure class="recipe solution__figure">
+                <img src="/src/images/recipe.png" alt="" />
                 <figcaption class="recipe__figcaption solution__figcaption">
-                  <p>Как собирается чай в Китае?</p>
+                  <p>
+                    Рецепт <br />
+                    освежающего чая
+                  </p>
                   <img
-                    class="recipe__arrow"
+                    class="recipe__arrow solution__arrow"
                     src="/src/images/Arrow.svg"
                     alt=""
                   />
                 </figcaption>
               </figure>
-              <figure class="matcha__china solution__figure">
+              <figure class="matcha solution__figure">
                 <img src="/src/images/matcha.png" alt="" />
                 <figcaption class="matcha__figcaption solution__figcaption">
-                  <p>Как собирается чай в Китае?</p>
+                  <p>Все о матче</p>
                   <img
-                    class="matcha__arrow"
+                    class="matcha__arrow solution__arrow"
                     src="/src/images/Arrow.svg"
                     alt=""
                   />
@@ -105,11 +113,21 @@
               </figure>
               <p class="gray_text stress">
                 Какой чай пить при стрессе?
-                <span><img src="/src/images/Arrow.svg" alt="" /></span>
+                <span
+                  ><img
+                    class="gray_text__arrow"
+                    src="/src/images/Arrow.svg"
+                    alt=""
+                /></span>
               </p>
               <p class="gray_text where">
                 Где хранить чай?
-                <span><img src="/src/images/Arrow.svg" alt="" /></span>
+                <span
+                  ><img
+                    class="gray_text__arrow"
+                    src="/src/images/Arrow.svg"
+                    alt=""
+                /></span>
               </p>
               <p class="gray_text tasty">
                 Где выпить вкусный чай в Москве?
@@ -121,16 +139,16 @@
             <div class="conclusion__body">
               <div class="conclusion__text">
                 <p>
-                  Мы ценители настоящего чая, собирающие дома маленькую (или
-                  большую) коллекцию.
+                  Мы&nbsp;ценители настоящего чая, собирающие дома маленькую
+                  (или большую) коллекцию..
                 </p>
                 <p>
-                  Увлекаемся здоровым образом жизни, и&nbsp;любим пить
-                  и&nbsp;готовить натуральные напитки.
+                  Увлекаемся здоровым образом жизни, <br />
+                  и&nbsp;любим пить и&nbsp;готовить натуральные напитки.
                 </p>
                 <p>
-                  Семейные люди с&nbsp;традиционными семьями, ценящие культуру
-                  еды и&nbsp;внимательные к&nbsp;здоровью.
+                  Семейные люди с&nbsp;традиционными семьями, <br />
+                  ценящие культуру еды и внимательные к&nbsp;здоровью.
                 </p>
               </div>
             </div>
@@ -148,6 +166,17 @@
               <img src="/src/images/Nastya.png" alt="" />
               <p>Анастасия Толщина</p>
             </div>
+          </div>
+          <div class="socials">
+            <a href="#" class="socials__link"
+              ><img src="./images/vk-logo.svg" alt="" /></a
+            ><a href="#" class="socials__link"
+              ><img src="./images/instagram-logo.svg" alt="" /></a
+            ><a href="#" class="socials__link"
+              ><img src="./images/youtube-logo.svg" alt="" /></a
+            ><a href="#" class="socials__link"
+              ><img src="./images/telegram-logo.svg" alt=""
+            /></a>
           </div>
         </div>
       </footer>
