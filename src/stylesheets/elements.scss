@@ -13,11 +13,12 @@
   position: absolute;
   left: 50%;
   bottom: 0;
-  transform: translateX(-50%);
+  transform: translateX(-50%) rotate(180deg);
   //width: 1.22vw;
   height: 25.9vh;
   z-index: 0;
   max-width: 23px;
+  max-height: 319px;
 }
 
 .link-wrapper {
