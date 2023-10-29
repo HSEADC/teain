@@ -37,3 +37,10 @@
     background-color: rgba(217, 217, 217, 0.3);
   }
 }
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-smooth: never;
+}
