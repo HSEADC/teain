@@ -15,7 +15,9 @@
         <div class="fullscreen__body">
           <header class="header">
             <nav class="header__nav">
-              <a href="./index.html" class="header__link">назад</a>
+              <div class="fullscreen__link-wrapper link-wrapper">
+                <a href="./index.html" class="header__link">назад</a>
+              </div>
             </nav>
           </header>
           <div class="fullscreen__text">
@@ -76,7 +78,16 @@
               <h2 class="solution__title h2-about">решение</h2>
 
               <figure class="collect solution__figure">
-                <img src="/src/images/china.png" alt="" />
+                <picture>
+                  <source srcset="/src/images/china.avif" type="image/avif" />
+                  <source srcset="/src/images/china.webp" type="image/webp" />
+                  <img
+                    class="solution__img"
+                    src="/src/images/china.png"
+                    alt=""
+                  />
+                </picture>
+
                 <figcaption class="collect__figcaption solution__figcaption">
                   <p>Как собирается чай в Китае?</p>
                   <img
@@ -87,7 +98,16 @@
                 </figcaption>
               </figure>
               <figure class="recipe solution__figure">
-                <img src="/src/images/recipe.png" alt="" />
+                <picture>
+                  <source srcset="/src/images/recipe.avif" type="image/avif" />
+                  <source srcset="/src/images/recipe.webp" type="image/webp" />
+                  <img
+                    class="solution__img"
+                    src="/src/images/recipe.png"
+                    alt=""
+                  />
+                </picture>
+
                 <figcaption class="recipe__figcaption solution__figcaption">
                   <p>
                     Рецепт <br />
@@ -101,7 +121,15 @@
                 </figcaption>
               </figure>
               <figure class="matcha solution__figure">
-                <img src="/src/images/matcha.png" alt="" />
+                <picture>
+                  <source srcset="/src/images/matcha.avif" type="image/avif" />
+                  <source srcset="/src/images/matcha.webp" type="image/webp" />
+                  <img
+                    class="solution__img"
+                    src="/src/images/matcha.png"
+                    alt=""
+                  />
+                </picture>
                 <figcaption class="matcha__figcaption solution__figcaption">
                   <p>Все о матче</p>
                   <img
@@ -140,7 +168,7 @@
               <div class="conclusion__text">
                 <p>
                   Мы&nbsp;ценители настоящего чая, собирающие дома маленькую
-                  (или большую) коллекцию..
+                  (или большую) коллекцию.
                 </p>
                 <p>
                   Увлекаемся здоровым образом жизни, <br />
@@ -159,11 +187,20 @@
         <div class="footer__body">
           <div class="footer__persons">
             <div class="footer__person">
-              <img src="/src/images/zlata.jpg" alt="" />
+              <picture>
+                <source srcset="/src/images/zlata.avif" type="image/avif" />
+                <source srcset="/src/images/zlata.webp" type="image/webp" />
+                <img class="person__img" src="/src/images/zlata.jpg" alt="" />
+              </picture>
               <p>Злата Баева</p>
             </div>
             <div class="footer__person">
-              <img src="/src/images/Nastya.png" alt="" />
+              <picture>
+                <source srcset="/src/images/Nastya.avif" type="image/avif" />
+                <source srcset="/src/images/Nastya.webp" type="image/webp" />
+                <img class="person__img" src="/src/images/Nastya.png" alt="" />
+              </picture>
+
               <p>Анастасия Толщина</p>
             </div>
           </div>

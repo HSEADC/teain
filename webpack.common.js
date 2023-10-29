@@ -73,6 +73,20 @@ module.exports = {
         }
       },
       {
+        test: /\.avif/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'images/[hash][ext][query]'
+        }
+      },
+      {
+        test: /\.webp/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'images/[hash][ext][query]'
+        }
+      },
+      {
         test: /\.svg/,
         type: 'asset/resource',
         generator: {

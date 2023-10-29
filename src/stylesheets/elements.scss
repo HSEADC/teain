@@ -19,3 +19,28 @@
   z-index: 0;
   max-width: 23px;
 }
+
+.link-wrapper {
+  min-width: 11.15vw;
+  min-height: 4.38vw;
+  max-width: 211px;
+  max-height: 83px;
+  position: absolute;
+  right: 0;
+  border-radius: 17.688px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    transition: background 0.2s ease;
+    background-color: rgba(217, 217, 217, 0.3);
+  }
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-smooth: never;
+}

@@ -20,14 +20,24 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-image: url('/src/images/gradient.png');
+    background-image: image-set(
+      url('/src/images/gradient.avif') 1x,
+      url('/src/images/gradient.webp') 1x,
+      url('/src/images/gradient.png') 1x
+    );
+    //background-image: url('/src/images/gradient.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
   }
 
   .fullscreen {
-    background-image: url('/src/images/fullscreen.png');
+    //background-image: url('/src/images/fullscreen.png');
+    background-image: image-set(
+      url('/src/images/fullscreen.avif') 1x,
+      url('/src/images/fullscreen.webp') 1x,
+      url('/src/images/fullscreen.png') 1x
+    );
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -82,6 +92,10 @@
       line-height: normal;
       font-family: 'TT Commons Pro Edu', sans-serif;
     }
+
+    &__link-wrapper {
+      margin: 0 4.382vw 0 0;
+    }
   }
 
   .header {
@@ -91,25 +105,19 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 1vw 5.86vw 0;
+    padding: 0 5.86vw 0;
     max-width: 1893px;
     margin: 0 auto;
     &__link {
       color: #fff;
       font-family: 'TT Commons Pro Edu', sans-serif;
-      font-size: clamp(1.5rem, 1.3733rem + 0.6333vw, 2.122625rem);
+      font-size: clamp(1.5rem, 1.8vw, 2.122625rem);
       font-style: normal;
       font-weight: 300;
       line-height: normal;
       text-decoration: none;
       cursor: pointer;
-      padding: 15px 10px;
-      border-radius: 17.688px;
-
-      &:hover {
-        transition: background 0.2s ease;
-        background-color: rgba(217, 217, 217, 0.3);
-      }
+      //padding: 15px 10px;
     }
   }
 
@@ -164,6 +172,7 @@
 
   .problem {
     position: relative;
+    z-index: 100;
 
     &__body {
       padding: 6.87vw 4.6vw;
@@ -222,7 +231,7 @@
       height: 2220px;
     }
     @media (max-width: 1024px) {
-      height: 252vw;
+      height: 260vw;
     }
     &__body {
       padding: 24vw 4.6vw 0;
@@ -246,9 +255,10 @@
 
     &__figure {
       position: relative;
-      & > img {
-        width: 100%;
-      }
+    }
+
+    &__img {
+      width: 100%;
     }
 
     &__figcaption {
@@ -400,7 +410,7 @@
       width: 62.11vw;
       left: 11.13vw;
       z-index: 999;
-      margin-top: 144vw;
+      margin-top: 152vw;
     }
 
     @media (min-width: 1893px) {
@@ -530,14 +540,14 @@
         width: 2.93vw;
       }
 
-      margin-top: 193vw;
+      margin-top: 202vw;
       left: 21vw;
     }
   }
 
   .conclusion {
-    border-top: 4.5px solid white;
-    border-bottom: 4.5px solid white;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
 
     &__body {
       padding: 6.87vw 10.57vw;
@@ -603,10 +613,10 @@
     &__persons {
       display: flex;
       flex-direction: column;
-      gap: 3.17vw;
+      gap: 1vw;
 
       @media (min-width: 1893px) {
-        gap: 60px;
+        gap: 19px;
       }
     }
 
@@ -623,16 +633,22 @@
       line-height: 155.556%; /* 155.556% */
       align-items: center;
 
+      picture {
+        display: flex;
+        align-items: center;
+      }
+
       @media (min-width: 1893px) {
         gap: 56px;
       }
-
-      img {
-        border-radius: 100%;
-        width: 6.39vw;
-        max-width: 121px;
-      }
     }
+
+    .person__img {
+      border-radius: 100%;
+      width: 6.39vw;
+      max-width: 121px;
+    }
+
     .socials {
       display: flex;
 
