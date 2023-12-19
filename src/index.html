@@ -2,52 +2,82 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="/src/images/favicon-16x16.png" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="/src/images/favicon-16x16.png" rel="icon" type="image/x-icon" />
     <title>teatime</title>
     <!--  <analytics></analytics> -->
   </head>
   <body class="body-index">
-    <div class="fullscreen-index">
-      <img class="verticalLine-top line1" src="/src/images/line1.svg" alt="" />
-      <img class="line2" src="/src/images/line2.svg" alt="" />
-      <img class="line3" src="/src/images/line3.svg" alt="" />
-
-      <img
-        class="verticalLine-bottom line4"
-        src="/src/images/line1.svg"
-        alt=""
-      />
-      <section class="plug">
-        <div class="container">
-          <div class="plug__link-wrapper link-wrapper">
-            <a class="plug__link" href="./about.html">о проекте</a>
+    <div class="wrapper">
+      <section class="fullscreen">
+        <div class="fullscreen__body">
+          <!--<header class="header">
+																								  <nav class="header__nav">
+																									<div class="fullscreen__link-wrapper link-wrapper">
+																									  <a class="header__link" href="./index.html">назад</a>
+																									</div>
+																								  </nav>
+																								</header>-->
+          <div class="fullscreen__text">
+            <p class="fullscreen__subtitle">медиа-сервис про чай</p>
+            <h1 class="fullscreen__title">
+              Cult<span class="fullscreen__title--lithium">tea</span>
+            </h1>
           </div>
-          <div class="plug__text">
-            <h1 class="plug__title">teatime</h1>
-            <p class="plug__subtitle">Погрузись в мир чая</p>
-          </div>
-          <form
-            id="my-form"
-            action="https://formspree.io/f/xnqkwole"
-            method="POST"
-            class="email"
-          >
-            <label id="my-form-status" class="email__label" for="email">
-              Узнай первым о запуске
-            </label>
-
-            <div class="email__wrapper">
-              <input
-                class="email__input"
-                id="email"
-                name="email"
-                type="email"
-                placeholder="Ваш email"
-              />
-              <button id="my-form-button" class="email__button">OK</button>
+        </div>
+      </section>
+      <section class="recipes">
+        <div class="recipes__container">
+          <div class="recipes__body">
+            <div class="recipes__buckthornSbiten">
+              <div class="toast recipes__toast">Облепиховый сбитень</div>
             </div>
-          </form>
+            <div class="recipes__compilations">
+              <div class="recipes__compilationsImages">
+                <img
+                  alt="tea"
+                  class="recipes__compilationsImage"
+                  src="./images/recipe_image_1.png"
+                />
+                <img
+                  alt="tea"
+                  class="recipes__compilationsImage"
+                  src="./images/recipe_image_2.png"
+                />
+                <img
+                  alt="tea"
+                  class="recipes__compilationsImage"
+                  src="./images/recipe_image_3.png"
+                />
+              </div>
+              <div>
+                <p class="recipes__text recipes__text--bold">рецепты</p>
+                <p class="recipes__text">и подборки чая</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="lib">
+        <div class="lib__container">
+          <div class="lib__body">
+            <h2 class="lib__heading">
+              <span class="lib__heading--top">удобные фильтры</span>
+              <span class="lib__heading--bottom">полноценная библиотека</span>
+            </h2>
+            <div class="lib__images">
+              <div class="lib__image lib__fermentation">
+                <span>Ферментация</span>
+              </div>
+              <div class="lib__image lib__region"><span>Регион</span></div>
+              <div class="lib__image lib__property">
+                <span>Действие и свойства</span>
+              </div>
+              <div class="lib__image lib__chu">
+                <div class="toast lib__toast">Цу Чши Псинь</div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>

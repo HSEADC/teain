@@ -1,203 +1,290 @@
 .body-index {
-  .fullscreen-index {
+  .fullscreen {
+    animation: blur 2s ease;
     background-image: image-set(
-      url('/src/images/blured_image.avif') 1x,
-      url('/src/images/blured_image.webp') 1x,
-      url('/src/images/blured_image.png') 1x
+      url('/src/images/fullscreen.avif') 1x,
+      url('/src/images/fullscreen.webp') 1x,
+      url('/src/images/fullscreen.png') 1x
     );
-    background-repeat: no-repeat;
     background-position: center center;
+    background-repeat: no-repeat;
     background-size: cover;
+    box-sizing: border-box;
+    display: flex;
+    filter: blur(0);
     min-height: 100vh;
+    padding: 2.6vw 1.48vw 0;
     position: relative;
-    min-width: 320px;
 
-    .container {
-      height: 100%;
-      position: relative;
-      padding: 0 5.86vw;
+    @keyframes blur {
+      from {
+        filter: blur(20px);
+      }
     }
 
-    .plug {
-      position: relative;
-      max-width: 1893px;
+    &__body {
+      align-items: flex-end;
+      display: flex;
+      flex: 1 1 auto;
+      justify-content: center;
       margin: 0 auto;
+      max-width: 1920px;
+      position: relative;
       width: 100%;
-      height: 1px;
-      min-height: 100vh;
-
-      &__link-wrapper {
-        margin: 3.28vw 5.88vw 0 0;
-      }
-
-      &__link {
-        color: #fff;
-        font-family: 'TT Commons Pro Edu', sans-serif;
-        font-size: clamp(1.5rem, 1.8vw, 2.122625rem);
-        font-style: normal;
-        font-weight: 300;
-        line-height: normal;
-        text-decoration: none;
-        cursor: pointer;
-        //padding: 15px 10px;
-      }
-
-      &__text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        color: var(--white);
-      }
-
-      &__title {
-        font-size: clamp(6.25rem, 4.6734rem + 7.883vw, 14rem);
-        font-style: normal;
-        font-weight: 400;
-        line-height: 80%;
-        font-family: 'Lemony Personal Use', serif;
-      }
-
-      &__subtitle {
-        font-size: clamp(1.5rem, 1.2076rem + 1.4622vw, 2.9375rem);
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        font-family: 'TT Commons Pro Edu', sans-serif;
-      }
     }
 
-    .email {
+    &__text {
+      align-items: center;
+      //bottom: 10px;
+      //top: 16vw;
+      //bottom: -27vh;
+      color: var(--beige);
       display: flex;
       flex-direction: column;
-      position: absolute;
-      bottom: 32px;
-      width: 35.82vw;
-      max-width: 678px;
-      z-index: 100;
-      gap: 1.7vw;
+      justify-content: center;
+      left: 50%;
+      position: relative;
+      transform: translateX(-50%);
+    }
 
-      @media (max-width: 1024px) {
-        width: 100%;
-      }
+    &__title {
+      display: block;
+      font-family: var(--backwardsBlack);
+      font-size: clamp(7.4375rem, -0.1644rem + 33.7861vw, 40.3789375rem);
+      font-weight: 900;
+      line-height: 75%;
+      margin: 0 auto;
 
-      &__label {
-        color: var(--white);
-        font-family: 'TT Commons Pro Edu', sans-serif;
-        font-size: clamp(1.125rem, 0.9779rem + 0.7357vw, 1.8483125rem);
-        font-style: normal;
+      &--lithium {
+        font-family: 'Lithium', sans-serif;
+        font-size: clamp(9.375rem, -0.101rem + 42.1154vw, 50.4375rem);
         font-weight: 400;
-        line-height: normal;
-        padding: 0 0 0 17px;
-      }
-
-      &__wrapper {
-        font-style: normal;
-        font-weight: 400;
-        position: relative;
-        display: flex;
-        align-items: center;
-      }
-
-      &__input {
-        color: var(--white);
-        font-family: 'TT Commons Pro Edu', sans-serif;
-        //font-size: clamp(1.125rem, 0.9779rem + 0.7357vw, 1.8483125rem);
-        font-size: 1.53vw;
-        line-height: normal;
-        border-radius: 17.688px;
-        background: rgba(217, 217, 217, 0.3);
-        padding: 1.16vw 0 1.16vw 0.9vw;
-        border: none;
-        outline: white;
-        width: 100%;
-        position: relative;
-        z-index: 999;
-
-        @media (min-width: 1893px) {
-          padding: 22px 0 22px 17px;
-        }
-        @media (max-width: 1024px) {
-          padding: 22px 0 22px 17px;
-        }
-
-        &::placeholder {
-          color: var(--white);
-          font-family: 'TT Commons Pro Edu', sans-serif;
-          font-style: normal;
-          font-weight: 400;
-          font-size: clamp(1.125rem, 0.9779rem + 0.7357vw, 1.8483125rem);
-          line-height: normal;
-          vertical-align: center;
-        }
-      }
-
-      &__button {
-        padding: 0 1.58vw;
-        position: absolute;
-        z-index: 999;
-        right: 0;
-        top: 0;
-        color: var(--white);
-        font-family: 'TT Commons Pro Edu', sans-serif;
-        font-size: clamp(1.25rem, 1.1283rem + 0.6086vw, 1.8483125rem);
-        height: 100%;
-        background: none;
-        border: none;
-        cursor: pointer;
-        border-radius: 17.688px;
-
-        @media (min-width: 1893px) {
-          padding: 0 30px;
-        }
-        @media (max-width: 1024px) {
-          padding: 0 30px;
-        }
-
-        &:hover {
-          background: rgba(217, 217, 217, 0.3);
-          transition: background 0.2s ease;
-        }
       }
     }
 
-    .line2 {
+    &__subtitle {
+      font-family: 'TT Commons Pro Edu', sans-serif;
+      font-size: clamp(1.0625rem, 0.6811rem + 1.9072vw, 2.9375rem);
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
       position: absolute;
-      left: 9.77vw;
-      top: 0;
-      width: 16.48vw;
+      right: 4vw;
+      top: -5vw;
     }
 
-    .line3 {
-      position: absolute;
-      top: 9.47vw;
-      right: 0;
-      width: 76.97vw;
+    &__link-wrapper {
+      margin: 0 0.6vw 0 0;
     }
+  }
 
-    .line1 {
-      max-width: none;
-      max-height: 100%;
-    }
+  .recipes {
+    background-color: var(--green);
 
-    .line4 {
-      position: absolute;
-      z-index: 0;
-      max-width: none;
-      max-height: 100%;
-    }
-
-    @media (max-width: 1024px) {
-      .email {
-        left: 50%;
-        transform: translateX(-50%);
-        max-width: 80vw;
+    &__container {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      max-width: 1920px;
+      padding: 10.104vw 5.365vw;
+      width: 100%;
+      @media (min-width: 1920px) {
+        padding: 194px 103px;
       }
-      .verticalLine-bottom {
-        display: none;
+    }
+
+    &__body {
+      display: flex;
+      gap: 2.24vw;
+      width: 100%;
+
+      @media (min-width: 1920px) {
+        gap: 43px;
+      }
+    }
+
+    &__buckthornSbiten {
+      background: url('/src/images/recipe_sbiten.png') no-repeat;
+      background-size: cover;
+      border-radius: 2.396vw;
+      max-width: 32.083vw;
+      position: relative;
+      width: 100%;
+
+      @media (min-width: 1920px) {
+        border-radius: 46px;
+        max-width: 616px;
+      }
+    }
+
+    &__compilations {
+      background: #f6f0e0;
+      border-radius: 2.396vw;
+      display: flex;
+      flex-direction: column;
+      gap: 3.49vw;
+      padding: 0.521vw 2.083vw 3.646vw;
+      width: 100%;
+
+      @media (min-width: 1920px) {
+        border-radius: 46px;
+        gap: 67px;
+        padding: 10px 40px 70px;
+      }
+    }
+
+    &__compilationsImages {
+      align-items: flex-end;
+      display: flex;
+      justify-content: center;
+    }
+
+    &__compilationsImage:first-child {
+      border-radius: 30px;
+      max-width: 292px;
+      width: 15.208vw;
+    }
+
+    &__compilationsImage:nth-child(2) {
+      border-radius: 70%;
+      max-width: 235px;
+      width: 12.24vw;
+    }
+
+    &__compilationsImage:nth-child(3) {
+      border-radius: 30px;
+      max-width: 419px;
+      width: 21.823vw;
+    }
+
+    &__text {
+      color: var(--darkGreen);
+      font-family: var(--lithium);
+      font-size: clamp(1.5rem, -0.075rem + 7.875vw, 9.375rem);
+      font-weight: 400;
+      line-height: 70%;
+    }
+
+    &__text--bold {
+      font-family: var(--backwardsBlack);
+      font-weight: 900;
+      margin-bottom: 1.406vw;
+
+      @media (min-width: 1920px) {
+        margin-bottom: 27px;
+      }
+    }
+
+    &__toast {
+      bottom: 1.823vw;
+      position: absolute;
+      right: 0.833vw;
+
+      @media (min-width: 1920px) {
+        bottom: 35px;
+        right: 16px;
+      }
+    }
+  }
+
+  .lib {
+    background: #bb8f54;
+
+    &__container {
+      margin: 0 auto;
+      max-width: 1920px;
+      padding: 4.271vw 2.865vw 1.615vw;
+      @media (min-width: 1920px) {
+        padding: 82px 55px 31px;
+      }
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: column;
+      gap: 2.188vw;
+      @media (min-width: 1920px) {
+        gap: 42px;
+      }
+    }
+
+    &__heading {
+      color: var(--beige);
+      display: flex;
+      flex-direction: column;
+      font-family: var(--lithium);
+      font-size: clamp(1.5rem, -0.075rem + 7.875vw, 9.375rem);
+      font-style: normal;
+      font-weight: 400;
+      gap: 1.615vw;
+      line-height: 70%;
+      padding: 0 1.042vw;
+
+      @media (min-width: 1920px) {
+        gap: 31px;
+        padding: 0 20px;
+      }
+    }
+
+    &__heading--bottom {
+      font-family: var(--backwardsBlack);
+      text-align: end;
+    }
+
+    &__images {
+      background-color: var(--beige);
+      background-image: var(--beige);
+      border-radius: 2.396vw;
+      display: flex;
+      gap: 0.573vw;
+      min-height: 38.125vw;
+      padding: 5.208vw 3.229vw;
+      width: 100%;
+
+      @media (min-width: 1920px) {
+        border-radius: 46px;
+        gap: 11px;
+        min-height: 732px;
+        padding: 100px 62px;
+      }
+    }
+
+    &__image {
+      background-color: var(--green2A3C2C);
+      border-radius: 1.563vw;
+      color: var(--beige);
+      font-family: var(--commons);
+      font-size: clamp(0.3125rem, -0.0125rem + 1.625vw, 1.9375rem);
+      font-weight: 450;
+      line-height: normal;
+      padding: 1.563vw 2.083vw;
+
+      @media (min-width: 1920px) {
+        padding: 30px 40px;
+        border-radius: 30px;
+      }
+    }
+
+    &__property {
+      flex: 1 0 auto;
+    }
+
+    &__chu {
+      background: url('/src/images/tea_texture.png') no-repeat center center;
+      background-size: cover;
+      position: relative;
+      width: 100%;
+    }
+
+    &__toast {
+      bottom: 2.135vw;
+      left: 2.5vw;
+      position: absolute;
+
+      @media (min-width: 1920px) {
+        bottom: 41px;
+        left: 48px;
       }
     }
   }
