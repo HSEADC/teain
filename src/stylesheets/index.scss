@@ -350,7 +350,8 @@
       }
 
       &__pic {
-        background: url('/src/images/tea_texture.png');
+        background: url('/src/images/tea_texture.png') no-repeat center center;
+        background-size: cover;
         border-radius: 1.563vw;
         height: 100%;
         position: relative;
