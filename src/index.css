@@ -1,11 +1,11 @@
 @import 'stylesheets/reset.scss';
 @import 'stylesheets/fonts.scss';
 @import 'stylesheets/vars.scss';
+@import 'stylesheets/base.scss';
+@import 'stylesheets/elements.scss';
 @import 'stylesheets/article.scss';
 @import 'stylesheets/section.scss';
 @import 'stylesheets/filtr.scss';
 @import 'stylesheets/index.scss';
 @import 'stylesheets/splash.scss';
 @import 'stylesheets/about.scss';
-@import 'stylesheets/base.scss';
-@import 'stylesheets/elements.scss';

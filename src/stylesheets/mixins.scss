@@ -1,0 +1,79 @@
+// display: flex
+@mixin displayFlex() {
+  display: -webkit-box; /* Safari, iOS 6 и ранних версиях Android, старых WebKit */
+  display: -moz-box; /*  Firefox (может и глючить) */
+  display: -ms-flexbox; /*  IE 10 */
+  display: -webkit-flex; /* Chrome 21+ */
+  display: flex; /* Opera 12.1+, Firefox 22+ */
+}
+
+// flex direction
+@mixin flexDirection($item) {
+  -webkit-flex-direction: $item;
+  -ms-flex-direction: $item;
+  flex-direction: $item;
+}
+
+@mixin transition($time) {
+  -webkit-transition: all $time;
+  -moz-transition: all $time;
+  -o-transition: all $time;
+  transition: all $time;
+}
+
+@mixin contentCenter() {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@mixin flexWrap($wrap) {
+  flex-wrap: $wrap;
+  -webkit-flex-wrap: $wrap;
+  -ms-flex-wrap: $wrap;
+}
+
+@mixin heading($bold) {
+  color: var(--beige);
+  font-size: 5vw;
+  width: 100%;
+  @if ($bold == 2) {
+    span:first-child {
+      display: block;
+      @extend %lithium-text;
+    }
+
+    span:last-child {
+      display: block;
+      @extend %bold-text;
+      text-align: end;
+    }
+  }
+  @if ($bold == 1) {
+    span:first-child {
+      display: block;
+      @extend %bold-text;
+    }
+
+    span:last-child {
+      display: block;
+      @extend %lithium-text;
+      text-align: end;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 6.843vw;
+    gap: 2.639vw;
+  }
+}
+
+@mixin border-frame($color) {
+  border: 2px solid $color;
+  border-radius: 1.563vw;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
