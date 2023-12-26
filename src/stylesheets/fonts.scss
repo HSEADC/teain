@@ -6,6 +6,7 @@
   font-weight: 700;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'PT Root UI';
   src:
@@ -14,6 +15,7 @@
   font-weight: 500;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'PT Root UI';
   src:
@@ -22,6 +24,7 @@
   font-weight: 400;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'PT Root UI';
   src:
@@ -40,6 +43,7 @@
     url('/src/fonts/LemonyPersonalUse.woff2') format('woff2'),
     url('/src/fonts/LemonyPersonalUse.woff') format('woff');
 }
+
 @font-face {
   font-family: 'TT Commons Pro Edu';
   font-style: normal;
@@ -49,24 +53,27 @@
     url('/src/fonts/TTCommonsProEducationalVariable.woff2') format('woff2'),
     url('/src/fonts/TTCommonsProEducationalVariable.woff') format('woff');
 }
+
 @font-face {
   font-family: 'TT Backwards Sans Edu Black';
   font-style: normal;
-  font-weight: normal;
+  font-weight: 900;
   src:
     local('TT Backwards Sans Edu'),
     url('/src/fonts/TT-Backwards-Sans-BlackEducational.woff2') format('woff2'),
     url('/src/fonts/TT-Backwards-Sans-BlackEducational.woff') format('woff');
 }
+
 @font-face {
   font-family: 'TT Backwards Sans Edu Bold';
   font-style: normal;
-  font-weight: normal;
+  font-weight: 700;
   src:
     local('TT Backwards Sans Edu'),
     url('/src/fonts/TT-Backwards-Sans-BoldEducational.woff2') format('woff2'),
     url('/src/fonts/TT-Backwards-Sans-BoldEducational.woff') format('woff');
 }
+
 @font-face {
   font-family: 'Lithium';
   font-style: normal;
@@ -75,4 +82,24 @@
     local('Lithium'),
     url('/src/fonts/Lithium.woff2') format('woff2'),
     url('/src/fonts/Lithium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local('Helvetica Neue'),
+    url('/src/fonts/HelveticaNeueCyr-Roman.woff2') format('woff2'),
+    url('/src/fonts/HelveticaNeueCyr-Roman.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Helvetica Neue Bold';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local('Helvetica Neue'),
+    url('/src/fonts/HelveticaNeueCyr-Bold.woff2') format('woff2'),
+    url('/src/fonts/HelveticaNeueCyr-Bold.woff') format('woff');
 }
