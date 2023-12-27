@@ -38,6 +38,8 @@
   font-size: 5vw;
   width: 100%;
   gap: 1.354vw;
+  @include displayFlex;
+  @include flexDirection(column);
   @if ($bold == 2) {
     span:first-child {
       display: block;

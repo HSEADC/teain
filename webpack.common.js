@@ -172,8 +172,8 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/media/news.html',
-      filename: './media/news.html'
+      template: './src/media/news&advice.html',
+      filename: './media/news&advice.html'
     }),
 
     new HtmlWebpackPlugin({
