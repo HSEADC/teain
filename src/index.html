@@ -50,7 +50,7 @@
                   src="./images/recipe_image_3.png"
                 />
               </div>
-              <div>
+              <div class="recipes__text-block">
                 <p class="recipes__text recipes__text--bold">рецепты</p>
                 <p class="recipes__text">и подборки чая</p>
               </div>
@@ -117,12 +117,12 @@
             </p>
           </div>
           <div class="articles__right">
-            <button class="articles__toast">
+            <a class="articles__toast" href="articles/sovety.html">
               Как правильно хранить чай дома?
               <i>
                 <img alt="" class="toast-icon" src="./images/arrow-right.svg" />
               </i>
-            </button>
+            </a>
             <img
               alt=""
               class="article_tea-1"
@@ -155,12 +155,12 @@
                 <div class="cultures__frame"></div>
                 <img alt="" src="./images/media-1.png" />
               </div>
-              <button class="cultures__toast">
+              <a class="cultures__toast" href="media/news.html">
                 Путешествие из&nbsp;Петербурга в&nbsp;Индию
                 <i>
                   <img alt="" src="./images/arrow-right.svg" />
                 </i>
-              </button>
+              </a>
             </div>
             <div class="bars">
               <img alt="" class="cultures__img-2" src="./images/media-2.png" />
@@ -172,16 +172,24 @@
       </section>
       <section class="email">
         <div class="email__inner">
-          <h2 class="email__heading">
-            Подпишитесь на&nbsp;обновления нашего сервиса и&nbsp;узнавайте
+          <h2 class="email__heading" id="my-form-status">
+            Подпишитесь на&nbsp;обновления
+            <span class="desktop-words"> нашего сервиса </span> и&nbsp;узнавайте
             новости первыми
           </h2>
 
-          <form action="#" class="email__form">
+          <form
+            action="https://formspree.io/f/xnqkwole"
+            class="email__form"
+            id="my-form"
+            method="post"
+          >
             <input
               class="email__form-input"
               id="email"
+              name="email"
               placeholder="Почта"
+              required
               type="email"
             />
             <button class="email__form-btn" type="submit"></button>
@@ -209,5 +217,42 @@
         </div>
       </footer>
     </div>
+    <script>
+      var form = document.getElementById('my-form')
+
+      async function handleSubmit(event) {
+        event.preventDefault()
+        var status = document.getElementById('my-form-status')
+        var data = new FormData(event.target)
+        fetch(event.target.action, {
+          method: form.method,
+          body: data,
+          headers: {
+            Accept: 'application/json'
+          }
+        })
+          .then((response) => {
+            if (response.ok) {
+              status.innerHTML = 'Спасибо за подписку!'
+              form.reset()
+            } else {
+              response.json().then((data) => {
+                if (Object.hasOwn(data, 'errors')) {
+                  status.innerHTML = data['errors']
+                    .map((error) => error['message'])
+                    .join(', ')
+                } else {
+                  status.innerHTML = 'Ошибка отправки почты'
+                }
+              })
+            }
+          })
+          .catch((error) => {
+            status.innerHTML = 'Ошибка отправки почты'
+          })
+      }
+
+      form.addEventListener('submit', handleSubmit)
+    </script>
   </body>
 </html>

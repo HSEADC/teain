@@ -37,6 +37,9 @@
   color: var(--beige);
   font-size: 5vw;
   width: 100%;
+  gap: 1.354vw;
+  @include displayFlex;
+  @include flexDirection(column);
   @if ($bold == 2) {
     span:first-child {
       display: block;
@@ -65,6 +68,11 @@
   @media (max-width: 1024px) {
     font-size: 6.843vw;
     gap: 2.639vw;
+  }
+
+  @media (min-width: 1920px) {
+    font-size: 3.384vw;
+    gap: 0.885vw;
   }
 }
 
