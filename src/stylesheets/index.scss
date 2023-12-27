@@ -145,6 +145,7 @@
 
     &__frame {
       @include border-frame(var(--beige));
+      border-radius: 2.396vw;
       left: 0.99vw;
       transform: rotate(4.948deg);
     }
@@ -269,17 +270,19 @@
 
     &__heading {
       @include heading(2);
-      gap: 1.563vw;
+      gap: 1.51vw;
       margin-bottom: 5.313vw;
       max-width: 66.667vw;
       width: 100%;
 
       @media (min-width: 1920px) {
+        gap: 1.25vw;
         margin-bottom: 2.447vw;
         max-width: 50.547vw;
       }
 
       @media (max-width: 1024px) {
+        gap: 2.637vw;
         margin-bottom: 5.376vw;
         max-width: none;
       }
@@ -405,9 +408,11 @@
 
     &__heading {
       @include heading(1);
+      gap: 1.354vw;
       max-width: 42.344vw;
 
       @media (min-width: 1920px) {
+        gap: 0.938vw;
         max-width: 42.322vw;
       }
 
@@ -678,6 +683,7 @@
 
     &__frame {
       @include border-frame(var(--beige));
+      border-radius: 2.396vw;
       transform: rotate(3.157deg);
     }
   }
