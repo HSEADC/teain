@@ -3,6 +3,8 @@
 @import '../elements';
 
 .body-news-advice {
+  background: var(--beige);
+
   .wrapper {
     @include displayFlex;
     @include flexDirection(column);
@@ -19,68 +21,13 @@
 
   .container {
     padding: 0 4.164vw;
-
     @media (max-width: 1024px) {
       padding: 0 9.189vw;
     }
   }
 
   .header {
-    &__inner {
-      @include displayFlex;
-      align-items: stretch;
-      justify-content: space-between;
-      padding: 2.967vw 0 5.622vw;
-    }
-
-    &__logo {
-      color: var(--black-light);
-      @include displayFlex;
-      @include contentCenter;
-      font-size: 3.385vw;
-
-      &-bold {
-        @extend %bold-text;
-      }
-
-      &-thin {
-        @extend %lithium-text;
-        font-size: 3.802vw;
-      }
-
-      @media (max-width: 1024px) {
-        font-size: 5.385vw;
-        &-thin {
-          font-size: 5.802vw;
-        }
-      }
-    }
-
-    &__search {
-      align-items: center;
-      background: rgba(188, 188, 188, 0.3);
-      border-radius: 1.875vw;
-      max-height: 3.438vw;
-      max-width: 39.531vw;
-      padding-left: 7.813vw;
-      @include displayFlex;
-      width: 100%;
-
-      &::placeholder {
-        font-size: 1.336vw;
-      }
-    }
-
-    &__nav {
-      @include displayFlex;
-      @include contentCenter;
-      gap: 5.938vw;
-
-      a {
-        color: var(--black);
-        text-decoration: none;
-      }
-    }
+    @extend %header-article;
   }
 
   .main {
@@ -112,7 +59,9 @@
       padding: 0 8.021vw 3.49vw;
 
       @media (max-width: 1024px) {
-        padding: 0 3.49vw 3.49vw;
+        border-radius: 5.799vw;
+        gap: 8.397vw;
+        padding: 0 5.415vw 17.048vw;
       }
     }
 
@@ -120,17 +69,21 @@
       aspect-ratio: 1456/670;
       background: url('/src/images/news/news-image.png') no-repeat center center;
       background-size: cover;
-      border-radius: 1.563vw;
+      border-radius: 5.799vw;
       width: 100%;
 
       @media (max-width: 1024px) {
-        aspect-ratio: 670/750;
+        aspect-ratio: 258 /471;
       }
 
       &-advice {
         background: url('/src/images/advice/advice-img.png') no-repeat center
           center;
         background-size: cover;
+
+        @media (max-width: 1024px) {
+          aspect-ratio: 270 / 256;
+        }
       }
     }
 
@@ -167,8 +120,9 @@
       }
     }
 
-    &__text {
+    .main__text {
       @extend %helvetica-text;
+      color: var(--green2A3C2C);
       font-size: 1.25vw;
       margin: 0 auto;
       max-width: 40.885vw;
@@ -183,8 +137,7 @@
       }
 
       @media (max-width: 1024px) {
-        font-size: 3.125vw;
-        max-width: none;
+        display: none;
       }
 
       @media (min-width: 1920px) {
@@ -193,9 +146,18 @@
         max-width: 56vw;
       }
     }
+
+    .main__text--mobile {
+      display: none;
+      @media (max-width: 1024px) {
+        display: block;
+        font-size: 3.562vw;
+        max-width: none;
+      }
+    }
   }
 
   .footer {
-    color: var(--black-light);
+    @extend %footer;
   }
 }
