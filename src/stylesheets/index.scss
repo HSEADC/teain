@@ -9,12 +9,11 @@
 
   .fullscreen {
     animation: blur 2s ease;
-
     box-sizing: border-box;
     display: flex;
     filter: blur(0);
     min-height: 100vh;
-    padding: 2.6vw 1.48vw 0;
+    padding: 2.6vw 3.125vw 0;
     position: relative;
 
     @keyframes blur {
@@ -422,7 +421,7 @@
       @extend %helvetica-text;
       color: var(--beige);
       font-size: 1.25vw;
-      max-width: 24vw;
+      max-width: 25.5vw;
 
       @media (min-width: 1920px) {
         max-width: 24vw;
@@ -456,13 +455,9 @@
       height: 22.708vw;
       position: absolute;
       right: 5.208vw;
-      top: 11.458vw;
+      top: 13.458vw;
       width: 19.01vw;
 
-      @media (min-width: 1920px) {
-        height: 436px;
-        width: 365px;
-      }
       @media (min-width: 1920px) {
         height: 4.008vw;
         right: 10vw;
@@ -498,9 +493,12 @@
       }
     }
 
-    @media (min-width: 1920px) {
-      &__right-bottom {
-        @include displayFlex;
+    &__right-bottom {
+      justify-content: space-between;
+      @include displayFlex;
+
+      @media (min-width: 1920px) {
+        gap: 1.302vw;
       }
     }
 
