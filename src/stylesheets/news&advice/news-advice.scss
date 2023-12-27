@@ -60,7 +60,8 @@
 
       @media (max-width: 1024px) {
         border-radius: 5.799vw;
-        padding: 0 9.415vw 3.49vw;
+        gap: 8.397vw;
+        padding: 0 5.415vw 17.048vw;
       }
     }
 
@@ -72,13 +73,17 @@
       width: 100%;
 
       @media (max-width: 1024px) {
-        aspect-ratio: 670/750;
+        aspect-ratio: 258 /471;
       }
 
       &-advice {
         background: url('/src/images/advice/advice-img.png') no-repeat center
           center;
         background-size: cover;
+
+        @media (max-width: 1024px) {
+          aspect-ratio: 270 / 256;
+        }
       }
     }
 
@@ -115,8 +120,9 @@
       }
     }
 
-    &__text {
+    .main__text {
       @extend %helvetica-text;
+      color: var(--green2A3C2C);
       font-size: 1.25vw;
       margin: 0 auto;
       max-width: 40.885vw;
@@ -131,14 +137,22 @@
       }
 
       @media (max-width: 1024px) {
-        font-size: 3.125vw;
-        max-width: none;
+        display: none;
       }
 
       @media (min-width: 1920px) {
         font-size: 1.718vw;
         margin: 0;
         max-width: 56vw;
+      }
+    }
+
+    .main__text--mobile {
+      display: none;
+      @media (max-width: 1024px) {
+        display: block;
+        font-size: 3.562vw;
+        max-width: none;
       }
     }
   }

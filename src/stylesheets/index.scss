@@ -781,4 +781,24 @@
       }
     }
   }
+
+  .footer {
+    @extend %footer;
+
+    @media (max-width: 1024px) {
+      border-top: 1px solid var(--beige) !important;
+    }
+
+    .container {
+      padding: 0 3.125vw;
+
+      @media (max-width: 1024px) {
+        padding: 0 9.189vw;
+      }
+    }
+
+    * {
+      color: var(--beige);
+    }
+  }
 }

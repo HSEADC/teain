@@ -13,7 +13,7 @@
 
     &__inner {
       border: 0.135vw solid var(--black);
-      border-radius: 1.979vw;
+      border-radius: 5.799vw;
       gap: 3.021vw;
       @include displayFlex;
       @include flexDirection(column);
@@ -21,7 +21,7 @@
       position: relative;
 
       @media (max-width: 1024px) {
-        padding: 0 3.49vw 3.49vw;
+        padding: 0 9.415vw 11.705vw;
       }
     }
 
@@ -30,6 +30,11 @@
       color: var(--green2A3C2C);
       font-size: 4.427vw;
       margin-bottom: 3.906vw;
+
+      @media (max-width: 1024px) {
+        font-size: 7.634vw;
+        line-height: 107.298%;
+      }
     }
 
     &__image {
@@ -41,6 +46,13 @@
       position: absolute;
       right: 0;
       width: 100%;
+
+      @media (max-width: 1024px) {
+        aspect-ratio: 259 / 288;
+        max-width: none;
+        position: static;
+        width: 100%;
+      }
     }
 
     &__ingredients {
@@ -49,6 +61,11 @@
       font-weight: 700;
       margin-bottom: 2.031vw;
 
+      @media (max-width: 1024px) {
+        font-size: 3.562vw;
+        line-height: 144%;
+      }
+
       &-lists {
         @include displayFlex;
         font-size: 1.25vw;
@@ -56,12 +73,17 @@
         margin-bottom: 3.385vw;
         max-width: 35.521vw;
         width: 100%;
+        @media (max-width: 1024px) {
+          font-size: 3.562vw;
+          max-width: none;
+        }
       }
 
       &-list {
         @include displayFlex;
         @include flexDirection(column);
         @extend %helvetica-text;
+        gap: 0.5vw;
       }
     }
 
@@ -72,6 +94,11 @@
       font-size: 1.354vw;
       line-height: 120.833%;
       list-style-type: decimal;
+
+      @media (max-width: 1024px) {
+        font-size: 3.562vw;
+        list-style-type: disc;
+      }
     }
   }
 

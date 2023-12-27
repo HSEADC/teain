@@ -166,12 +166,25 @@ body {
   padding-bottom: 8.49vw;
   width: 100%;
 
+  @media (max-width: 1024px) {
+    border-top: 1px solid black;
+    font-size: 3.053vw;
+    padding-bottom: 15.267vw;
+    padding-top: 10.941vw;
+  }
+
   .footer__inner {
     @include displayFlex;
     align-items: stretch;
     justify-content: space-between;
     max-width: 79.167vw;
     width: 100%;
+
+    @media (max-width: 1024px) {
+      @include flexDirection(column);
+
+      gap: 17.557vw;
+    }
   }
 
   .footer__left {
@@ -185,38 +198,42 @@ body {
     @include flexDirection(column);
     justify-content: space-between;
     margin-top: 0.7vw;
+
+    @media (max-width: 1024px) {
+      gap: 2.036vw;
+    }
   }
 
   .socials {
     @include displayFlex;
-    @include contentCenter;
+    align-items: center;
     gap: 1.927vw;
 
     .telegram {
       width: 2.344vw;
       @media (max-width: 1024px) {
-        width: 3.91vw;
+        width: 5.089vw;
       }
     }
 
     .vk {
       width: 3.958vw;
       @media (max-width: 1024px) {
-        width: 6.647vw;
+        width: 6.107vw;
       }
     }
 
     .dzen {
       width: 2.604vw;
       @media (max-width: 1024px) {
-        width: 4.399vw;
+        width: 4.835vw;
       }
     }
 
     .youtube {
       width: 3.75vw;
       @media (max-width: 1024px) {
-        width: 6.256vw;
+        width: 6.361vw;
       }
     }
   }
