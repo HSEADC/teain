@@ -252,6 +252,7 @@ body {
     @include displayFlex;
     @include contentCenter;
     font-size: 3.385vw;
+    text-decoration: none;
 
     .header__logo-bold {
       @extend %bold-text;
