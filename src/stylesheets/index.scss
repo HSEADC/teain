@@ -270,13 +270,13 @@
 
     &__heading {
       @include heading(2);
-      gap: 1.51vw;
+      gap: 0.25vw;
       margin-bottom: 5.313vw;
       max-width: 66.667vw;
       width: 100%;
 
       @media (min-width: 1920px) {
-        gap: 1.25vw;
+        gap: 0.25vw;
         margin-bottom: 2.447vw;
         max-width: 50.547vw;
       }
@@ -408,11 +408,11 @@
 
     &__heading {
       @include heading(1);
-      gap: 1.354vw;
+
       max-width: 42.344vw;
 
       @media (min-width: 1920px) {
-        gap: 0.938vw;
+        //gap: 0.938vw;
         max-width: 42.322vw;
       }
 
@@ -575,13 +575,13 @@
 
     &__heading {
       @include heading(2);
-      gap: 1.354vw;
+      //gap: 1.354vw;
       margin-bottom: 5.313vw;
       max-width: 66.667vw;
       width: 100%;
 
       @media (min-width: 1920px) {
-        gap: 0.938vw;
+        //gap: 0.938vw;
         margin-bottom: 2.447vw;
         max-width: 50.547vw;
       }
