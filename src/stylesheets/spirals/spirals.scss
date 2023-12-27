@@ -1,0 +1,82 @@
+@import '../vars';
+@import '../mixins';
+@import '../elements';
+
+.body-spirals {
+  @extend %body-article;
+
+  .header {
+    @extend %header-article;
+  }
+
+  .main {
+    @extend %main-article;
+
+    &__inner {
+      border: 0.135vw solid var(--black);
+      border-radius: 1.979vw;
+      gap: 3.021vw;
+      @include displayFlex;
+      padding: 3.958vw 18.229vw 3.958vw 36.458vw;
+      position: relative;
+
+      @media (max-width: 1024px) {
+        padding: 0 3.49vw 3.49vw;
+      }
+    }
+
+    &__image {
+      background: url('/src/images/spirals/teaa-texture.png') no-repeat center
+        center;
+
+      border-radius: 2vw;
+      height: 29.896vw;
+      left: 0;
+      position: absolute;
+      width: 28.594vw;
+    }
+
+    &__heading {
+      @extend %bold-text;
+      color: var(--green2A3C2C);
+      font-size: 4.427vw;
+      margin-bottom: 1.094vw;
+    }
+
+    &__subtitle {
+      @extend %helvetica-text;
+      font-size: 1.25vw;
+      margin-bottom: 3.802vw;
+    }
+
+    .characteristics {
+      @include displayFlex;
+      @include flexWrap(wrap);
+      justify-content: space-between;
+      margin-bottom: 5.365vw;
+      max-width: 32.917vw;
+      row-gap: 1.458vw;
+      width: 100%;
+
+      &__ul {
+        @extend %helvetica-text;
+        font-size: 1.354vw;
+      }
+
+      &__li:first-child {
+        @extend %helvetica-text;
+        font-weight: 700;
+      }
+    }
+
+    &__description {
+      @extend %helvetica-text;
+      font-size: 1.354vw;
+      max-width: 37.188vw;
+    }
+  }
+
+  .footer {
+    @extend %footer;
+  }
+}

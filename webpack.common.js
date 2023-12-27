@@ -187,6 +187,15 @@ module.exports = {
       filename: './typesoftee/ferm/black.html'
     }),
 
+    new HtmlWebpackPlugin({
+      template: './src/typesoftee/ferm/spirals.html',
+      filename: './typesoftee/ferm/spirals.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/articles/recipe/recipe.html',
+      filename: './articles/recipe/recipe.html'
+    }),
+
     // Partials
     new HtmlWebpackPartialsPlugin([
       {

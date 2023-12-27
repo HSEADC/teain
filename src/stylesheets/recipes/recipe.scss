@@ -1,0 +1,81 @@
+@import '../vars';
+@import '../elements';
+
+.body-recipe {
+  @extend %body-article;
+
+  .header {
+    @extend %header-article;
+  }
+
+  .main {
+    @extend %main-article;
+
+    &__inner {
+      border: 0.135vw solid var(--black);
+      border-radius: 1.979vw;
+      gap: 3.021vw;
+      @include displayFlex;
+      @include flexDirection(column);
+      padding: 3.958vw 44.01vw 4.479vw 6.354vw;
+      position: relative;
+
+      @media (max-width: 1024px) {
+        padding: 0 3.49vw 3.49vw;
+      }
+    }
+
+    &__heading {
+      @extend %bold-text;
+      color: var(--green2A3C2C);
+      font-size: 4.427vw;
+      margin-bottom: 3.906vw;
+    }
+
+    &__image {
+      aspect-ratio: 574 / 738;
+      background: url('/src/images/recipe_sbiten.png') no-repeat;
+      background-size: cover;
+      border-radius: 1.563vw;
+      max-width: 29.896vw;
+      position: absolute;
+      right: 0;
+      width: 100%;
+    }
+
+    &__ingredients {
+      @extend %helvetica-text;
+      font-size: 1.25vw;
+      font-weight: 700;
+      margin-bottom: 2.031vw;
+
+      &-lists {
+        @include displayFlex;
+        font-size: 1.25vw;
+        justify-content: space-between;
+        margin-bottom: 3.385vw;
+        max-width: 35.521vw;
+        width: 100%;
+      }
+
+      &-list {
+        @include displayFlex;
+        @include flexDirection(column);
+        @extend %helvetica-text;
+      }
+    }
+
+    &__steps {
+      @extend %helvetica-text;
+      @include displayFlex;
+      @include flexDirection(column);
+      font-size: 1.354vw;
+      line-height: 120.833%;
+      list-style-type: decimal;
+    }
+  }
+
+  .footer {
+    @extend %footer;
+  }
+}
