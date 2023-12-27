@@ -339,8 +339,8 @@
       }
 
       &__text {
-        @extend %commons-text;
-        font-size: 1.823vw;
+        @extend %helvetica-text;
+        font-size: 1.458vw;
         line-height: 108.669%;
         max-width: 30.99vw;
         @media (min-width: 1920px) {
@@ -425,8 +425,8 @@
     &__text {
       @extend %helvetica-text;
       color: var(--beige);
-      font-size: 1.25vw;
-      max-width: 25.5vw;
+      font-size: 1.458vw;
+      max-width: 26.5vw;
 
       @media (min-width: 1920px) {
         max-width: 24vw;
@@ -457,11 +457,11 @@
     }
 
     &__left-line {
-      height: 22.708vw;
+      height: 12.2vw;
       position: absolute;
       right: 5.208vw;
-      top: 13.458vw;
-      width: 19.01vw;
+      top: 22.9vw;
+      width: 20vw;
 
       @media (min-width: 1920px) {
         height: 4.008vw;
