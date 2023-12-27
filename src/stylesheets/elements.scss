@@ -51,7 +51,6 @@ body {
 %toast-btn {
   backdrop-filter: blur(85px);
   background: rgba(255, 255, 255, 0.2);
-  border: none;
   border-radius: 3.385vw;
   color: var(--beige);
   cursor: pointer;
@@ -59,20 +58,43 @@ body {
   font-size: 1.042vw;
   font-weight: 600;
   gap: 0.99vw;
-  padding: 0.677vw 2.083vw;
+  height: 2.917vw;
+  padding: 0.6vw 2.083vw 0.677vw;
   text-decoration: none;
+  vertical-align: middle;
   @include displayFlex;
   @include contentCenter;
   width: auto;
 
+  span {
+    position: relative;
+    top: -0.06vw;
+  }
+
+  i {
+    height: 100%;
+    @include displayFlex;
+    @include contentCenter;
+  }
+
   @media (min-width: 1920px) {
     font-size: 1.249vw;
+    height: 3.542vw;
     padding: 1.041vw 2.447vw;
+
+    span {
+      top: -0.16vw;
+    }
   }
   @media (max-width: 1024px) {
     font-size: 3.128vw;
     gap: 2.933vw;
+    height: 9.082vw;
     padding: 2.053vw 6.256vw;
+
+    span {
+      top: -0.4vw;
+    }
   }
 
   .toast-icon {
@@ -111,11 +133,11 @@ body {
   background: var(--green2A3C2C);
   @include displayFlex;
   @include contentCenter;
-  border-radius: 30px;
+  border-radius: 1.563vw;
   color: var(--beige);
   font-family: var(--helveticaNeue);
   font-size: 1.25vw;
-  padding: 1.563vw 1.823vw;
+  padding: 1.4vw 1.7vw;
 
   @media (max-width: 1024px) {
     font-size: 2.25vw;
@@ -136,6 +158,13 @@ body {
     align-items: flex-end;
     font-size: 2.542vw;
     padding: 0 9.189vw 9.57vw;
+  }
+
+  &__left {
+    align-items: flex-start;
+    @include displayFlex;
+    gap: 10.729vw;
+    margin-top: 0.781vw;
   }
 
   &__right {
