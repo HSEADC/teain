@@ -1,7 +1,3 @@
-@import '../vars';
-@import '../mixins';
-@import '../elements';
-
 .body-spirals {
   @extend %body-article;
 
@@ -21,7 +17,8 @@
       position: relative;
 
       @media (max-width: 1024px) {
-        padding: 0 3.49vw 3.49vw;
+        padding: 0 9.415vw 9.415vw;
+        @include flexDirection(column);
       }
     }
 
@@ -34,6 +31,10 @@
       left: 0;
       position: absolute;
       width: 28.594vw;
+
+      @media (max-width: 1024px) {
+        position: static;
+      }
     }
 
     &__heading {
