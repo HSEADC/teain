@@ -1,4 +1,5 @@
 import './index.css'
+
 var form = document.getElementById('my-form')
 
 async function handleSubmit(event) {
@@ -32,4 +33,12 @@ async function handleSubmit(event) {
       status.innerHTML = 'Возникли проблемы с отправкой почты.'
     })
 }
+
 form.addEventListener('submit', handleSubmit)
+
+const scene_1 = document.getElementById('scene_1')
+const scene_2 = document.getElementById('scene_2')
+const scene_3 = document.getElementById('scene_3')
+const parallaxInstance = new Parallax(scene_1)
+const parallaxInstance2 = new Parallax(scene_2)
+const parallaxInstance3 = new Parallax(scene_3)
