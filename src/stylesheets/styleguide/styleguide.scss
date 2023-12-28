@@ -1,0 +1,70 @@
+@import '../vars';
+
+.body-styleguide {
+	height: 100%;
+
+	.container {
+		height: 100%;
+		padding: 0 13.438vw;
+	}
+
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		min-height: 100%;
+	}
+
+	.content {
+		flex: 1 0 auto;
+	}
+
+	.footer {
+		flex: 0 0 auto;
+	}
+
+	.fullscreen {
+		background: var(--darkGreen);
+		background-size: contain;
+		height: 100vh;
+		min-height: 100vh;
+
+		&__inner {
+			height: 100%;
+			position: relative;
+		}
+
+		&__word {
+			font-size: 2.5vw;
+			position: absolute;
+			right: 0;
+			top: 50%;
+		}
+	}
+
+	.culttea {
+		left: 50%;
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: 100%;
+	}
+
+	.header {
+		@include displayFlex;
+		@include contentCenter;
+
+		&__nav {
+			@include displayFlex;
+			@include contentCenter;
+			gap: 2.083vw;
+			padding-top: 5.26vw;
+		}
+
+		&__nav-link {
+			@extend %helvetica-text;
+			color: var(--beige);
+			font-size: 1.25vw;
+			text-decoration: none;
+		}
+	}
+}
