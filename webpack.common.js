@@ -208,6 +208,10 @@ module.exports = {
       template: './src/articles/recipe/recipe.html',
       filename: './articles/recipe/recipe.html'
     }),
+    new HtmlWebpackPlugin({
+      template: './src/styleguide.html',
+      filename: './styleguide.html'
+    }),
 
     // Partials
     new HtmlWebpackPartialsPlugin([
