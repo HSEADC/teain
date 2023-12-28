@@ -5,6 +5,7 @@ const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin')
 
 const webpack = require('webpack')
 const path = require('path')
+const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   entry: {
@@ -103,6 +104,18 @@ module.exports = {
     ]
   },
   plugins: [
+    new CopyPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, 'src/share/'),
+          to: path.resolve(__dirname, 'dev_build/share/')
+        },
+        {
+          from: path.resolve(__dirname, 'src/share/'),
+          to: path.resolve(__dirname, 'docs/share/')
+        }
+      ]
+    }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
       chunkFilename: '[id].[contenthash].css'
