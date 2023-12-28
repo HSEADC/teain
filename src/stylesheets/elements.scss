@@ -45,6 +45,7 @@ body {
   font-smooth: never;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
   text-rendering: optimizeLegibility;
 }
 
@@ -322,5 +323,19 @@ body {
     @media (max-width: 1024px) {
       font-size: 4vw;
     }
+
+    &:hover {
+      color: var(--green2A3C2C);
+    }
   }
+}
+
+.scene {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
 }

@@ -50,11 +50,13 @@
           </div>
         </div>
       </section>
-      <section class="recipes">
+      <section class="recipes" id="recipes">
         <div class="recipes__container">
           <div class="recipes__body">
             <div class="recipes__buckthornSbiten">
-              <div class="recipes__frame"></div>
+              <div class="scene" id="scene_1">
+                <div class="recipes__frame" data-depth="0.5"></div>
+              </div>
             </div>
             <a class="recipes__toast" href="articles/recipe/recipe.html">
               <span> Облепиховый чай с имбирем </span>
@@ -88,7 +90,7 @@
           </div>
         </div>
       </section>
-      <section class="lib">
+      <section class="lib" id="lib">
         <div class="lib__container">
           <h2 class="lib__heading">
             <span>удобные фильтры</span>
@@ -116,7 +118,9 @@
 
             <div class="beige-block__right">
               <div class="beige-block__pic">
-                <div class="beige-block__frame"></div>
+                <div class="scene" id="scene_2">
+                  <div class="beige-block__frame" data-depth="0.5"></div>
+                </div>
                 <a
                   class="beige-block__right-toast"
                   href="typesoftee/ferm/spirals.html"
@@ -131,7 +135,7 @@
           </div>
         </div>
       </section>
-      <section class="articles">
+      <section class="articles" id="articles">
         <div class="articles__inner">
           <div class="articles__left">
             <img
@@ -176,7 +180,7 @@
           </div>
         </div>
       </section>
-      <section class="cultures">
+      <section class="cultures" id="cultures">
         <div class="cultures__inner">
           <h2 class="cultures__heading">
             <span> новости чайной культуры </span>
@@ -185,7 +189,9 @@
           <div class="cultures__row">
             <div class="image-toast">
               <div class="cultures__img-1">
-                <div class="cultures__frame"></div>
+                <div class="scene" id="scene_3">
+                  <div class="cultures__frame" data-depth="0.5"></div>
+                </div>
                 <img alt="" src="./images/media-1.png" />
               </div>
               <a class="cultures__toast" href="media/news.html">
@@ -256,9 +262,9 @@
                   <img alt="" class="dzen" src="./images/dzen.svg" />
                 </a>
                 <a
+                  class="socials__link"
                   href="https://youtube.com/@teatime-xx3on?si=eWZBCB-LQaB9LT8t"
                   target="_blank"
-                  class="socials__link"
                 >
                   <img alt="" class="youtube" src="./images/youtube.svg"
                 /></a>
@@ -282,42 +288,6 @@
         </div>
       </footer>
     </div>
-    <script>
-      var form = document.getElementById('my-form')
-
-      async function handleSubmit(event) {
-        event.preventDefault()
-        var status = document.getElementById('my-form-status')
-        var data = new FormData(event.target)
-        fetch(event.target.action, {
-          method: form.method,
-          body: data,
-          headers: {
-            Accept: 'application/json'
-          }
-        })
-          .then((response) => {
-            if (response.ok) {
-              status.innerHTML = 'Спасибо за подписку!'
-              form.reset()
-            } else {
-              response.json().then((data) => {
-                if (Object.hasOwn(data, 'errors')) {
-                  status.innerHTML = data['errors']
-                    .map((error) => error['message'])
-                    .join(', ')
-                } else {
-                  status.innerHTML = 'Ошибка отправки почты'
-                }
-              })
-            }
-          })
-          .catch((error) => {
-            status.innerHTML = 'Ошибка отправки почты'
-          })
-      }
-
-      form.addEventListener('submit', handleSubmit)
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
   </body>
 </html>
