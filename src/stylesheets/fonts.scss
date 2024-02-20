@@ -103,3 +103,21 @@
     url('/src/fonts/HelveticaNeueCyr-Bold.woff2') format('woff2'),
     url('/src/fonts/HelveticaNeueCyr-Bold.woff') format('woff');
 }
+
+@font-face {
+  font-family: 'Gramatika';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url('/src/fonts/Gramatika-Regular.woff2') format('woff2'),
+    url('/src/fonts/Gramatika-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'HeliosExtBlackC';
+  font-style: normal;
+  font-weight: 900;
+  src:
+    url('/src/fonts/HeliosExtBlackC.woff2') format('woff2'),
+    url('/src/fonts/HeliosExtBlackC.woff') format('woff');
+}

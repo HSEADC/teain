@@ -1,3 +1,4 @@
+/*
 .body-about {
   .h2-about {
     color: #fff;
@@ -5,7 +6,7 @@
     font-style: normal;
     font-size: clamp(2.3125rem, 12vw, 14rem);
     font-weight: 400;
-    line-height: 99.99%; /* 224.089px */
+    line-height: 99.99%; !* 224.089px *!
   }
 
   .text-about {
@@ -42,7 +43,7 @@
 
 
 
-  .fullscreen {
+  .S_Hero {
     background-image: image-set(
       url('/src/images/fullscreen.avif') 1x,
       url('/src/images/fullscreen.webp') 1x,
@@ -244,7 +245,7 @@
     }
   }
 
- /* .description {
+ !* .description {
     position: relative;
 
     &__body {
@@ -291,7 +292,7 @@
         top: 237px;
       }
     }
-  }*/
+  }*!
 
 .problem {
   background-color: var(--mustard);
@@ -356,7 +357,7 @@
 
 
 
-/*
+!*
   .solution {
     position: relative;
     height: 110.78vw;
@@ -852,4 +853,5 @@
     }
   }
 }
+*!
 */

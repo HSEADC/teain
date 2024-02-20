@@ -1,0 +1,41 @@
+.O_Recipe_Card {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.O_Title {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+  position: relative;
+}
+
+.O_Title_Send {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+  position: relative;
+}
+
+.O_Tea_Card {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+
+  .A_Name {
+    margin: 30px 0 13px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .O_Title {
+    gap: 18px;
+  }
+  .O_Title_Send {
+    gap: 18px;
+  }
+}
