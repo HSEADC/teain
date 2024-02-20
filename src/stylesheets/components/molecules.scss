@@ -1,0 +1,29 @@
+.M_Menu {
+  display: flex;
+  gap: 52px;
+}
+
+.M_Email {
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid black;
+  max-width: 926px;
+  outline: none;
+  padding: 0 0 4px 38px;
+  width: 100%;
+
+  &:placeholder-shown {
+    color: #bb8f54;
+    font-family: 'Gramatika', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 144.444%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .M_Email {
+    max-width: 1234px;
+  }
+}

@@ -34,23 +34,23 @@
       }
     }
 
-    &__image {
-      aspect-ratio: 574 / 738;
-      background: url('/src/images/recipe_sbiten.png') no-repeat;
-      background-size: cover;
-      border-radius: 1.563vw;
-      max-width: 29.896vw;
-      position: absolute;
-      right: 0;
-      width: 100%;
-
-      @media (max-width: 1024px) {
-        aspect-ratio: 259 / 288;
-        max-width: none;
-        position: static;
-        width: 100%;
-      }
-    }
+    /* &__image {
+			 aspect-ratio: 574 / 738;
+			 background: url('/src/images/recipe_sbiten.png') no-repeat;
+			 background-size: cover;
+			 border-radius: 1.563vw;
+			 max-width: 29.896vw;
+			 position: absolute;
+			 right: 0;
+			 width: 100%;
+ 
+			 @media (max-width: 1024px) {
+				 aspect-ratio: 259 / 288;
+				 max-width: none;
+				 position: static;
+				 width: 100%;
+			 }
+		 }*/
 
     &__ingredients {
       @extend %helvetica-text;

@@ -13,3 +13,9 @@
 @import 'stylesheets/spirals/spirals.scss';
 @import 'stylesheets/recipes/recipe.scss';
 @import 'stylesheets/styleguide/styleguide.scss';
+@import 'stylesheets/components/atoms.scss';
+@import 'stylesheets/components/super-organisms.scss';
+@import 'stylesheets/components/wrappers.scss';
+@import 'stylesheets/components/molecules.scss';
+@import 'stylesheets/components/qwarks.scss';
+@import 'stylesheets/components/organisms.scss';

@@ -1,0 +1,73 @@
+.S_Hero {
+  animation: blur 2s ease;
+  box-sizing: border-box;
+  display: flex;
+  filter: blur(0);
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+
+  .A_Background {
+    bottom: -40px;
+    left: -40px;
+    position: absolute;
+    right: -40px;
+    top: -40px;
+  }
+
+  @keyframes blur {
+    from {
+      filter: blur(20px);
+    }
+  }
+
+  .A_Quote {
+    bottom: 100px;
+    left: 102px;
+    position: absolute;
+  }
+}
+
+.S_Header {
+  left: 50%;
+  max-width: 1237px;
+  position: fixed;
+  top: 76px;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 2;
+}
+
+.S_Recipes {
+  background-color: #f7f2e6;
+}
+
+.S_Collection {
+  background-color: #f7f2e6;
+}
+
+.S_MasterClass {
+  background: url('/src/images/index/background.png') no-repeat center;
+}
+
+.S_AfterWork {
+  background-color: #f7f2e6;
+}
+
+.S_Subscription {
+  background-color: #f7f2e6;
+}
+
+@media (min-width: 1920px) {
+  .S_Hero {
+    .A_Quote {
+      bottom: 150px;
+      left: 142px;
+      position: absolute;
+    }
+  }
+
+  .S_Header {
+    max-width: 1638px;
+  }
+}
