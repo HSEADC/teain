@@ -9,6 +9,12 @@ body,
   overflow-x: hidden;
 }
 
-* {
+*,
+::before,
+::after {
   box-sizing: border-box;
+}
+
+.body-index {
+  background: var(--beige-bckg);
 }

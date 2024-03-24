@@ -126,7 +126,7 @@ body {
 }
 
 %bold-text {
-  font-family: var(--backwardsBlack);
+  font-family: var(--font-backwardsBlack);
   font-weight: 900;
 }
 
@@ -162,7 +162,7 @@ body {
 
 %footer {
   color: var(--black-light);
-  font-family: var(--backwardsBold);
+  font-family: var(--font-backwardsBold);
   font-size: 1.354vw;
   padding-bottom: 8.49vw;
   width: 100%;

@@ -1,41 +1,81 @@
-.O_Recipe_Card {
+.O_NavBar {
+  background: var(--biege-transparent);
   display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.O_Title {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
   justify-content: center;
-  position: relative;
+  left: 50%;
+  padding: 35px 0;
+  position: fixed;
+  transform: translateX(-50%);
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+  z-index: 2;
+
+  &:hover {
+    background: var(--beige);
+  }
 }
 
-.O_Title_Send {
-  align-items: center;
+.O_StartComp {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
-  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
   position: relative;
+
+  .Q_dgimg {
+    bottom: 0;
+    left: 0px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+
+  .A_quote {
+    grid-column: -6 / span 4;
+    position: absolute;
+    top: 282px;
+  }
 }
 
-.O_Tea_Card {
-  display: flex;
-  flex: 1 1 auto;
-  flex-direction: column;
+.O_PreCategory {
+  column-gap: 24px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
 
-  .A_Name {
-    margin: 30px 0 13px;
+  .W_TextLink {
+    grid-column: -7 / -2;
+  }
+
+  .M_Title2 {
+    grid-column: span 5;
   }
 }
 
 @media (min-width: 1920px) {
-  .O_Title {
-    gap: 18px;
+  .O_StartComp {
+    .A_quote {
+      top: 316px;
+    }
   }
-  .O_Title_Send {
-    gap: 18px;
+  .O_PreCategory {
+    column-gap: 24px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    .W_TextLink {
+      grid-column: -7 / span 4;
+    }
+
+    .M_Title2 {
+      grid-column: span 4;
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+  .O_StartComp {
+    .A_quote {
+      top: 205px;
+      grid-column: -7 / span 6;
+    }
   }
 }

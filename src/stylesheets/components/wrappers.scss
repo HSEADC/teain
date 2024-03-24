@@ -1,247 +1,61 @@
-.W_Header {
+.W_StartComp {
+  column-gap: 24px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 0 72px;
+  position: relative;
+  width: 100%;
+}
+
+.W_NavBarCat {
+  align-items: center;
+  display: flex;
+  gap: 84px;
+  justify-content: space-between;
+}
+
+.W_NavBar {
   align-items: center;
   display: flex;
   justify-content: space-between;
+  max-width: 1296px;
   width: 100%;
 }
 
-.W_Hero {
-  margin: 0 auto;
+.W_Categories {
+  margin: auto;
   max-width: 1440px;
-  position: relative;
-  width: 100%;
+  padding: 62px 72px 0;
 }
 
-.W_Recipes {
-  column-gap: 20px;
-  display: grid;
-  grid-template-columns: repeat(24, 1fr);
-  margin: 0 auto;
-  max-width: 1440px;
-  padding: 186px 0 174px;
-
-  .A_Explanation {
-    text-align: right;
-  }
-
-  .O_Title {
-    grid-column: 3/21;
-  }
-}
-
-.W_Recipe_Cards {
+.W_TextLink {
   display: flex;
-  gap: 20px;
-  grid-column: 3/-5;
-  margin-top: 67px;
-}
-
-.W_Collection {
-  column-gap: 20px;
-  display: grid;
-  grid-template-columns: repeat(24, 1fr);
-  margin: 0 auto;
-  max-width: 1440px;
-  padding: 0 0 199px;
-
-  .A_Explanation {
-    text-align: right;
-  }
-
-  .O_Title {
-    grid-column: 3/23;
-    text-align: right;
-  }
-
-  .A_Drop {
-    position: absolute;
-
-    img {
-      width: 100%;
-    }
-  }
-
-  .W_Tea_Cards {
-    display: flex;
-    gap: 57px;
-    grid-column: 3/-3;
-    justify-content: space-between;
-    margin-top: 57px;
-    width: 100%;
-  }
-}
-
-.W_MasterClass {
-  column-gap: 20px;
-  display: grid;
-  grid-template-columns: repeat(24, 1fr);
-  margin: 0 auto;
-  max-width: 1440px;
-  overflow: hidden;
-  padding: 239px 0 125px;
-  position: relative;
-  row-gap: 79px;
-
-  .A_H2 {
-    grid-column: 3/-7;
-    line-height: 100%;
-  }
-
-  .A_Quote_2 {
-    grid-column: 3/-3;
-  }
-
-  .A_Play {
-    bottom: -22px;
-    grid-column: -10/-3;
-    position: absolute;
-  }
-}
-
-.W_AfterWork {
-  column-gap: 20px;
-  display: grid;
-  grid-template-columns: repeat(24, 1fr);
-  margin: 0 auto;
-  max-width: 1440px;
-  padding: 234px 0 220px;
-
-  .O_Title {
-    grid-column: 3/24;
-    text-align: right;
-  }
-
-  .W_Recipe_Cards {
-    grid-column: 3/14;
-  }
-}
-
-.W_Subscription {
-  column-gap: 20px;
-  display: grid;
-  grid-template-columns: repeat(24, 1fr);
-  margin: 0 auto;
-  max-width: 1440px;
-  padding: 0 0 220px;
-
-  .O_Title_Send {
-    grid-column: 5/-5;
-    text-align: center;
-  }
+  flex-direction: column;
+  gap: 12px;
 }
 
 @media (min-width: 1920px) {
-  .W_Hero {
-    margin: 0 auto;
-    max-width: 1920px;
-    position: relative;
-    width: 100%;
+  .W_NavBar {
+    max-width: 1638px;
   }
 
-  .W_Recipes {
+  .W_Categories {
     max-width: 1920px;
-    padding: 219px 0 138px;
-
-    .A_H2 {
-      font-size: 92px;
-      line-height: 70.373%;
-    }
-
-    .A_Explanation {
-      font-size: 38px;
-      line-height: 91.228%;
-    }
-
-    .O_Title {
-      grid-column: 3/23;
-    }
+    padding: 67px 72px 0;
   }
 
-  .W_Recipe_Cards {
-    grid-column: 3/-3;
-    margin-top: 70px;
-  }
-
-  .W_Collection {
+  .W_StartComp {
     max-width: 1920px;
-    padding: 0 0 199px;
-
-    .A_H2 {
-      font-size: 92px;
-      line-height: 70.373%;
-    }
-
-    .A_Explanation {
-      font-size: 38px;
-      line-height: 91.228%;
-    }
-
-    .O_Title {
-      grid-column: 4/23;
-      text-align: right;
-    }
-
-    .A_Drop {
-      left: -10px;
-      max-width: 165px;
-      position: absolute;
-
-      img {
-        width: 100%;
-      }
-    }
-
-    .W_Tea_Cards {
-      gap: 100px;
-    }
-  }
-
-  .W_MasterClass {
-    max-width: 1920px;
-
-    .A_Play {
-      grid-column: -9/-2;
-    }
-  }
-
-  .W_AfterWork {
-    max-width: 1920px;
-    padding: 234px 0 220px;
-
-    .O_Title {
-      grid-column: 3/23;
-      text-align: right;
-    }
-
-    .W_Recipe_Cards {
-      grid-column: 3/12;
-    }
-  }
-
-  .W_Subscription {
-    column-gap: 20px;
-    display: grid;
-    grid-template-columns: repeat(24, 1fr);
-    margin: 0 auto;
-    max-width: 1920px;
-    padding: 0 0 220px;
-
-    .O_Title_Send {
-      text-align: center;
-    }
-
-    .M_Email {
-      margin-top: 20px;
-    }
   }
 }
 
-@media (max-width: 1919px) {
-  .W_Recipes {
-    .W_Recipe_Cards {
-      .O_Recipe_Card:last-child {
-        display: none;
-      }
-    }
+@media (max-width: 1440px) {
+  .W_StartComp {
+    column-gap: 16px;
+    max-width: 1440px;
+    padding: 0 28px;
   }
 }

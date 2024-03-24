@@ -1,6 +1,7 @@
 import './index.css'
+import * as $ from 'jquery'
 
-var form = document.getElementById('my-form')
+/*var form = document.getElementById('my-form')
 
 async function handleSubmit(event) {
   event.preventDefault()
@@ -34,11 +35,13 @@ async function handleSubmit(event) {
     })
 }
 
-form.addEventListener('submit', handleSubmit)
+form.addEventListener('submit', handleSubmit)*/
 
-const scene_1 = document.getElementById('scene_1')
-const scene_2 = document.getElementById('scene_2')
-const scene_3 = document.getElementById('scene_3')
-const parallaxInstance = new Parallax(scene_1)
-const parallaxInstance2 = new Parallax(scene_2)
-const parallaxInstance3 = new Parallax(scene_3)
+$(function () {
+  console.log('aaaa')
+})
+
+$('#searchBtn').click(() => {
+  $('.M_SearchIcon').toggleClass('active').focus()
+  $('.A_SearchInput').toggleClass('active')
+})

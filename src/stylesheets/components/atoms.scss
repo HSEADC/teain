@@ -1,182 +1,105 @@
 @import '/src/stylesheets/vars';
 
-.A_Background {
-  background-image: image-set(
-    url('/src/images/index/background.webp') 1x,
-    url('/src/images/index/background.png') 1x
-  );
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  filter: blur(25px);
+.A_Logo {
+  width: 110px;
 }
 
-.A_Quote {
-  max-width: 1198px;
-  width: 100%;
-  z-index: 1;
+.A_SearchInput {
+  background: transparent;
+  border: none;
+  color: var(--darkGreen);
 
-  img {
+  display: none;
+  font-family: var(--gramatika);
+  font-size: 1.125rem;
+  height: 100%;
+
+  line-height: 112%;
+  outline: none;
+  padding-left: 15px;
+  transition: all 0.3s ease;
+  width: 0;
+
+  &::placeholder {
+    color: var(--light-green);
+  }
+
+  &.active {
+    display: inline;
+    transition: all 0.4s 0.7s ease;
     width: 100%;
   }
 }
 
-.A_Quote_2 {
-  max-width: 571px;
-  width: 100%;
-  z-index: 1;
-
-  img {
-    width: 100%;
-  }
+.A_quote {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-helios_ext_c);
+  gap: 24px;
+  max-width: 431px;
 }
 
-.A_Hdr_Link {
-  color: var(--beige);
+.A_QuoteText {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.A_QuoteAuthor {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.A_chapter {
+  color: var(--darkGreen);
   font-family: 'Gramatika', sans-serif;
-  font-size: 28px;
+  font-size: 1.12rem;
   font-weight: 400;
+  line-height: 112%;
+  text-align: right;
   text-decoration: none;
 }
 
-.A_H2 {
-  color: var(--black);
-  font-family: 'HeliosExtBlackC', sans-serif;
-  font-size: 70px;
+.A_Title2Helios {
+  font-family: var(--font-helios_ext_c);
+  font-size: 2.5rem;
   font-weight: 900;
-  line-height: 69.368%;
-
-  &.white {
-    color: var(--beige);
-  }
 }
 
-.A_H2_Send {
-  color: var(--black);
-  font-family: 'HeliosExtBlackC', sans-serif;
-  font-size: 48px;
-  font-weight: 900;
-  line-height: 134.882%;
+.A_Title2Vlas {
+  font-family: var(--font-als_vlas);
+  font-size: 1.75rem;
+  -webkit-text-stroke: 1px var(--darkGreen);
+  text-stroke: 1px var(--darkGreen);
 }
 
-.A_Explanation {
-  color: var(--dark-gray);
-  font-family: 'Gramatika', sans-serif;
-  font-size: 28px;
+.A_Text {
+  color: var(--darkGreen);
+  font-family: var(--gramatika);
+  font-size: 1.125rem;
   font-weight: 400;
-
-  line-height: 92.857%;
 }
 
-.A_Explanation_Send {
-  color: var(--dark-gray);
-  font-family: 'Gramatika', sans-serif;
-  font-size: 24px;
+.A_Link {
+  color: var(--caramel);
+  font-family: var(--gramatika);
   font-weight: 400;
-  line-height: 144.444%;
+  line-height: 159%;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
 }
 
-.A_Recipe_Pic {
-  img {
-    object-fit: cover;
+@media (max-width: 1440px) {
+  .A_quote {
+    max-width: 395px;
 
-    width: 100%;
-  }
-}
-
-.A_Name {
-  font-family: 'HeliosExtBlackC', sans-serif;
-  font-size: 26px;
-  font-weight: 900;
-  line-height: 186.759%;
-}
-
-.A_Recipe_Text {
-  font-family: 'Gramatika', sans-serif;
-  font-size: 22px;
-  font-weight: 400;
-  line-height: 118.182%;
-}
-
-.A_Tea_Pic {
-  opacity: 0.3;
-
-  img {
-    object-fit: cover;
-    width: 100%;
-  }
-}
-
-.A_Affect {
-  align-items: center;
-  border: 1px solid #bb8f54;
-  border-radius: 66.667px;
-  display: flex;
-  font-family: Gramatika, sans-serif;
-  font-size: 22px;
-  font-weight: 400;
-  justify-content: center;
-  line-height: 193.939%;
-  padding: 5px 42px;
-  width: fit-content;
-}
-
-.A_Play {
-  max-width: 410px;
-
-  img {
-    object-fit: cover;
-    width: 100%;
-  }
-}
-
-@media (min-width: 1920px) {
-  .A_Quote {
-    max-width: 1597px;
-    width: 100%;
-    z-index: 1;
-
-    img {
-      width: 100%;
+    .A_QuoteText {
+      font-size: 1.375rem;
+      line-height: 118%;
     }
-  }
 
-  .A_Hdr_Link {
-    font-size: 36px;
-  }
-
-  .A_Name {
-    font-size: 28px;
-    line-height: 191.132%;
-  }
-
-  .A_Recipe_Text {
-    font-size: 26px;
-    line-height: 110.214%;
-  }
-
-  .A_Quote_2 {
-    max-width: 761px;
-    width: 100%;
-    z-index: 1;
-
-    img {
-      width: 100%;
+    .A_QuoteAuthor {
+      font-size: 1rem;
+      font-weight: 700;
     }
-  }
-
-  .A_H2 {
-    font-size: 90px;
-    line-height: 102.174%;
-  }
-
-  .A_H2_Send {
-    font-size: 64px;
-    line-height: 101.161%;
-  }
-
-  .A_Explanation_Send {
-    font-size: 28px;
-    line-height: 123.81%;
   }
 }
