@@ -26,15 +26,113 @@
 }
 
 .W_Categories {
+  background: var(--beige-bckg);
   margin: auto;
-  max-width: 1440px;
-  padding: 62px 72px 0;
+  padding: 62px 0 0;
+}
+
+.W_CategoriesLight {
+  background: var(--beige-l);
 }
 
 .W_TextLink {
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+
+.W_PreImjs {
+  background-color: var(--beige-bckg);
+  background-image: url('/src/images/index/Q_LineCircle.svg');
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  margin: auto;
+
+  padding: 62px 0 78px;
+}
+
+.W_RecipeCardText {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  .A_Text {
+    max-width: 450px;
+  }
+}
+
+.W_RecipeCardLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px 0 38px 24px;
+}
+
+.W_RecipeCardL {
+  align-items: center;
+  background: var(--beige-bckg);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+  padding: 94px 0 65px;
+}
+
+.W_QuoteLBack {
+  background: var(--beige-l);
+  padding: 271px 0 271px;
+}
+
+.W_Container {
+  column-gap: 24px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 0 72px;
+}
+
+.W_QuoteL {
+  grid-column: 3 / span 9;
+  max-width: 856px;
+
+  .A_QuoteH {
+    margin-bottom: 16px;
+    max-width: 830px;
+  }
+
+  .A_QuoteTxt {
+    margin-bottom: 28px;
+  }
+}
+
+.W_CardTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.W_TeaTipeCards {
+  background: var(--beige-l);
+  padding: 62px 0 215px;
+}
+
+.W_Banner {
+  margin: 0 auto;
+  max-width: 1296px;
+  padding: 72px 0 0;
+}
+
+.W_LinkContainer {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 30px 72px 0;
+}
+
+.W_BannerLink {
+  background-color: var(--beige-l);
 }
 
 @media (min-width: 1920px) {

@@ -40,13 +40,60 @@
   column-gap: 24px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  margin: 0 auto;
+  max-width: 1296px;
 
   .W_TextLink {
     grid-column: -7 / -2;
   }
 
   .M_Title2 {
+    grid-column: span 6;
+  }
+}
+
+.O_RecipeCardL {
+  background: var(--beige-l);
+  column-gap: 24px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin: 0 auto;
+  max-width: 1296px;
+
+  .W_RecipeCardLeft {
     grid-column: span 5;
+  }
+
+  .M_Title2 {
+  }
+}
+
+.O_Banner {
+  background-image: url('/src/images/index/Banner_Img.png');
+  background-position: 50% 90%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  min-height: 565px;
+}
+
+.O_Subscribe {
+  background: var(--beige-l);
+  padding: 125px 0 165px;
+}
+
+.O_Subscribe {
+  .A_Describe {
+    grid-column: 7 / -2;
+  }
+
+  .W_Container {
+    grid-template-rows: 1fr 1fr;
+    row-gap: 15px;
+  }
+
+  .A_Title2Vlas {
+    grid-column: 6 / -2;
+    text-align: right;
   }
 }
 
@@ -74,8 +121,8 @@
 @media (max-width: 1440px) {
   .O_StartComp {
     .A_quote {
-      top: 205px;
       grid-column: -7 / span 6;
+      top: 205px;
     }
   }
 }

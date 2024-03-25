@@ -132,6 +132,15 @@
 }
 
 @font-face {
+  font-family: 'HeliosExtC';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url('/src/fonts/HeliosExtC.woff2') format('woff2'),
+    url('/src/fonts/HeliosExtC.woff') format('woff');
+}
+
+@font-face {
   font-family: 'ALS Vlas';
   font-style: normal;
   src:

@@ -5,3 +5,25 @@
   justify-content: space-between;
   max-width: 419px;
 }
+
+.C_PreImjs {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  max-width: 1296px;
+}
+
+.C_TegCloud {
+  column-gap: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 322px;
+  row-gap: 12px;
+}
+
+.C_TeaTipeCards {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  max-width: 1296px;
+}

@@ -44,7 +44,16 @@
   font-weight: 900;
 }
 
+.A_QuoteTxt {
+  color: var(--darkGreen);
+  font-family: var(--font-helios_ext_c);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
 .A_QuoteAuthor {
+  color: var(--darkGreen);
+  font-family: var(--font-helios_ext_c);
   font-size: 1.125rem;
   font-weight: 700;
 }
@@ -86,6 +95,103 @@
   line-height: 159%;
   text-decoration: underline;
   text-decoration-skip-ink: none;
+}
+
+.A_PreImg {
+  max-width: 306px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.A_Teg {
+  border: 1px solid var(--green);
+  display: flex;
+  padding: 3px 10px;
+  @include contentCenter();
+  width: fit-content;
+
+  span {
+    color: var(--darkGreen);
+    font-family: var(--gramatika);
+    font-size: 0.75rem;
+    line-height: 172%;
+    text-align: justify;
+  }
+}
+
+.A_ImgRecipeL {
+  grid-column: -8/ -1;
+
+  img {
+    width: 100%;
+  }
+}
+
+.A_QuoteH {
+  color: var(--darkGreen);
+  font-family: var(--font-helios_ext_c);
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.A_TeaTipeCard {
+  background: url('/src/images/index/TeaTypeImgBckg.png') no-repeat center;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  gap: 256px;
+  max-width: 306px;
+  min-height: 400px;
+  padding: 50px 24px 24px;
+  position: relative;
+  width: 100%;
+}
+
+.A_CardTitl1 {
+  color: var(--darkGreen);
+  display: block;
+  font-family: var(--font-helios_ext_c);
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+
+.A_CardTitle2 {
+  color: var(--darkGreen);
+  font-family: var(--font-als_vlas);
+  font-size: 1rem;
+  font-weight: 400;
+  -webkit-text-stroke: 0.5px var(--darkGreen);
+  text-stroke: 0.5px var(--darkGreen);
+}
+
+.A_CardArrow {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+
+  img {
+    max-width: 40px;
+    width: 100%;
+  }
+}
+
+.A_Describe {
+  align-items: center;
+  background: var(--green);
+  border: none;
+  color: var(--beige-l);
+  cursor: pointer;
+  display: flex;
+  font-family: var(--font-helios_ext_c);
+  font-size: 1.25rem;
+  font-weight: 900;
+  justify-content: center;
+  line-height: 103%;
+  min-height: 56px;
+  padding: 6px 18px;
+  text-align: justify;
 }
 
 @media (max-width: 1440px) {
