@@ -136,16 +136,19 @@
   font-weight: 900;
 }
 
-.A_TeaTipeCard {
+.A_TeaTypeCard {
   background: url('/src/images/index/TeaTypeImgBckg.png') no-repeat center;
   background-size: contain;
+  cursor: pointer;
   display: flex;
+
   flex-direction: column;
   gap: 256px;
   max-width: 306px;
   min-height: 400px;
   padding: 50px 24px 24px;
   position: relative;
+  text-decoration: none;
   width: 100%;
 }
 
@@ -192,6 +195,119 @@
   min-height: 56px;
   padding: 6px 18px;
   text-align: justify;
+}
+
+.A_Cursor1 {
+  background: url('/src/images/index/Cursor_Default.svg') no-repeat center;
+  background-size: cover;
+  display: none;
+  height: 153px;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  transition:
+    opacity 0.4s ease,
+    transform 0.1s ease;
+  width: 232px;
+  z-index: 1000;
+
+  &.active {
+    opacity: 1;
+  }
+
+  &.click {
+    background: url('/src/images/index/Cursor_Click.svg') no-repeat center;
+  }
+}
+
+.A_CardTitl2 {
+  color: var(--darkGreen);
+  display: block;
+  font-family: var(--font-helios_ext_c);
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.A_Title1 {
+  color: var(--darkGreen);
+  font-family: var(--font-helios_ext_c);
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 76%;
+}
+
+.A_TeaTypeCardSlim {
+  background-position: 60% 50%;
+  background-size: cover;
+  gap: initial;
+  height: 63vh;
+  justify-content: space-between;
+  min-height: 0;
+  //min-height: 500px;
+}
+
+.A_TeaImage {
+  background: url('/src/images/tea_image.png') no-repeat center;
+  background-size: cover;
+  max-width: 636px;
+  width: 100%;
+}
+
+.A_TeaImageSlim {
+  max-width: 306px;
+}
+
+.A_FermentationBanner {
+  background-image: url('/src/images/tea_image.png');
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 440px;
+  width: 100%;
+}
+
+.A_Lead {
+  color: var(--darkGreen);
+  font-family: var(--gramatika);
+  font-size: 1.875rem;
+  font-weight: 400;
+}
+
+.A_CardTitleHelios {
+  color: var(--darkGreen);
+  font-family: var(--font-helios_ext_c);
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 118%;
+}
+
+.A_CardTitleVlas {
+  color: var(--darkGreen);
+  font-family: var(--font-als_vlas);
+  font-size: 0.75rem;
+  -webkit-text-stroke: 0.5px var(--darkGreen);
+  text-stroke: 0.5px var(--darkGreen);
+}
+
+.A_SliderButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  position: absolute;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.A_SliderButtonLeft.A_SliderButton_Disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.A_SliderButtonRight.A_SliderButton_Disabled {
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 @media (max-width: 1440px) {

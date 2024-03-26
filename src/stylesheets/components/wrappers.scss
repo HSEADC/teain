@@ -82,7 +82,9 @@
 
 .W_QuoteLBack {
   background: var(--beige-l);
+  display: block;
   padding: 271px 0 271px;
+  text-decoration: none;
 }
 
 .W_Container {
@@ -92,6 +94,11 @@
   margin: 0 auto;
   max-width: 1440px;
   padding: 0 72px;
+
+  .A_Lead {
+    grid-column: 2 / 11;
+    margin: 90px 0;
+  }
 }
 
 .W_QuoteL {
@@ -114,7 +121,7 @@
   gap: 8px;
 }
 
-.W_TeaTipeCards {
+.W_TeaTypeCards {
   background: var(--beige-l);
   padding: 62px 0 215px;
 }
@@ -133,6 +140,46 @@
 
 .W_BannerLink {
   background-color: var(--beige-l);
+}
+
+.W_SectionDescription {
+  padding: 156px 0 68px;
+
+  .A_Title1 {
+    grid-column: span 2;
+  }
+
+  .A_Text {
+    grid-column: 6 / -3;
+  }
+}
+
+.W_Source {
+  column-gap: 24px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin: 0 auto;
+  max-width: 1296px;
+  padding: 87px 0 187px;
+
+  .A_Text:first-child {
+    grid-column: 2 / span 2;
+  }
+
+  .A_Text:last-child {
+    grid-column: -7 / -2;
+  }
+}
+
+.W_TeaType {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 31px;
+  padding-left: clamp(4.5625rem, -39.592rem + 49.0605vw, 19.25rem);
+}
+
+.W_TeaType:last-of-type {
+  padding-bottom: 233px;
 }
 
 @media (min-width: 1920px) {

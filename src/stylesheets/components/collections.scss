@@ -21,9 +21,31 @@
   row-gap: 12px;
 }
 
-.C_TeaTipeCards {
+.C_TeaTypeCards {
   display: flex;
   justify-content: space-between;
   margin: auto;
   max-width: 1296px;
+}
+
+.C_CardTitl2 {
+  bottom: 37px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  position: absolute;
+
+  .A_CardTitl2 {
+    opacity: 0;
+  }
+}
+
+.C_TeaTypesCards {
+  column-gap: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1296px;
+  row-gap: 40px;
 }

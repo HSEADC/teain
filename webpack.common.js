@@ -9,7 +9,8 @@ const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   entry: {
-    index: './src/index.js'
+    index: './src/index.js',
+    fermentation: './src/js/categories/fermentation.js'
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -103,6 +104,9 @@ module.exports = {
       }
     ]
   },
+  resolve: {
+    extensions: ['.js', '.jsx', '.json']
+  },
   plugins: [
     new CopyPlugin({
       patterns: [
@@ -129,6 +133,10 @@ module.exports = {
     }),
 
     // Section
+    new HtmlWebpackPlugin({
+      template: './src/tea.html',
+      filename: './tea.html'
+    }),
     new HtmlWebpackPlugin({
       template: './src/splash.html',
       filename: './splash.html'
@@ -192,6 +200,13 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/media/mesta.html',
       filename: './media/mesta.html'
+    }),
+
+    //Categories
+    new HtmlWebpackPlugin({
+      template: './src/categories/fermentation.html',
+      filename: './categories/fermentation.html',
+      chunks: ['fermentation']
     }),
 
     // Article

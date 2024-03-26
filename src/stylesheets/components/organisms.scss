@@ -11,7 +11,7 @@
   z-index: 2;
 
   &:hover {
-    background: var(--beige);
+    background: var(--beige-d);
   }
 }
 
@@ -49,6 +49,22 @@
 
   .M_Title2 {
     grid-column: span 6;
+  }
+}
+
+.O_PreArticle {
+  column-gap: 24px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin: 62px auto 0;
+  max-width: 1296px;
+
+  .A_Title2Helios {
+    grid-column: span 5;
+  }
+
+  .W_TextLink {
+    grid-column: -8 / -2;
   }
 }
 
@@ -94,6 +110,34 @@
   .A_Title2Vlas {
     grid-column: 6 / -2;
     text-align: right;
+  }
+}
+
+.O_TeaType {
+  background-color: var(--beige-d);
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 30px;
+  //max-width: 1368px;
+  overflow-x: hidden;
+  padding: 57px 0 45px 110px;
+  position: relative;
+
+  .W_TextLink {
+    max-width: 500px;
+  }
+
+  .A_SliderButtonRight {
+    bottom: 65px;
+    position: absolute;
+    right: 163px;
+  }
+
+  .A_SliderButtonLeft {
+    bottom: 65px;
+    position: absolute;
+    right: 290px;
   }
 }
 

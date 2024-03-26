@@ -38,6 +38,8 @@
     <!--  <analytics></analytics> -->
   </head>
   <body class="body-index">
+    <div class="A_Cursor1" id="A_Cursor1"></div>
+
     <header class="O_NavBar">
       <div class="W_NavBar">
         <div class="A_Logo">
@@ -51,7 +53,7 @@
               <a class="A_chapter" href="#">о нас</a>
             </li>
             <li>
-              <a class="A_chapter" href="#">чай</a>
+              <a class="A_chapter" href="./tea.html">чай</a>
             </li>
             <li>
               <a class="A_chapter" href="#">рецепты</a>
@@ -145,7 +147,7 @@
       </div>
       <a class="A_Link" href="#">Открыть все рецепты</a>
     </section>
-    <section class="W_QuoteLBack">
+    <a class="W_QuoteLBack" href="#">
       <div class="W_Container">
         <blockquote class="W_QuoteL">
           <h3 class="A_QuoteH">
@@ -165,25 +167,27 @@
           <p class="A_QuoteAuthor">Джордж Майкс</p>
         </blockquote>
       </div>
-    </section>
+    </a>
     <section class="W_Categories W_CategoriesLight">
       <div class="O_PreCategory">
         <h2 class="M_Title2">
-          <span class="A_Title2Helios">интересно про чай</span>
-          <span class="A_Title2Vlas">и его компоненты</span>
+          <span class="A_Title2Helios"
+            >про чай <br />
+            и его компоненты</span
+          >
         </h2>
         <div class="W_TextLink">
           <p class="A_Text">
             Читайте про виды и&nbsp;сорта чая, травы и&nbsp;другие компоненты.
             Делимся с вами всеми секретами, которые знаем сами.
           </p>
-          <a class="A_Link" href="#">Открыть категории</a>
+          <a class="A_Link" href="./tea.html">Открыть категории</a>
         </div>
       </div>
     </section>
-    <section class="W_TeaTipeCards">
-      <div class="C_TeaTipeCards">
-        <div class="A_TeaTipeCard">
+    <section class="W_TeaTypeCards">
+      <div class="C_TeaTypeCards">
+        <div class="A_TeaTypeCard" data-href="./categories/fermentation.html">
           <h4 class="W_CardTitle">
             <span class="A_CardTitl1">виды чая</span>
             <span class="A_CardTitle2">ферментация</span>
@@ -191,8 +195,26 @@
           <div class="A_CardArrow">
             <img alt="" src="./images/index/arrow_right.svg" />
           </div>
+          <ul class="C_CardTitl2">
+            <li>
+              <a class="A_CardTitl2" href="#">черный чай</a>
+            </li>
+            <li>
+              <a class="A_CardTitl2" href="#">зеленый чай</a>
+            </li>
+            <li>
+              <a class="A_CardTitl2" href="#">белый чай</a>
+            </li>
+            <li>
+              <a class="A_CardTitl2" href="#">пуэр</a>
+            </li>
+            <li>
+              <a class="A_CardTitl2" href="#">улун</a>
+            </li>
+          </ul>
         </div>
-        <div class="A_TeaTipeCard">
+
+        <div class="A_TeaTypeCard">
           <h4 class="W_CardTitle">
             <span class="A_CardTitl1">травы</span>
             <span class="A_CardTitle2">для заварки</span>
@@ -200,8 +222,25 @@
           <div class="A_CardArrow">
             <img alt="" src="./images/index/arrow_right.svg" />
           </div>
+          <ul class="C_CardTitl2">
+            <li>
+              <a class="A_CardTitl2" href="#">мята</a>
+            </li>
+            <li>
+              <a class="A_CardTitl2" href="#">ромашка</a>
+            </li>
+            <li>
+              <a class="A_CardTitl2" href="#">чабрец</a>
+            </li>
+            <li>
+              <a class="A_CardTitl2" href="#">иван-чай</a>
+            </li>
+            <li>
+              <a class="A_CardTitl2" href="#">лаванда</a>
+            </li>
+          </ul>
         </div>
-        <div class="A_TeaTipeCard">
+        <div class="A_TeaTypeCard">
           <h4 class="W_CardTitle">
             <span class="A_CardTitl1">компоненты</span>
             <span class="A_CardTitle2">фрукты, ягоды</span>
@@ -209,8 +248,25 @@
           <div class="A_CardArrow">
             <img alt="" src="./images/index/arrow_right.svg" />
           </div>
+          <ul class="C_CardTitl2">
+            <li>
+              <a class="A_CardTitl2" href="#">облепиха</a>
+            </li>
+            <li>
+              <a class="A_CardTitl2" href="#">смородина</a>
+            </li>
+            <li>
+              <a class="A_CardTitl2" href="#">шиповник</a>
+            </li>
+            <li>
+              <a class="A_CardTitl2" href="#">лимон</a>
+            </li>
+            <li>
+              <a class="A_CardTitl2" href="#">яблоко</a>
+            </li>
+          </ul>
         </div>
-        <div class="A_TeaTipeCard">
+        <div class="A_TeaTypeCard">
           <h4 class="W_CardTitle">
             <span class="A_CardTitl1">специи</span>
             <span class="A_CardTitle2">добавки</span>
@@ -218,6 +274,23 @@
           <div class="A_CardArrow">
             <img alt="" src="./images/index/arrow_right.svg" />
           </div>
+          <ul class="C_CardTitl2">
+            <li>
+              <a class="A_CardTitl2" href="#">корица</a>
+            </li>
+            <li>
+              <a class="A_CardTitl2" href="#">черный перец</a>
+            </li>
+            <li>
+              <a class="A_CardTitl2" href="#">кориандр</a>
+            </li>
+            <li>
+              <a class="A_CardTitl2" href="#">имбирь</a>
+            </li>
+            <li>
+              <a class="A_CardTitl2" href="#">базилик</a>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
@@ -237,7 +310,7 @@
     </section>
     <section class="O_Subscribe">
       <div class="W_Container">
-        <button type="button" class="A_Describe">подписаться на нас</button>
+        <button class="A_Describe" type="button">подписаться на нас</button>
         <span class="A_Title2Vlas">гонять чаи вместе</span>
       </div>
     </section>
