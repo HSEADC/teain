@@ -118,6 +118,47 @@
   }
 }
 
+.M_RecipeInf {
+  padding: 201px 0 0;
+
+  img {
+    grid-column: -5 / -1;
+  }
+
+  .A_Lead {
+    margin: 0;
+  }
+
+  .M_RecipeTitleLead {
+    display: flex;
+    flex-direction: column;
+    grid-column: span 7;
+    justify-content: space-between;
+    min-height: 465px;
+
+    .C_TegCloud {
+      max-width: 300px;
+    }
+  }
+
+  .W_RecipeTitleLead {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+.M_RecipeTableRow {
+  border-top: 1px solid var(--darkGreen);
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0 18px;
+
+  .A_Table2 {
+    max-width: 196px;
+  }
+}
+
 @media (min-width: 1024px) {
   .M_Email {
     max-width: 1234px;

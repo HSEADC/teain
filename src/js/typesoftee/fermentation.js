@@ -1,4 +1,4 @@
-import '../../index.css'
+import '/src/index.css'
 import Swiper from 'swiper'
 import * as $ from 'jquery'
 import anime from 'animejs'

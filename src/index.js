@@ -106,4 +106,12 @@ $(function () {
       })
     })
   })
+
+  const recipesCards = document.querySelectorAll('.O_RecipeCardS')
+
+  recipesCards.forEach((card) => {
+    card.addEventListener('click', function () {
+      window.location.href = this.getAttribute('data-href')
+    })
+  })
 })

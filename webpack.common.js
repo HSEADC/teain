@@ -185,8 +185,13 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/articles/recepies.html',
-      filename: './articles/recepies.html'
+      template: './src/articles/recipes.html',
+      filename: './articles/recipes.html'
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/articles/recipes/thyme_and_apricots.html',
+      filename: './articles/recipes/thyme_and_apricots.html'
     }),
 
     // Partials
