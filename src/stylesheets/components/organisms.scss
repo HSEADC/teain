@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   left: 50%;
-  padding: 35px 0;
+  padding: 25px 0;
   position: fixed;
   transform: translateX(-50%);
   transition: all 0.2s ease-in-out;
@@ -298,6 +298,16 @@
       object-fit: cover;
       width: 100%;
     }
+  }
+}
+
+.O_MediaCardCoupleReverse {
+  .O_MediaCardL {
+    grid-column: span 8;
+  }
+
+  .O_MediaCardS {
+    grid-column: -5 / span 4;
   }
 }
 

@@ -138,7 +138,11 @@ module.exports = {
       filename: './tea.html'
     }),
 
-    //Categories
+    new HtmlWebpackPlugin({
+      template: './src/media.html',
+      filename: './media.html'
+    }),
+
     new HtmlWebpackPlugin({
       template: './src/typesoftee/fermentation.html',
       filename: './typesoftee/fermentation.html',
