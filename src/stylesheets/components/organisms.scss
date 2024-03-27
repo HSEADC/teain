@@ -141,6 +141,106 @@
   }
 }
 
+.O_TeaCaracters {
+  .M_Title3 {
+    grid-column: 2 / span 5;
+  }
+
+  .W_TeaTable {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    grid-column: 2 / span 9;
+    margin-top: 35px;
+  }
+}
+
+.O_RecipesRec {
+  column-gap: 24px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin: 138px auto 0;
+  max-width: 1296px;
+  padding-bottom: 103px;
+  position: relative;
+  row-gap: 30px;
+
+  .A_Tag-Active {
+    background: var(--green);
+    position: absolute;
+    right: 0;
+    text-decoration: none;
+    top: 50px;
+
+
+    span {
+      color: var(--beige-l);
+      font-size: 1.125rem;
+      line-height: 114%;
+      text-align: justify;
+
+    }
+  }
+
+  .M_Title3 {
+    grid-column: span 8;
+  }
+
+  //.C_RecipeCardS {
+  //  display: flex;
+  //  flex-wrap: wrap;
+  //  grid-column: span 12;
+  //  grid-row: 2;
+  //  justify-content: space-between;
+  //  margin: 0 auto;
+  //  max-width: 1296px;
+  //
+  //}
+}
+
+.C_RecipeCardS {
+  display: flex;
+  flex-wrap: wrap;
+  grid-column: span 12;
+  grid-row: 2;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1296px;
+
+}
+
+.O_RecipeCardS {
+  background: var(--beige-d);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 306px;
+
+  .W_RecipeCardSBottom {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 0 25px 25px;
+  }
+
+  .C_TegCloud {
+    column-gap: 12px;
+    row-gap: 8px;
+  }
+
+  img {
+
+    width: 100%;
+  }
+}
+
+.O_SearchResult {
+  background: var(--beige-d);
+  display: none;
+  padding: 0 0 136px;
+
+}
+
 @media (min-width: 1920px) {
   .O_StartComp {
     .A_quote {

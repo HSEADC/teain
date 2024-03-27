@@ -16,10 +16,31 @@ body,
 }
 
 .body-index {
+  .W_RecipeCardL {
+
+    padding: 94px 0 65px;
+  }
 }
 
 .body-fermentation {
   background-color: #fcf6ee;
   overflow-x: hidden;
   position: relative;
+}
+
+.body-recepies {
+  background-color: var(--beige-d);
+
+  .O_RecipeCardS {
+    background: var(--beige-l);
+  }
+
+  .W_RecipeCardL {
+    padding: 49px 0 0;
+  }
+
+  .C_RecipeCardS {
+    padding: 49px 0 0;
+
+  }
 }

@@ -39,9 +39,10 @@ async function handleSubmit(event) {
 form.addEventListener('submit', handleSubmit)*/
 
 $(function () {
-  $('#searchBtn').click(() => {
-    $('.M_SearchIcon').toggleClass('active').focus()
-    $('.A_SearchInput').toggleClass('active')
+  $('#searchBtn').mouseenter(() => {
+    console.log('aæ')
+    $('.M_SearchIcon').addClass('active').focus()
+    $('.A_SearchInput').addClass('active')
   })
   const cursor = $('.A_Cursor1')
   const section = $('.W_QuoteLBack')
