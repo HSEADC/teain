@@ -86,81 +86,82 @@
 
     <ul class="C_TagCloudBig">
       <li>
-        <button class="A_Tag_Cloud" href="#">
+        <button class="A_Tag_Cloud" data-tag="все" href="#">
           <span>все</span>
         </button>
       </li>
       <li>
-        <button class="A_Tag_Cloud" href="#">
+        <button class="A_Tag_Cloud" data-tag="успокаивающий" href="#">
           <span>успокаивающий</span>
         </button>
       </li>
       <li>
-        <button class="A_Tag_Cloud" href="#">
+        <button class="A_Tag_Cloud" data-tag="бодрящий" href="#">
           <span>бодрящий</span>
         </button>
       </li>
       <li>
-        <button class="A_Tag_Cloud" href="#">
+        <button class="A_Tag_Cloud" data-tag="для_сна" href="#">
           <span>для сна</span>
         </button>
       </li>
       <li>
-        <button class="A_Tag_Cloud" href="#">
+        <button class="A_Tag_Cloud" data-tag="для_иммунитета" href="#">
           <span>для иммунитета</span>
         </button>
       </li>
       <li>
-        <button class="A_Tag_Cloud" href="#">
+        <button class="A_Tag_Cloud" data-tag="ягоды" href="#">
           <span>ягоды</span>
         </button>
       </li>
       <li>
-        <button class="A_Tag_Cloud" href="#">
+        <button class="A_Tag_Cloud" data-tag="фрукты" href="#">
           <span>фрукты</span>
         </button>
       </li>
       <li>
-        <button class="A_Tag_Cloud" href="#">
+        <button class="A_Tag_Cloud" data-tag="пряности" href="#">
           <span>пряности</span>
         </button>
       </li>
       <li>
-        <button class="A_Tag_Cloud" href="#">
+        <button class="A_Tag_Cloud" data-tag="расслабляющий" href="#">
           <span>расслабляющий</span>
         </button>
       </li>
       <li>
-        <button class="A_Tag_Cloud" href="#">
+        <button class="A_Tag_Cloud" data-tag="от_стресса" href="#">
           <span>от стресса</span>
         </button>
       </li>
       <li>
-        <button class="A_Tag_Cloud" href="#">
+        <button class="A_Tag_Cloud" data-tag="жаропонижающий" href="#">
           <span>жаропонижающий</span>
         </button>
       </li>
       <li>
-        <button class="A_Tag_Cloud" href="#">
+        <button class="A_Tag_Cloud" data-tag="зеленый_чай" href="#">
           <span>зеленый чай</span>
         </button>
       </li>
       <li>
-        <button class="A_Tag_Cloud" href="#">
+        <button class="A_Tag_Cloud" data-tag="черный_чай" href="#">
           <span>черный чай</span>
         </button>
       </li>
       <li>
-        <button class="A_Tag_Cloud" href="#">
+        <button class="A_Tag_Cloud" data-tag="травяной" href="#">
           <span>травяной</span>
         </button>
       </li>
     </ul>
     <ul class="C_RecipeCardS">
-      <li>
-        <div
-          class="O_RecipeCardS"
+
+      <li
+        class="O_RecipeCardS card"
           data-href="./recipes/thyme_and_apricots.html"
+        data-tags="успокаивающий бодрящий от_стресса для_иммунитета ягодный травяной"
         >
           <img alt="" src="images/teaCardImg.png" />
           <div class="W_RecipeCardSBottom">
@@ -172,7 +173,7 @@
                 </a>
               </li>
               <li class="A_Tag">
-                <span> утренний </span>
+                <span> бодрящий </span>
               </li>
               <li class="A_Tag">
                 <span> от стресса </span>
@@ -188,10 +189,58 @@
               </li>
             </ul>
           </div>
-        </div>
       </li>
-      <li>
-        <div class="O_RecipeCardS">
+
+
+      <li class="O_RecipeCardS card"
+          data-tags="зеленый_чай ягодный успокаивающий">
+          <img alt="" src="images/teaCardImg.png" />
+          <div class="W_RecipeCardSBottom">
+            <span class="A_CardTitleHelios">чабрец с курагой</span>
+            <ul class="C_TegCloud">
+
+              <li class="A_Tag">
+                <span> зеленый чай </span>
+              </li>
+              <li class="A_Tag">
+                <span> ягодный </span>
+              </li>
+              <li class="A_Tag">
+                <span> успокаивающий </span>
+              </li>
+            </ul>
+          </div>
+      </li>
+
+
+      <li class="O_RecipeCardS card" data-tags="фрукты пряности бодрящий успокаивающий расслабляющий жаропонижающий">
+          <img alt="" src="images/teaCardImg.png" />
+          <div class="W_RecipeCardSBottom">
+            <span class="A_CardTitleHelios">чабрец с курагой</span>
+            <ul class="C_TegCloud">
+              <li class="A_Tag">
+                <span> фрукты </span>
+              </li>
+              <li class="A_Tag">
+                <span> пряности </span>
+              </li>
+              <li class="A_Tag">
+                <span> бодрящий </span>
+              </li>
+              <li class="A_Tag">
+                <span> успокаивающий </span>
+              </li>
+              <li class="A_Tag">
+                <span> расслабляющий </span>
+              </li>
+              <li class="A_Tag">
+                <span> жаропонижающий </span>
+              </li>
+            </ul>
+          </div>
+      </li>
+      <li class="O_RecipeCardS card"
+          data-tags="успокаивающий для_иммунитета черный_чай для_сна">
           <img alt="" src="images/teaCardImg.png" />
           <div class="W_RecipeCardSBottom">
             <span class="A_CardTitleHelios">чабрец с курагой</span>
@@ -200,82 +249,20 @@
                 <span> успокаивающий </span>
               </li>
               <li class="A_Tag">
-                <span> утренний </span>
-              </li>
-              <li class="A_Tag">
-                <span> от стресса </span>
-              </li>
-              <li class="A_Tag">
                 <span> для иммунитета </span>
               </li>
+
               <li class="A_Tag">
-                <span> ягодный </span>
+                <span> черный чай </span>
               </li>
               <li class="A_Tag">
-                <span> кислый </span>
+                <span> для сна </span>
               </li>
             </ul>
           </div>
-        </div>
-      </li>
-      <li>
-        <div class="O_RecipeCardS">
-          <img alt="" src="images/teaCardImg.png" />
-          <div class="W_RecipeCardSBottom">
-            <span class="A_CardTitleHelios">чабрец с курагой</span>
-            <ul class="C_TegCloud">
-              <li class="A_Tag">
-                <span> успокаивающий </span>
-              </li>
-              <li class="A_Tag">
-                <span> утренний </span>
-              </li>
-              <li class="A_Tag">
-                <span> от стресса </span>
-              </li>
-              <li class="A_Tag">
-                <span> для иммунитета </span>
-              </li>
-              <li class="A_Tag">
-                <span> ягодный </span>
-              </li>
-              <li class="A_Tag">
-                <span> кислый </span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="O_RecipeCardS">
-          <img alt="" src="images/teaCardImg.png" />
-          <div class="W_RecipeCardSBottom">
-            <span class="A_CardTitleHelios">чабрец с курагой</span>
-            <ul class="C_TegCloud">
-              <li class="A_Tag">
-                <span> успокаивающий </span>
-              </li>
-              <li class="A_Tag">
-                <span> утренний </span>
-              </li>
-              <li class="A_Tag">
-                <span> от стресса </span>
-              </li>
-              <li class="A_Tag">
-                <span> для иммунитета </span>
-              </li>
-              <li class="A_Tag">
-                <span> ягодный </span>
-              </li>
-              <li class="A_Tag">
-                <span> кислый </span>
-              </li>
-            </ul>
-          </div>
-        </div>
       </li>
     </ul>
-    <section class="W_RecipeCardL">
+    <div class="W_RecipeCardL card" data-tags="фрукты успокаивающий расслабляющий жаропонижающий ягодный зеленый_чай">
       <div class="O_RecipeCardL">
         <div class="W_RecipeCardLeft">
           <div class="W_RecipeCardText">
@@ -289,52 +276,63 @@
             </div>
           </div>
           <div class="C_TegCloud">
+            <div class="A_Tag"><span>фрукты</span></div>
             <div class="A_Tag"><span>успокаивающий</span></div>
-            <div class="A_Tag"><span>утренний</span></div>
-            <div class="A_Tag"><span>от стресса</span></div>
-            <div class="A_Tag"><span>для иммунитета</span></div>
+            <div class="A_Tag"><span>расслабляющий</span></div>
+            <div class="A_Tag"><span>жаропонижающий</span></div>
             <div class="A_Tag"><span>ягодный</span></div>
-            <div class="A_Tag"><span>кислый</span></div>
+            <div class="A_Tag"><span>зеленый чай</span></div>
           </div>
         </div>
         <div class="A_ImgRecipeL">
           <img alt="" src="images/index/A_ImgRecipeL.png" />
         </div>
       </div>
-    </section>
+    </div>
     <ul class="C_RecipeCardS">
       <li>
-        <div class="O_RecipeCardS">
+        <div class="O_RecipeCardS card" data-tags="для_сна ягоды">
           <img alt="" src="images/teaCardImg.png" />
           <div class="W_RecipeCardSBottom">
             <span class="A_CardTitleHelios">чабрец с курагой</span>
             <ul class="C_TegCloud">
               <li>
                 <a class="A_Tag" href="#">
-                  <span> успокаивающий </span>
+                  <span> для сна </span>
                 </a>
               </li>
               <li class="A_Tag">
-                <span> утренний </span>
+                <span> ягоды </span>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="O_RecipeCardS card" data-tags="пряности от_стресса жаропонижающий зеленый_чай">
+          <img alt="" src="images/teaCardImg.png" />
+          <div class="W_RecipeCardSBottom">
+            <span class="A_CardTitleHelios">чабрец с курагой</span>
+            <ul class="C_TegCloud">
+              <li class="A_Tag">
+                <span> пряности </span>
               </li>
               <li class="A_Tag">
                 <span> от стресса </span>
               </li>
               <li class="A_Tag">
-                <span> для иммунитета </span>
+                <span> жаропонижающий </span>
               </li>
               <li class="A_Tag">
-                <span> ягодный </span>
-              </li>
-              <li class="A_Tag">
-                <span> кислый </span>
+                <span> зеленый чай </span>
               </li>
             </ul>
           </div>
         </div>
       </li>
       <li>
-        <div class="O_RecipeCardS">
+        <div class="O_RecipeCardS card" data-tags="успокаивающий ягоды травяной от_стресса">
           <img alt="" src="images/teaCardImg.png" />
           <div class="W_RecipeCardSBottom">
             <span class="A_CardTitleHelios">чабрец с курагой</span>
@@ -343,196 +341,19 @@
                 <span> успокаивающий </span>
               </li>
               <li class="A_Tag">
-                <span> утренний </span>
+                <span> ягоды </span>
+              </li>
+              <li class="A_Tag">
+                <span> травяной </span>
               </li>
               <li class="A_Tag">
                 <span> от стресса </span>
-              </li>
-              <li class="A_Tag">
-                <span> для иммунитета </span>
-              </li>
-              <li class="A_Tag">
-                <span> ягодный </span>
-              </li>
-              <li class="A_Tag">
-                <span> кислый </span>
               </li>
             </ul>
           </div>
         </div>
       </li>
-      <li>
-        <div class="O_RecipeCardS">
-          <img alt="" src="images/teaCardImg.png" />
-          <div class="W_RecipeCardSBottom">
-            <span class="A_CardTitleHelios">чабрец с курагой</span>
-            <ul class="C_TegCloud">
-              <li class="A_Tag">
-                <span> успокаивающий </span>
-              </li>
-              <li class="A_Tag">
-                <span> утренний </span>
-              </li>
-              <li class="A_Tag">
-                <span> от стресса </span>
-              </li>
-              <li class="A_Tag">
-                <span> для иммунитета </span>
-              </li>
-              <li class="A_Tag">
-                <span> ягодный </span>
-              </li>
-              <li class="A_Tag">
-                <span> кислый </span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="O_RecipeCardS">
-          <img alt="" src="images/teaCardImg.png" />
-          <div class="W_RecipeCardSBottom">
-            <span class="A_CardTitleHelios">чабрец с курагой</span>
-            <ul class="C_TegCloud">
-              <li class="A_Tag">
-                <span> успокаивающий </span>
-              </li>
-              <li class="A_Tag">
-                <span> утренний </span>
-              </li>
-              <li class="A_Tag">
-                <span> от стресса </span>
-              </li>
-              <li class="A_Tag">
-                <span> для иммунитета </span>
-              </li>
-              <li class="A_Tag">
-                <span> ягодный </span>
-              </li>
-              <li class="A_Tag">
-                <span> кислый </span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </li>
-    </ul>
-    <ul class="C_RecipeCardS">
-      <li>
-        <div class="O_RecipeCardS">
-          <img alt="" src="images/teaCardImg.png" />
-          <div class="W_RecipeCardSBottom">
-            <span class="A_CardTitleHelios">чабрец с курагой</span>
-            <ul class="C_TegCloud">
-              <li>
-                <a class="A_Tag" href="#">
-                  <span> успокаивающий </span>
-                </a>
-              </li>
-              <li class="A_Tag">
-                <span> утренний </span>
-              </li>
-              <li class="A_Tag">
-                <span> от стресса </span>
-              </li>
-              <li class="A_Tag">
-                <span> для иммунитета </span>
-              </li>
-              <li class="A_Tag">
-                <span> ягодный </span>
-              </li>
-              <li class="A_Tag">
-                <span> кислый </span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="O_RecipeCardS">
-          <img alt="" src="images/teaCardImg.png" />
-          <div class="W_RecipeCardSBottom">
-            <span class="A_CardTitleHelios">чабрец с курагой</span>
-            <ul class="C_TegCloud">
-              <li class="A_Tag">
-                <span> успокаивающий </span>
-              </li>
-              <li class="A_Tag">
-                <span> утренний </span>
-              </li>
-              <li class="A_Tag">
-                <span> от стресса </span>
-              </li>
-              <li class="A_Tag">
-                <span> для иммунитета </span>
-              </li>
-              <li class="A_Tag">
-                <span> ягодный </span>
-              </li>
-              <li class="A_Tag">
-                <span> кислый </span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="O_RecipeCardS">
-          <img alt="" src="images/teaCardImg.png" />
-          <div class="W_RecipeCardSBottom">
-            <span class="A_CardTitleHelios">чабрец с курагой</span>
-            <ul class="C_TegCloud">
-              <li class="A_Tag">
-                <span> успокаивающий </span>
-              </li>
-              <li class="A_Tag">
-                <span> утренний </span>
-              </li>
-              <li class="A_Tag">
-                <span> от стресса </span>
-              </li>
-              <li class="A_Tag">
-                <span> для иммунитета </span>
-              </li>
-              <li class="A_Tag">
-                <span> ягодный </span>
-              </li>
-              <li class="A_Tag">
-                <span> кислый </span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="O_RecipeCardS">
-          <img alt="" src="images/teaCardImg.png" />
-          <div class="W_RecipeCardSBottom">
-            <span class="A_CardTitleHelios">чабрец с курагой</span>
-            <ul class="C_TegCloud">
-              <li class="A_Tag">
-                <span> успокаивающий </span>
-              </li>
-              <li class="A_Tag">
-                <span> утренний </span>
-              </li>
-              <li class="A_Tag">
-                <span> от стресса </span>
-              </li>
-              <li class="A_Tag">
-                <span> для иммунитета </span>
-              </li>
-              <li class="A_Tag">
-                <span> ягодный </span>
-              </li>
-              <li class="A_Tag">
-                <span> кислый </span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </li>
+
     </ul>
     <div class="W_Text">
       <p class="A_Text">Как мы&nbsp;пишем рецепты</p>

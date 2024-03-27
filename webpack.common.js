@@ -10,7 +10,8 @@ const CopyPlugin = require('copy-webpack-plugin')
 module.exports = {
   entry: {
     index: './src/index.js',
-    fermentation: './src/js/typesoftee/fermentation.js'
+    fermentation: './src/js/typesoftee/fermentation.js',
+    recipes: './src/js/recipes.js'
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -157,7 +158,8 @@ module.exports = {
 
     new HtmlWebpackPlugin({
       template: './src/recipes.html',
-      filename: './recipes.html'
+      filename: './recipes.html',
+      chunks: ['recipes']
     }),
 
     new HtmlWebpackPlugin({
