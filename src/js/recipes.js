@@ -2,6 +2,61 @@ import '../index.css'
 
 let activeTags = []
 
+const tagMap = {
+  все: 'all',
+  успокаивающий: 'soothing',
+  бодрящий: 'invigorating',
+  'для сна': 'for_sleeping',
+  'для иммунитета': 'immune',
+  ягоды: 'berries',
+  фрукты: 'fruit',
+  пряности: 'spices',
+  расслабляющий: 'relaxing',
+  'от стресса': 'from_stress',
+  жаропонижающий: 'antipyretic',
+  'зеленый чай': 'green_tea',
+  'черный чай': 'black tea',
+  травяной: 'herbal'
+}
+
+function convertTagsToLatin(tags) {
+  return tags.map((tag) => tagMap[tag] || tag)
+}
+
+function convertTagsFromLatin(tags) {
+  const reverseMap = Object.fromEntries(
+    Object.entries(tagMap).map(([k, v]) => [v, k])
+  )
+  return tags.map((tag) => reverseMap[tag] || tag)
+}
+
+function updateUrlWithTags(tags) {
+  const tagsInLatin = convertTagsToLatin(tags)
+  const queryString = tagsInLatin.length ? `?tags=${tagsInLatin.join(',')}` : ''
+  history.pushState(
+    { tags: tagsInLatin },
+    '',
+    `${window.location.pathname}${queryString}`
+  )
+}
+
+function initTagsFromUrl() {
+  const urlParams = new URLSearchParams(window.location.search)
+  const tagsInLatin = urlParams.get('tags')
+    ? urlParams.get('tags').split(',')
+    : []
+
+  if (tagsInLatin.length > 0) {
+    const tags = convertTagsFromLatin(tagsInLatin)
+    activeTags = [] // Очистить текущие активные теги перед применением новых
+    tags.forEach((tag) => toggleTagSelection(tag))
+  } else {
+    // Вызываем toggleTagSelection('все') только если в URL нет тегов
+    // Это предотвращает сброс до "все" после инициализации тегов из URL
+    toggleTagSelection('все')
+  }
+}
+
 function updateActiveTagsDisplay() {
   document.querySelectorAll('.A_Tag_Cloud').forEach((button) => {
     button.classList.remove('active')
@@ -41,7 +96,7 @@ function filterCards() {
   cards.forEach((card) => {
     card.querySelectorAll('.A_Tag').forEach((tagElement) => {
       tagElement.classList.remove('active')
-      const tagText = tagElement.textContent.trim().replace(/\s+/g, '_')
+      const tagText = tagElement.textContent.trim()
       if (activeTags.includes(tagText)) {
         tagElement.classList.add('active')
       }
@@ -78,9 +133,12 @@ function toggleTagSelection(tag) {
   }
 
   filterCards()
+  updateUrlWithTags(activeTags) // Обновляем URL после изменения активных тегов
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  initTagsFromUrl() // Сначала инициализируем теги из URL
+
   document.querySelectorAll('.A_Tag_Cloud').forEach((button) => {
     button.addEventListener('click', () => {
       const tag = button.getAttribute('data-tag')
@@ -88,5 +146,5 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   })
 
-  toggleTagSelection('все')
+  // Убираем вызов toggleTagSelection('все') отсюда, так как он уже есть в initTagsFromUrl
 })
