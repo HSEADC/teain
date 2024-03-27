@@ -1,7 +1,12 @@
 html,
 body {
+  font-smooth: never;
+  -webkit-font-smoothing: antialiased;
   height: 100%;
+  -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
+
+  text-rendering: optimizeLegibility;
 }
 
 body,

@@ -116,11 +116,12 @@
 }
 
 .A_Tag {
+  align-items: center;
   background: transparent;
   border: 1px solid var(--green);
   display: flex;
+  justify-content: center;
   padding: 3px 10px;
-  @include contentCenter();
   scale: 0.9;
   text-decoration: none;
 
@@ -134,10 +135,10 @@
     text-align: justify;
   }
 
-
   &:hover {
-    transform: scale(1.1); /* Используйте свойство transform для масштабирования */
-
+    transform: scale(
+      1.1
+    ); /* Используйте свойство transform для масштабирования */
   }
 
   &:not(:active) {
@@ -372,7 +373,6 @@
   font-size: 1.375rem;
   font-weight: 400;
 }
-
 
 .A_SearchResult {
   color: var(--darkGreen);

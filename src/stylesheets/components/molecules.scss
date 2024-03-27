@@ -32,11 +32,12 @@
   transition: all 0.3s ease;
 
   button {
-    @include displayFlex;
-    @include contentCenter;
+    align-items: center;
     background: transparent;
     border: none;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
 
     max-width: 25px;
     padding: 0;

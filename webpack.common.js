@@ -137,39 +137,6 @@ module.exports = {
       template: './src/tea.html',
       filename: './tea.html'
     }),
-    new HtmlWebpackPlugin({
-      template: './src/splash.html',
-      filename: './splash.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/about.html',
-      filename: './about.html'
-    }),
-
-    new HtmlWebpackPlugin({
-      template: './src/articles.html',
-      filename: './articles.html'
-    }),
-
-    new HtmlWebpackPlugin({
-      template: './src/typesoftee.html',
-      filename: './typesoftee.html'
-    }),
-
-    new HtmlWebpackPlugin({
-      template: './src/media.html',
-      filename: './media.html'
-    }),
-
-    new HtmlWebpackPlugin({
-      template: './src/media/news.html',
-      filename: './media/news.html'
-    }),
-
-    new HtmlWebpackPlugin({
-      template: './src/media/mesta.html',
-      filename: './media/mesta.html'
-    }),
 
     //Categories
     new HtmlWebpackPlugin({
@@ -185,8 +152,8 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/articles/recipes.html',
-      filename: './articles/recipes.html'
+      template: './src/recipes.html',
+      filename: './recipes.html'
     }),
 
     new HtmlWebpackPlugin({
