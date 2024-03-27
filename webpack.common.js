@@ -9,7 +9,9 @@ const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   entry: {
-    index: './src/index.js'
+    index: './src/index.js',
+    fermentation: './src/js/typesoftee/fermentation.js',
+    recipes: './src/js/recipes.js'
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -103,6 +105,9 @@ module.exports = {
       }
     ]
   },
+  resolve: {
+    extensions: ['.js', '.jsx', '.json']
+  },
   plugins: [
     new CopyPlugin({
       patterns: [
@@ -130,22 +135,8 @@ module.exports = {
 
     // Section
     new HtmlWebpackPlugin({
-      template: './src/splash.html',
-      filename: './splash.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/about.html',
-      filename: './about.html'
-    }),
-
-    new HtmlWebpackPlugin({
-      template: './src/articles.html',
-      filename: './articles.html'
-    }),
-
-    new HtmlWebpackPlugin({
-      template: './src/typesoftee.html',
-      filename: './typesoftee.html'
+      template: './src/tea.html',
+      filename: './tea.html'
     }),
 
     new HtmlWebpackPlugin({
@@ -153,64 +144,27 @@ module.exports = {
       filename: './media.html'
     }),
 
-    // Filtr
     new HtmlWebpackPlugin({
-      template: './src/articles/podborki.html',
-      filename: './articles/podborki.html'
-    }),
-
-    new HtmlWebpackPlugin({
-      template: './src/articles/sovety.html',
-      filename: './articles/sovety.html'
-    }),
-
-    new HtmlWebpackPlugin({
-      template: './src/articles/rezepty.html',
-      filename: './articles/rezepty.html'
-    }),
-
-    new HtmlWebpackPlugin({
-      template: './src/typesoftee/ferm.html',
-      filename: './typesoftee/ferm.html'
-    }),
-
-    new HtmlWebpackPlugin({
-      template: './src/typesoftee/region.html',
-      filename: './typesoftee/region.html'
-    }),
-
-    new HtmlWebpackPlugin({
-      template: './src/typesoftee/deystvie.html',
-      filename: './typesoftee/deystvie.html'
-    }),
-
-    new HtmlWebpackPlugin({
-      template: './src/media/news.html',
-      filename: './media/news.html'
-    }),
-
-    new HtmlWebpackPlugin({
-      template: './src/media/mesta.html',
-      filename: './media/mesta.html'
+      template: './src/typesoftee/fermentation.html',
+      filename: './typesoftee/fermentation.html',
+      chunks: ['fermentation']
     }),
 
     // Article
     new HtmlWebpackPlugin({
-      template: './src/typesoftee/ferm/black.html',
-      filename: './typesoftee/ferm/black.html'
+      template: './src/typesoftee/fermentation/Indian_Black_Tea.html',
+      filename: './typesoftee/fermentation/Indian_Black_Tea.html'
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/typesoftee/ferm/spirals.html',
-      filename: './typesoftee/ferm/spirals.html'
+      template: './src/recipes.html',
+      filename: './recipes.html',
+      chunks: ['recipes']
     }),
+
     new HtmlWebpackPlugin({
-      template: './src/articles/recipe/recipe.html',
-      filename: './articles/recipe/recipe.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/styleguide.html',
-      filename: './styleguide.html'
+      template: './src/articles/recipes/thyme_and_apricots.html',
+      filename: './articles/recipes/thyme_and_apricots.html'
     }),
 
     // Partials

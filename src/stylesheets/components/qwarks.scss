@@ -3,3 +3,17 @@
   height: 2px;
   width: 100%;
 }
+
+.Q_dgimg {
+  background-image: url('/src/images/index/hero-image.png');
+  background-position: 70% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 1440px) {
+  .Q_dgimg {
+    background-position: 50% 62%;
+    background-size: 102%;
+  }
+}
