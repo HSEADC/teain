@@ -2,42 +2,6 @@ import './index.css'
 import * as $ from 'jquery'
 import anime from 'animejs/lib/anime.es.js'
 
-/*var form = document.getElementById('my-form')
-
-async function handleSubmit(event) {
-  event.preventDefault()
-  var status = document.getElementById('my-form-status')
-  var data = new FormData(event.target)
-  fetch(event.target.action, {
-    method: form.method,
-    body: data,
-    headers: {
-      Accept: 'application/json'
-    }
-  })
-    .then((response) => {
-      if (response.ok) {
-        status.innerHTML = 'Спасибо за подписку!'
-        form.reset()
-      } else {
-        response.json().then((data) => {
-          if (Object.hasOwn(data, 'errors')) {
-            status.innerHTML = data['errors']
-              .map((error) => error['message'])
-              .join(', ')
-          } else {
-            status.innerHTML = 'Возникли проблемы с отправкой почты.'
-          }
-        })
-      }
-    })
-    .catch((error) => {
-      status.innerHTML = 'Возникли проблемы с отправкой почты.'
-    })
-}
-
-form.addEventListener('submit', handleSubmit)*/
-
 $(function () {
   $('#searchBtn').mouseenter(() => {
     console.log('aæ')
@@ -82,11 +46,11 @@ $(function () {
       targetsReversed.forEach((target, index) => {
         anime({
           targets: target,
-          translateY: [30, 0], // Перемещение снизу вверх
-          opacity: [0, 1], // Изменение прозрачности от невидимого к полностью видимому
-          delay: index * 100, // Задержка анимации для каждого последующего элемента
-          duration: 1000, // Продолжительность анимации
-          easing: 'easeOutExpo' // Тип анимации для более плавного движения
+          translateY: [30, 0],
+          opacity: [0, 1],
+          delay: index * 100,
+          duration: 1000,
+          easing: 'easeOutExpo'
         })
       })
     })
@@ -97,11 +61,11 @@ $(function () {
       targetsReversed.forEach((target, index) => {
         anime({
           targets: target,
-          translateY: [0, 30], // Перемещение снизу вверх
-          opacity: [1, 0], // Изменение прозрачности от невидимого к полностью видимому
-          delay: index * 100, // Задержка анимации для каждого последующего элемента
-          duration: 1000, // Продолжительность анимации
-          easing: 'easeOutExpo' // Тип анимации для более плавного движения
+          translateY: [0, 30],
+          opacity: [1, 0],
+          delay: index * 100,
+          duration: 1000,
+          easing: 'easeOutExpo'
         })
       })
     })

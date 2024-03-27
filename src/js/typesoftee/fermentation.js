@@ -15,16 +15,16 @@ $(function () {
         targets: bg,
         opacity: [0, 1],
 
-        fill: ['#F6ECE0', '#CC8931'], // Опционально: изменение цвета фона
+        fill: ['#F6ECE0', '#CC8931'],
         duration: 700,
-        easing: 'easeOutExpo' // Тип анимации для более плавного движения
+        easing: 'easeOutExpo'
       })
       anime({
         targets: arrow,
         // scale: [0, 1],
-        fill: ['#CC8931', '#FFFFFF'], // Опционально: изменение цвета фона
+        fill: ['#CC8931', '#FFFFFF'],
         duration: 700,
-        easing: 'easeOutExpo' // Тип анимации для более плавного движения
+        easing: 'easeOutExpo'
       })
     })
 
@@ -33,16 +33,16 @@ $(function () {
         targets: bg,
         opacity: [1, 0],
 
-        fill: ['#CC8931', '#F6ECE0'], // Опционально: изменение цвета фона
+        fill: ['#CC8931', '#F6ECE0'],
         duration: 700,
-        easing: 'easeOutExpo' // Тип анимации для более плавного движения
+        easing: 'easeOutExpo'
       })
       anime({
         targets: arrow,
         // scale: [0, 1],
-        fill: ['#FFFFFF', '#CC8931'], // Опционально: изменение цвета фона
+        fill: ['#FFFFFF', '#CC8931'],
         duration: 700,
-        easing: 'easeOutExpo' // Тип анимации для более плавного движения
+        easing: 'easeOutExpo'
       })
     })
   })
@@ -52,7 +52,7 @@ $(function () {
     spaceBetween: 24,
     modules: [Navigation],
     navigation: {
-      nextEl: '.A_SliderButtonRight_1', // Используем найденные кнопки для этого свайпера
+      nextEl: '.A_SliderButtonRight_1',
       prevEl: '.A_SliderButtonLeft_1',
       disabledClass: 'A_SliderButton_Disabled'
     }
@@ -63,7 +63,7 @@ $(function () {
     spaceBetween: 24,
     modules: [Navigation],
     navigation: {
-      nextEl: '.A_SliderButtonRight_2', // Используем найденные кнопки для этого свайпера
+      nextEl: '.A_SliderButtonRight_2',
       prevEl: '.A_SliderButtonLeft_2',
       disabledClass: 'A_SliderButton_Disabled'
     }
@@ -73,7 +73,7 @@ $(function () {
     spaceBetween: 24,
     modules: [Navigation],
     navigation: {
-      nextEl: '.A_SliderButtonRight_3', // Используем найденные кнопки для этого свайпера
+      nextEl: '.A_SliderButtonRight_3',
       prevEl: '.A_SliderButtonLeft_3',
       disabledClass: 'A_SliderButton_Disabled'
     }
@@ -83,7 +83,7 @@ $(function () {
     spaceBetween: 24,
     modules: [Navigation],
     navigation: {
-      nextEl: '.A_SliderButtonRight_4', // Используем найденные кнопки для этого свайпера
+      nextEl: '.A_SliderButtonRight_4',
       prevEl: '.A_SliderButtonLeft_4',
       disabledClass: 'A_SliderButton_Disabled'
     }
@@ -93,7 +93,7 @@ $(function () {
     spaceBetween: 24,
     modules: [Navigation],
     navigation: {
-      nextEl: '.A_SliderButtonRight_5', // Используем найденные кнопки для этого свайпера
+      nextEl: '.A_SliderButtonRight_5',
       prevEl: '.A_SliderButtonLeft_5',
       disabledClass: 'A_SliderButton_Disabled'
     }
@@ -128,7 +128,7 @@ $(function () {
         $(this).find('.A_CardTitleHelios').text().toLowerCase() +
         ' ' +
         $(this).find('.A_CardTitleVlas').text().toLowerCase()
-      var cardWords = cardText.split(/\s+/) // Разделение текста на карточке на слова
+      var cardWords = cardText.split(/\s+/)
       var allWordsFound = searchWords.every(function (searchWord) {
         return cardWords.some(function (cardWord) {
           return cardWord.startsWith(searchWord)
