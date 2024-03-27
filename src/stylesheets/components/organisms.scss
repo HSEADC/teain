@@ -210,11 +210,11 @@
 .O_RecipeCardS {
   background: var(--beige-d);
   display: flex;
-
+  flex: 1 1 auto;
   flex-direction: column;
   gap: 24px;
-  height: 100%;
   max-width: 306px;
+  min-height: 0;
 
   .W_RecipeCardSBottom {
     display: flex;

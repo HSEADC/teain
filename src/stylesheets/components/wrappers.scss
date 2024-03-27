@@ -73,10 +73,11 @@
 .W_RecipeCardL {
   align-items: center;
   background: var(--beige-bckg);
+  column-gap: 24px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
   justify-content: center;
+  row-gap: 48px;
 }
 
 .W_QuoteLBack {

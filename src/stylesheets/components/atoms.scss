@@ -136,30 +136,54 @@
   }
 
   &:hover {
-    transform: scale(
-      1.1
-    ); /* Используйте свойство transform для масштабирования */
+    transform: scale(1.1);
   }
 
   &:not(:active) {
-    scale: 1; /* Используйте свойство transform для масштабирования */
-    transition: transform 0.2s ease-in-out; /* Перенесите сюда свойство transition */
+    scale: 1;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &.active {
+    background-color: var(--green);
+    border: 1px solid var(--green);
+    span {
+      color: var(--beige-l);
+    }
   }
 }
 
 .A_Tag_Cloud {
   background: transparent;
   border: 1px solid var(--green);
+  cursor: pointer;
   display: flex;
   font-size: 1.125rem;
   font-weight: 400;
   line-height: 114%;
-  padding: 3px 10px;
+  padding: 6px 20px;
+  scale: 0.9;
   text-align: justify;
 
   span {
     color: var(--green);
     font-family: var(--gramatika);
+  }
+
+  &.active {
+    background-color: var(--green);
+    border: 1px solid var(--green);
+    span {
+      color: var(--beige-l);
+    }
+  }
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:not(:active) {
+    scale: 1;
+    transition: transform 0.5s ease-in-out;
   }
 }
 
