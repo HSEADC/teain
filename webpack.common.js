@@ -167,6 +167,11 @@ module.exports = {
       filename: './articles/recipes/thyme_and_apricots.html'
     }),
 
+    new HtmlWebpackPlugin({
+      template: './src/media/puerh.html',
+      filename: './media/puerh.html'
+    }),
+
     // Partials
     new HtmlWebpackPartialsPlugin([
       {

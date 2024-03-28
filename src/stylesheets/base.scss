@@ -23,7 +23,13 @@ body,
 .body-index {
   .W_RecipeCardL {
     padding: 94px 0 65px;
+
+    @media (min-width: 2560px) {
+      padding: 158px 0 116px;
+    }
   }
+
+
 }
 
 .body-fermentation {
@@ -39,7 +45,7 @@ body,
     background: var(--beige-l);
   }
 
-  
+
   .C_RecipeCardS {
     padding: 49px 0 0;
   }

@@ -15,6 +15,8 @@
   display: flex;
   gap: 84px;
   justify-content: space-between;
+
+
 }
 
 .W_NavBar {
@@ -23,12 +25,18 @@
   justify-content: space-between;
   max-width: 1296px;
   width: 100%;
+
+
 }
 
 .W_Categories {
   background: var(--beige-bckg);
   margin: auto;
   padding: 62px 0 0;
+
+  @media (max-width: 2560px) {
+    padding: 117px 0 0;
+  }
 }
 
 .W_CategoriesLight {
@@ -51,6 +59,11 @@
   margin: auto;
 
   padding: 62px 0 78px;
+
+  @media (min-width: 1920px) {
+    background-image: url('/src/images/index/Q_LineCircle2560.svg');
+
+  }
 }
 
 .W_RecipeCardText {
@@ -60,6 +73,14 @@
 
   .A_Text {
     max-width: 450px;
+
+    @media (min-width: 2560px) {
+      max-width: 705px;
+    }
+  }
+
+  @media (min-width: 2560px) {
+    gap: 24px;
   }
 }
 
@@ -68,6 +89,11 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 50px 0 38px 24px;
+
+  @media (min-width: 2560px) {
+    padding: 50px 0 73px 24px;
+
+  }
 }
 
 .W_RecipeCardL {
@@ -85,6 +111,10 @@
   display: block;
   padding: 271px 0 271px;
   text-decoration: none;
+
+  @media (min-width: 2560px) {
+    padding: 383px 0 361px;
+  }
 }
 
 .W_Container {
@@ -100,15 +130,34 @@
     grid-column: 2 / 11;
     margin: 90px 0;
   }
+
+  @media (min-width: 1920px) {
+    max-width: 1920px;
+    padding: 0 108px;
+
+  }
+
+  @media (min-width: 2560px) {
+    column-gap: 32px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    max-width: 2560px;
+    padding: 0 180px;
+  }
 }
 
 .W_ContainerMediaCard {
+  align-items: start;
   display: flex;
   flex-direction: column;
   gap: 32px;
 
   .A_Link {
     margin-top: 12px;
+  }
+
+  @media (min-width: 2560px) {
+    gap: 40px;
   }
 }
 
@@ -137,13 +186,26 @@
   grid-column: 3 / span 9;
   max-width: 856px;
 
+  @media (min-width: 2560px) {
+    grid-column: 4 / span 6;
+    max-width: 1083px;
+  }
+
   .A_QuoteH {
     margin-bottom: 16px;
     max-width: 830px;
+
+    @media (min-width: 2560px) {
+      max-width: 1446px;
+    }
   }
 
   .A_QuoteTxt {
     margin-bottom: 28px;
+  }
+
+  @media (min-width: 1920px) {
+    grid-column: 4 / span 9;
   }
 }
 
@@ -156,6 +218,10 @@
 .W_TeaTypeCards {
   background: var(--beige-l);
   padding: 62px 0 215px;
+
+  @media (min-width: 2560px) {
+    padding: 96px 0 192px;
+  }
 }
 
 .W_Banner {
@@ -262,13 +328,54 @@
   }
 }
 
+.W_Fact {
+  background-color: var(--beige-d);
+  grid-column: -1 / -7;
+  padding: 45px 110px;
+}
+
+.W_ArticleText {
+  column-gap: 24px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin: 71px auto 0;
+  max-width: 1296px;
+
+  .A_Text {
+    grid-column: 1 / span 5;
+  }
+
+}
+
+.W_Footer {
+  align-items: end;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1296px;
+
+  @media (min-width: 1920px) {
+    max-width: 1704px;
+
+  }
+
+  @media (min-width: 2560px) {
+    max-width: 2273px;
+  }
+}
+
+.W_AuthorsBottom {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
 @media (min-width: 1920px) {
   .W_NavBar {
     max-width: 1638px;
   }
 
   .W_Categories {
-    max-width: 1920px;
     padding: 67px 72px 0;
   }
 
@@ -283,4 +390,15 @@
     max-width: 1440px;
     padding: 0 28px;
   }
+}
+
+@media (min-width: 2560px) {
+  .W_NavBar {
+    max-width: 2200px;
+  }
+
+  .W_Categories {
+    padding: 117px 0 0;
+  }
+
 }

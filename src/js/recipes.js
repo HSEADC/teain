@@ -88,6 +88,21 @@ function filterCards() {
     activeTags.length === 0 ||
     (activeTags.length === 1 && activeTags[0] === 'все')
   ) {
+    // Проверяем, существует ли marker и specialCard перед тем, как использовать метод after
+    if (marker && specialCard) {
+      marker.after(specialCard)
+    }
+  } else {
+    // Аналогично проверяем существование specialCard и container перед выполнением prepend
+    if (specialCard && container) {
+      container.prepend(specialCard)
+    }
+  }
+
+  if (
+    activeTags.length === 0 ||
+    (activeTags.length === 1 && activeTags[0] === 'все')
+  ) {
     marker.after(specialCard)
   } else {
     container.prepend(specialCard)
@@ -137,14 +152,17 @@ function toggleTagSelection(tag) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  initTagsFromUrl() // Сначала инициализируем теги из URL
+  if (window.location.pathname.endsWith('recipes.html')) {
+    initTagsFromUrl() // Сначала инициализируем теги из URL
 
-  document.querySelectorAll('.A_Tag_Cloud').forEach((button) => {
-    button.addEventListener('click', () => {
-      const tag = button.getAttribute('data-tag')
-      toggleTagSelection(tag)
+    document.querySelectorAll('.A_Tag_Cloud').forEach((button) => {
+      button.addEventListener('click', () => {
+        const tag = button.getAttribute('data-tag')
+        toggleTagSelection(tag)
+      })
     })
-  })
+  }
+
 
   // Убираем вызов toggleTagSelection('все') отсюда, так как он уже есть в initTagsFromUrl
 })

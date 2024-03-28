@@ -4,6 +4,12 @@
   gap: 36px;
   justify-content: space-between;
   max-width: 419px;
+
+  @media (min-width: 2560px) {
+    gap: 106px;
+    max-width: 588px;
+
+  }
 }
 
 .C_PreImjs {
@@ -11,6 +17,10 @@
   justify-content: space-between;
   margin: auto;
   max-width: 1296px;
+
+  @media (min-width: 1920px) {
+    max-width: 1704px;
+  }
 }
 
 .C_TegCloud {
@@ -26,6 +36,15 @@
   justify-content: space-between;
   margin: auto;
   max-width: 1296px;
+
+  @media (min-width: 1920px) {
+    max-width: 1704px;
+  }
+
+  @media (min-width: 2560px) {
+    max-width: 2200px;
+
+  }
 }
 
 .C_CardTitl2 {
@@ -67,4 +86,28 @@
   flex-direction: column;
   gap: 48px;
   padding-bottom: 113px;
+}
+
+.C_ArticleCont {
+  display: flex;
+  gap: 24px;
+}
+
+.C_ArticlePic {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 72px auto 0;
+  max-width: 1296px;
+}
+
+.C_Authors {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.C_Socials {
+  display: flex;
+  gap: 24px;
 }
