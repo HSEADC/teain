@@ -2,6 +2,13 @@
 
 .A_Logo {
   width: 110px;
+
+  @media (max-width: 1440px) {
+    img {
+      width: 7.617vw;
+
+    }
+  }
 }
 
 .A_SearchInput {
@@ -42,6 +49,11 @@
     max-width: 575px;
 
   }
+
+  @media (max-width: 1440px) {
+    gap: 1.66vw;
+    max-width: 29.883vw;
+  }
 }
 
 .A_QuoteText {
@@ -50,6 +62,10 @@
 
   @media (min-width: 2560px) {
     font-size: 2rem;
+  }
+
+  @media (max-width: 1440px) {
+    font-size: 1.66vw;
   }
 }
 
@@ -62,6 +78,10 @@
   @media (min-width: 2560px) {
     font-size: 1.75rem;
   }
+
+  @media (max-width: 1440px) {
+    font-size: 1.66vw;
+  }
 }
 
 .A_QuoteAuthor {
@@ -72,6 +92,10 @@
 
   @media (min-width: 2560px) {
     font-size: 1.625rem;
+  }
+
+  @media (max-width: 1440px) {
+    font-size: 1.172vw;
   }
 }
 
@@ -87,6 +111,10 @@
   @media (min-width: 2560px) {
     font-size: 1.5rem;
   }
+
+  @media (max-width: 1440px) {
+    font-size: 1.172vw;
+  }
 }
 
 .A_Title2Helios {
@@ -98,6 +126,11 @@
   @media (min-width: 2560px) {
     font-size: 3.25rem;
   }
+
+  @media (max-width: 1440px) {
+    font-size: 2.832vw;
+
+  }
 }
 
 .A_Title2Vlas {
@@ -108,6 +141,10 @@
   text-stroke: 1px var(--darkGreen);
   @media (min-width: 2560px) {
     font-size: 2rem;
+  }
+  @media (max-width: 1440px) {
+    font-size: 2.051vw;
+
   }
 }
 
@@ -128,6 +165,10 @@
   @media (min-width: 2560px) {
     font-size: 1.5rem;
   }
+
+  @media (max-width: 1440px) {
+    font-size: 1.172vw;
+  }
 }
 
 .A_Link {
@@ -142,6 +183,10 @@
   @media (min-width: 2560px) {
     font-size: 1.5rem;
   }
+
+  @media (max-width: 1440px) {
+    font-size: 1.172vw;
+  }
 }
 
 .A_PreImg {
@@ -153,6 +198,10 @@
 
   @media (min-width: 1920px) {
     max-width: 408px;
+  }
+
+  @media (max-width: 1440px) {
+    max-width: 21.191vw;
   }
 }
 
@@ -168,12 +217,19 @@
 
   width: fit-content;
 
+  @media (max-width: 1440px) {
+    padding: 0.195vw 0.684vw;
+  }
+
   span {
     color: var(--darkGreen);
     font-family: var(--gramatika);
     font-size: 0.75rem;
     line-height: 172%;
     text-align: justify;
+    @media (max-width: 1440px) {
+      font-size: 0.879vw;
+    }
   }
 
   &:hover {
@@ -249,6 +305,10 @@
   @media (min-width: 2560px) {
     font-size: 1.875rem;
   }
+
+  @media (max-width: 1440px) {
+    font-size: 1.66vw;
+  }
 }
 
 .A_TeaTypeCard {
@@ -278,6 +338,13 @@
     max-width: 526px;
     min-height: 675px;
   }
+
+  @media (max-width: 1440px) {
+    gap: 14.941vw;
+    max-width: 21.191vw;
+    min-height: 27.734vw;
+    padding: 3.418vw 1.66vw 1.66vw;
+  }
 }
 
 .A_CardTitl1 {
@@ -289,6 +356,10 @@
 
   @media (min-width: 2560px) {
     font-size: 1.375rem;
+  }
+
+  @media (max-width: 1440px) {
+    font-size: 1.367vw;
   }
 }
 
@@ -303,6 +374,10 @@
     font-size: 1.375rem;
     -webkit-text-stroke: 1px var(--darkGreen);
     text-stroke: 1px var(--darkGreen);
+  }
+
+  @media (max-width: 1440px) {
+    font-size: 1.074vw;
   }
 }
 
@@ -366,6 +441,10 @@
   font-size: 1.5rem;
   font-weight: 900;
   text-decoration: none;
+
+  @media (max-width: 1440px) {
+    font-size: 1.367vw;
+  }
 }
 
 .A_Title1 {
@@ -419,6 +498,10 @@
   font-size: 1rem;
   font-weight: 900;
   line-height: 118%;
+
+  @media (max-width: 1440px) {
+    font-size: 1.074vw;
+  }
 }
 
 .A_CardTitleVlas {
@@ -520,22 +603,6 @@
   line-height: 118%;
 }
 
-
-@media (max-width: 1440px) {
-  .A_quote {
-    max-width: 395px;
-
-    .A_QuoteText {
-      font-size: 1.375rem;
-      line-height: 118%;
-    }
-
-    .A_QuoteAuthor {
-      font-size: 1rem;
-      font-weight: 700;
-    }
-  }
-}
 
 
 
