@@ -48,11 +48,9 @@ function initTagsFromUrl() {
 
   if (tagsInLatin.length > 0) {
     const tags = convertTagsFromLatin(tagsInLatin)
-    activeTags = [] // Очистить текущие активные теги перед применением новых
+    activeTags = []
     tags.forEach((tag) => toggleTagSelection(tag))
   } else {
-    // Вызываем toggleTagSelection('все') только если в URL нет тегов
-    // Это предотвращает сброс до "все" после инициализации тегов из URL
     toggleTagSelection('все')
   }
 }
@@ -88,12 +86,10 @@ function filterCards() {
     activeTags.length === 0 ||
     (activeTags.length === 1 && activeTags[0] === 'все')
   ) {
-    // Проверяем, существует ли marker и specialCard перед тем, как использовать метод after
     if (marker && specialCard) {
       marker.after(specialCard)
     }
   } else {
-    // Аналогично проверяем существование specialCard и container перед выполнением prepend
     if (specialCard && container) {
       container.prepend(specialCard)
     }
@@ -148,7 +144,7 @@ function toggleTagSelection(tag) {
   }
 
   filterCards()
-  updateUrlWithTags(activeTags) // Обновляем URL после изменения активных тегов
+  updateUrlWithTags(activeTags)
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -162,7 +158,4 @@ document.addEventListener('DOMContentLoaded', () => {
       })
     })
   }
-
-
-  // Убираем вызов toggleTagSelection('все') отсюда, так как он уже есть в initTagsFromUrl
 })

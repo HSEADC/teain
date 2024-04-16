@@ -4,15 +4,28 @@
   grid-template-columns: repeat(12, 1fr);
   height: 100%;
   margin: 0 auto;
-  max-width: 1440px;
+  max-width: 1439px;
   padding: 0 72px;
   position: relative;
   width: 100%;
 
-  @media (max-width: 1440px) {
-    column-gap: 1.66vw;
-    max-width: 82.422vw;
-    padding: 0 4.98vw;
+  @media (min-width: 1920px) {
+    max-width: 1920px;
+  }
+
+  @media (max-width: 1439px) {
+    column-gap: 17px;
+    grid-template-columns: repeat(12, 1fr);
+    max-width: 1024px;
+    padding: 0 51px;
+  }
+
+  @media (max-width: 744px) {
+    column-gap: 2.791vw;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 86.047vw;
+    padding: 0 6.977vw;
   }
 }
 
@@ -22,11 +35,13 @@
   gap: 84px;
   justify-content: space-between;
 
-  @media (max-width: 1440px) {
-    gap: 6.836vw;
+  @media (max-width: 1439px) {
+    gap: 60px;
   }
 
-
+  @media (max-width: 744px) {
+    display: none;
+  }
 }
 
 .W_NavBar {
@@ -36,11 +51,16 @@
   max-width: 1296px;
   width: 100%;
 
-  @media (max-width: 1440px) {
-    max-width: 89vw;
+  @media (min-width: 1920px) {
+    max-width: 1702px;
+  }
+  @media (min-width: 2560px) {
+    max-width: 2200px;
   }
 
-
+  @media (max-width: 1439px) {
+    max-width: 921px;
+  }
 }
 
 .W_Categories {
@@ -48,13 +68,16 @@
   margin: auto;
   padding: 62px 0 0;
 
+  @media (min-width: 1920px) {
+    padding: 67px 72px 0;
+  }
+
   @media (min-width: 2560px) {
     padding: 117px 0 0;
   }
 
-  @media (max-width: 1440px) {
-    padding: 4.883vw 0 0;
-
+  @media (max-width: 1439px) {
+    padding: 50px 0 0;
   }
 }
 
@@ -67,8 +90,11 @@
   flex-direction: column;
   gap: 12px;
 
-  @media (max-width: 1440px) {
+  @media (max-width: 1439px) {
     gap: 1.172vw;
+  }
+  @media (max-width: 744px) {
+    gap: 1.86vw;
   }
 }
 
@@ -78,20 +104,23 @@
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: contain;
-
   margin: auto;
-
   padding: 62px 0 78px;
+
+  @media (min-width: 2560px) {
+    padding: 143px 0 78px;
+  }
 
   @media (min-width: 1920px) {
     background-image: url('/src/images/index/Q_LineCircle2560.svg');
-
   }
-  @media (max-width: 1440px) {
-    padding: 5.469vw 0 5.469vw;
+  @media (max-width: 1439px) {
+    padding: 62px 0 56px;
   }
 
-
+  @media (max-width: 744px) {
+    padding: 11.628vw 0 9.07vw;
+  }
 }
 
 .W_RecipeCardText {
@@ -100,14 +129,19 @@
   gap: 30px;
 
   .A_Text {
+    line-height: 120%;
     max-width: 450px;
 
     @media (min-width: 2560px) {
       max-width: 705px;
     }
 
-    @media (max-width: 1440px) {
-      max-width: 36.523vw;
+    @media (max-width: 1439px) {
+      max-width: 357px;
+    }
+
+    @media (max-width: 744px) {
+      max-width: none;
     }
   }
 
@@ -116,7 +150,11 @@
   }
 
   @media (max-width: 14440px) {
-    gap: 0.977vw;
+    gap: 25px;
+  }
+
+  @media (max-width: 744px) {
+    gap: 3.721vw;
   }
 }
 
@@ -127,12 +165,16 @@
   padding: 50px 0 38px 24px;
 
   @media (min-width: 2560px) {
-    padding: 50px 0 73px 24px;
-
+    padding: 70px 0 77px 24px;
   }
 
-  @media (max-width: 1440px) {
-    padding: 3.418vw 0 2.246vw 1.66vw;
+  @media (max-width: 1439px) {
+    padding: 35.5px 0 23px 17px;
+  }
+
+  @media (max-width: 744px) {
+    gap: 29.535vw;
+    padding: 8.14vw 0 0 3.953vw;
   }
 }
 
@@ -143,7 +185,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  row-gap: 48px;
+  row-gap: 17px;
 }
 
 .W_QuoteLBack {
@@ -156,8 +198,12 @@
     padding: 383px 0 361px;
   }
 
-  @media (max-width: 1440px) {
-    padding: 18.75vw 0 18.75vw;
+  @media (max-width: 1439px) {
+    padding: 192px 0 156px;
+  }
+
+  @media (max-width: 744px) {
+    padding: 24.651vw 0 48.605vw;
   }
 }
 
@@ -167,8 +213,9 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   margin: 0 auto;
-  max-width: 1440px;
+  max-width: 1439px;
   padding: 0 72px;
+  position: relative;
 
   .A_Lead {
     grid-column: 2 / 11;
@@ -178,7 +225,6 @@
   @media (min-width: 1920px) {
     max-width: 1920px;
     padding: 0 108px;
-
   }
 
   @media (min-width: 2560px) {
@@ -189,10 +235,17 @@
     padding: 0 180px;
   }
 
-  @media (max-width: 1440px) {
-    column-gap: 1.66vw;
-    max-width: 100vw;
-    padding: 0 4.883vw;
+  @media (max-width: 1439px) {
+    column-gap: 17px;
+    max-width: 921px;
+    padding: 0;
+  }
+
+  @media (max-width: 744px) {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
@@ -209,6 +262,10 @@
   @media (min-width: 2560px) {
     gap: 40px;
   }
+
+  @media (max-width: 1439px) {
+    gap: 23px;
+  }
 }
 
 .W_LeadContainer {
@@ -216,7 +273,7 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   margin: 0 auto;
-  max-width: 1440px;
+  max-width: 1439px;
   padding: 0 72px;
   position: relative;
 
@@ -241,29 +298,43 @@
     max-width: 1083px;
   }
 
+  @media (min-width: 1920px) {
+    grid-column: 4 / span 9;
+  }
+
+  @media (max-width: 1439px) {
+    grid-column: 3 / span 10;
+    max-width: 600px;
+  }
+
+  @media (max-width: 744px) {
+    max-width: none;
+  }
+
   .A_QuoteH {
     margin-bottom: 16px;
     max-width: 830px;
+
+    @media (min-width: 1920px) {
+      max-width: 857px;
+    }
 
     @media (min-width: 2560px) {
       max-width: 1446px;
     }
 
-    @media (max-width: 1440px) {
-      margin-bottom: 1.367vw;
+    @media (max-width: 1439px) {
+      line-height: 120%;
+      margin-bottom: 6px;
     }
   }
 
   .A_QuoteTxt {
     margin-bottom: 28px;
-  }
 
-  @media (min-width: 1920px) {
-    grid-column: 4 / span 9;
-  }
-
-  @media (max-width: 1440px) {
-    max-width: 59.375vw;
+    @media (max-width: 1439px) {
+      line-height: 120%;
+    }
   }
 }
 
@@ -271,10 +342,6 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-
-  @media (max-width: 1440px) {
-    gap: 1.074vw;
-  }
 }
 
 .W_TeaTypeCards {
@@ -285,8 +352,8 @@
     padding: 96px 0 192px;
   }
 
-  @media (max-width: 1440px) {
-    padding: 4.297vw 0 14.941vw;
+  @media (max-width: 1439px) {
+    padding: 61px 0 153px;
   }
 }
 
@@ -298,7 +365,7 @@
 
 .W_LinkContainer {
   margin: 0 auto;
-  max-width: 1440px;
+  max-width: 1439px;
   padding: 30px 72px 0;
 }
 
@@ -307,7 +374,7 @@
 }
 
 .W_SectionDescription {
-  padding: 156px 0 68px;
+  padding: 10.833vw 0 4.722vw;
 
   .A_Title1 {
     grid-column: span 2;
@@ -315,6 +382,11 @@
 
   .A_Text {
     grid-column: 6 / -3;
+
+    @media (max-width: 1439px) {
+      font-size: 1.21vw;
+      grid-column: 4 / span 6;
+    }
   }
 }
 
@@ -387,7 +459,7 @@
 }
 
 .W_RecipeButton {
-  .A_Describe {
+  .zzzzzzA_Describe {
     grid-column: 6 / -4;
     margin-top: 37px;
     max-width: 377px;
@@ -410,7 +482,6 @@
   .A_Text {
     grid-column: 1 / span 5;
   }
-
 }
 
 .W_Footer {
@@ -422,11 +493,14 @@
 
   @media (min-width: 1920px) {
     max-width: 1704px;
-
   }
 
   @media (min-width: 2560px) {
     max-width: 2273px;
+  }
+
+  @media (max-width: 1439px) {
+    max-width: 921px;
   }
 }
 
@@ -434,38 +508,8 @@
   display: flex;
   flex-direction: column;
   gap: 11px;
-}
 
-@media (min-width: 1920px) {
-  .W_NavBar {
-    max-width: 1638px;
-  }
-
-  .W_Categories {
-    padding: 67px 72px 0;
-  }
-
-  .W_StartComp {
-    max-width: 1920px;
+  @media (max-width: 1439px) {
+    gap: 4px;
   }
 }
-
-@media (max-width: 1440px) {
-  .W_StartComp {
-    column-gap: 16px;
-    max-width: 1440px;
-    padding: 0 28px;
-  }
-}
-
-@media (min-width: 2560px) {
-  .W_NavBar {
-    max-width: 2200px;
-  }
-
-  .W_Categories {
-    padding: 117px 0 0;
-  }
-
-}
-

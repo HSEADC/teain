@@ -24,19 +24,21 @@ body,
   .W_RecipeCardL {
     padding: 94px 0 65px;
 
+    @media (min-width: 1920px) {
+      padding: 174px 0 65px;
+    }
+
     @media (min-width: 2560px) {
       padding: 158px 0 116px;
     }
 
-    @media (max-width: 1440px) {
-      padding: 4.883vw 0 4.395vw;
+    @media (max-width: 1439px) {
+      padding: 46px 0;
     }
   }
-
-
 }
 
-.body-fermentation {
+.S_Fermentation {
   background-color: #fcf6ee;
   overflow-x: hidden;
   position: relative;
@@ -48,7 +50,6 @@ body,
   .O_RecipeCardS {
     background: var(--beige-l);
   }
-
 
   .C_RecipeCardS {
     padding: 49px 0 0;
