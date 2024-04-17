@@ -603,8 +603,8 @@
   font-weight: 900;
   line-height: 118%;
 
-  @media (max-width: 1439px) {
-    font-size: 0.75rem;
+  @media (min-width: 2560px) {
+    font-size: 1.25rem;
   }
 }
 

@@ -328,6 +328,14 @@
   margin: 0 auto;
   max-width: 1296px;
   width: 100%;
+
+  @media (min-width: 1920px) {
+    max-width: 1704px;
+  }
+
+  @media (min-width: 2560px) {
+    max-width: 2200px;
+  }
 }
 
 .O_RecipeCardS {
@@ -339,11 +347,25 @@
   max-width: 306px;
   min-height: 0;
 
+  @media (min-width: 1920px) {
+    max-width: 408px;
+  }
+
+  @media (min-width: 2560px) {
+    gap: 27px;
+    max-width: 532px;
+  }
+
   .W_RecipeCardSBottom {
     display: flex;
     flex-direction: column;
     gap: 32px;
     padding: 0 25px 25px;
+
+    @media (min-width: 2560px) {
+      gap: 46px;
+      padding: 0 25px 43px;
+    }
   }
 
   .C_TegCloud {
