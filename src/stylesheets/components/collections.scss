@@ -21,6 +21,7 @@
   justify-content: space-between;
   margin: auto;
   max-width: 1296px;
+  width: 100%;
 
   @media (min-width: 1920px) {
     max-width: 1704px;
@@ -31,6 +32,15 @@
 
   @media (max-width: 1439px) {
     max-width: 921px;
+  }
+
+  @media (max-width: 1023px) {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    max-width: none;
+    padding: 0 36px;
   }
   @media (max-width: 744px) {
     flex-wrap: wrap;

@@ -57,6 +57,10 @@
       top: 200px;
     }
 
+    @media (max-width: 1023px) {
+      top: 38vh;
+    }
+
     @media (max-width: 744px) {
       grid-column: 1 / span 4;
       top: 87.907vw;
@@ -82,6 +86,11 @@
       line-height: 112%;
     }
 
+    @media (max-width: 1023px) {
+      grid-column: 1 / -1;
+      max-width: 374px;
+    }
+
     @media (max-width: 744px) {
       grid-column: span 4;
     }
@@ -89,6 +98,10 @@
 
   .M_Title2 {
     grid-column: span 6;
+
+    @media (max-width: 1023px) {
+      grid-column: 1 / -1;
+    }
 
     @media (max-width: 744px) {
       grid-column: span 4;
@@ -107,8 +120,15 @@
   }
 
   @media (max-width: 1439px) {
-    column-gap: 1.66vw;
+    column-gap: 17px;
     max-width: 921px;
+  }
+
+  @media (max-width: 1023px) {
+    column-gap: 12px;
+    max-width: none;
+    padding: 0 36px;
+    row-gap: 22px;
   }
 
   @media (max-width: 744px) {
@@ -145,6 +165,10 @@
 
   .W_RecipeCardLeft {
     grid-column: span 5;
+
+    @media (max-width: 1023px) {
+      grid-column: 1/-1;
+    }
   }
 
   @media (min-width: 1920px) {
@@ -159,6 +183,11 @@
   @media (max-width: 1439px) {
     column-gap: 17px;
     max-width: 921px;
+  }
+
+  @media (max-width: 1023px) {
+    column-gap: 12px;
+    max-width: none;
   }
 
   @media (max-width: 744px) {

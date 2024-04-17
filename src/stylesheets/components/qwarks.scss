@@ -17,6 +17,10 @@
     background-size: 100%;
   }
 
+  @media (max-width: 1023px) {
+    background-size: cover;
+  }
+
   @media (max-width: 744px) {
     background-position: 79% 80%;
     background-size: cover;
