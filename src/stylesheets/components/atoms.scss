@@ -233,6 +233,10 @@
     max-width: 408px;
   }
 
+  @media (min-width: 2560px) {
+    max-width: 448px;
+  }
+
   @media (max-width: 1439px) {
     max-width: 217px;
   }
