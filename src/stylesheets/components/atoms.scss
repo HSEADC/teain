@@ -618,6 +618,10 @@
   font-size: 0.75rem;
   -webkit-text-stroke: 0.5px var(--darkGreen);
   text-stroke: 0.5px var(--darkGreen);
+
+  @media (min-width: 2560px) {
+    font-size: 1.125rem;
+  }
 }
 
 .A_SliderButton {

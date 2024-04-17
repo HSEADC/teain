@@ -59,10 +59,18 @@
   flex-direction: column;
   gap: 21px;
   max-width: 306px;
-  padding: 17px 18px;
-
+  padding: 18px 18px;
   scale: 0.95;
   text-decoration: none;
+
+  @media (min-width: 1920px) {
+    max-width: 408px;
+    padding: 18px 18px 44px;
+  }
+
+  @media (min-width: 2560px) {
+    max-width: 526px;
+  }
 
   &:not(:active) {
     scale: 1;
