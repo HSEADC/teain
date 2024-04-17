@@ -195,6 +195,10 @@
     font-size: 0.75rem;
   }
 
+  @media (max-width: 1023px) {
+    font-size: 0.875rem;
+  }
+
   @media (max-width: 744px) {
     font-size: 2.791vw;
   }
@@ -226,6 +230,8 @@
   max-width: 306px;
 
   img {
+    display: block;
+    height: auto;
     width: 100%;
   }
 
@@ -239,6 +245,11 @@
 
   @media (max-width: 1439px) {
     max-width: 217px;
+  }
+
+  @media (max-width: 1023px) {
+    max-width: none;
+    width: 100%;
   }
   @media (max-width: 744px) {
     max-width: 41.86vw;
@@ -340,6 +351,10 @@
 
 .A_ImgRecipeL {
   grid-column: -8/ -1;
+
+  @media (max-width: 1023px) {
+    grid-column: 1/-1;
+  }
 
   img {
     width: 100%;
@@ -497,25 +512,8 @@
 .A_Cursor1 {
   background: url('/src/images/index/Cursor_Default.svg') no-repeat center;
   background-size: cover;
-  display: none;
   height: 153px;
-  opacity: 0;
-  pointer-events: none;
-  position: fixed;
-  transform: translate(-50%, -50%);
-  transition:
-    opacity 0.4s ease,
-    transform 0.1s ease;
   width: 232px;
-  z-index: 1000;
-
-  &.active {
-    opacity: 1;
-  }
-
-  &.click {
-    background: url('/src/images/index/Cursor_Click.svg') no-repeat center;
-  }
 }
 
 .A_CardTitl2 {
