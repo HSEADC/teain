@@ -72,6 +72,10 @@
     max-width: 526px;
   }
 
+  @media (max-width: 1023px) {
+    max-width: none;
+  }
+
   &:not(:active) {
     scale: 1;
     transition: scale 0.5s ease-in-out;
@@ -79,6 +83,9 @@
 
   img {
     width: 100%;
+    @media (max-width: 1023px) {
+      aspect-ratio: 309/192;
+    }
   }
 }
 
@@ -228,6 +235,22 @@
 
     span {
       font-weight: 700;
+    }
+  }
+}
+
+.M_MediaTitleS {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  @media (max-width: 1439px) {
+    gap: 12px;
+  }
+
+  .A_Text {
+    @media (max-width: 1439px) {
+      line-height: 150%;
     }
   }
 }
