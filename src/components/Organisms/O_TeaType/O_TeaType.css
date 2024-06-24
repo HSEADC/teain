@@ -1,0 +1,47 @@
+.O_TeaType {
+  background-color: var(--beige-d);
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 30px;
+  overflow-x: hidden;
+  padding: 57px 0 45px 110px;
+  /*position: relative;*/
+
+  .W_TextLink {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    @media (max-width: 1439px) {
+      gap: 1.172vw;
+    }
+    @media (max-width: 744px) {
+      gap: 1.86vw;
+    }
+  }
+
+  .W_TextLink {
+    max-width: 500px;
+
+    @media (max-width: 1439px) {
+      max-width: 36.523vw;
+    }
+
+    @media (max-width: 744px) {
+      max-width: 86.047vw;
+    }
+  }
+
+  .A_SliderButtonRight {
+    bottom: 65px;
+    position: absolute;
+    right: 163px;
+  }
+
+  .A_SliderButtonLeft {
+    bottom: 65px;
+    position: absolute;
+    right: 290px;
+  }
+}

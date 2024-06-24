@@ -11,6 +11,8 @@ module.exports = {
   entry: {
     index: './src/index.js',
     fermentation: './src/js/typesoftee/fermentation.js',
+    typesoftea:
+      './src/typesoftea.jsx',
     recipes: './src/js/recipes.js'
   },
   output: {
@@ -148,6 +150,12 @@ module.exports = {
       template: './src/typesoftee/fermentation.html',
       filename: './typesoftee/fermentation.html',
       chunks: ['fermentation']
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/typesoftea.html',
+      filename: './typesoftea.html',
+      chunks: ['typesoftea']
     }),
 
     // Article

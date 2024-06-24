@@ -1,40 +1,4 @@
 @font-face {
-  font-family: 'PT Root UI';
-  src:
-    url('/src/fonts/pt-root-ui_bold.woff2') format('woff2'),
-    url('/src/fonts/pt-root-ui_bold.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'PT Root UI';
-  src:
-    url('/src/fonts/pt-root-ui_medium.woff2') format('woff2'),
-    url('/src/fonts/pt-root-ui_medium.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'PT Root UI';
-  src:
-    url('/src/fonts/pt-root-ui_regular.woff2') format('woff2'),
-    url('/src/fonts/pt-root-ui_regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'PT Root UI';
-  src:
-    url('/src/fonts/pt-root-ui_light.woff2') format('woff2'),
-    url('/src/fonts/pt-root-ui_light.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
   font-family: 'Lemony Personal Use';
   font-style: normal;
   font-weight: normal;
@@ -122,14 +86,6 @@
     url('/src/fonts/Gramatika-Bold.woff') format('woff');
 }
 
-@font-face {
-  font-family: 'HeliosExtC';
-  font-style: normal;
-  font-weight: 900;
-  src:
-    url('/src/fonts/HeliosExtBlackC.woff2') format('woff2'),
-    url('/src/fonts/HeliosExtBlackC.woff') format('woff');
-}
 
 @font-face {
   font-family: 'HeliosExtC';
@@ -147,6 +103,16 @@
   src:
     url('/src/fonts/HeliosExtC.woff2') format('woff2'),
     url('/src/fonts/HeliosExtC.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'HeliosExtC';
+  font-style: normal;
+  font-weight: 900;
+  src:
+          url('/src/fonts/HeliosExtBlackC.woff2') format('woff2'),
+          url('/src/fonts/HeliosExtBlackC.woff') format('woff');
 }
 
 @font-face {

@@ -1,0 +1,37 @@
+.M_TeaCard {
+  background: var(--beige-l);
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  width: 100%;
+  max-width: 306px;
+  padding: 18px 18px;
+  scale: 0.95;
+  /*box-sizing: content-box;*/
+  text-decoration: none;
+
+  @media (min-width: 1920px) {
+    max-width: 408px;
+    padding: 18px 18px 44px;
+  }
+
+  @media (min-width: 2560px) {
+    max-width: 526px;
+  }
+
+  @media (max-width: 1023px) {
+    max-width: none;
+  }
+
+  &:not(:active) {
+    scale: 1;
+    transition: scale 0.5s ease-in-out;
+  }
+
+  img {
+    width: 100%;
+    @media (max-width: 1023px) {
+      aspect-ratio: 270/197;
+    }
+  }
+}

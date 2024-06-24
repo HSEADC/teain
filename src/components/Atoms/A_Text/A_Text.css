@@ -1,0 +1,85 @@
+/*@import '../../../stylesheets/vars.scss';*/
+@import '../../../stylesheets/fonts.scss';
+/*@import '../../../stylesheets/vars.scss';*/
+/*@import '../../../stylesheets/base.scss';*/
+
+
+.A_Text {
+  color: var(--darkGreen);
+  font-family: var(--gramatika), sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+
+  @media (min-width: 2560px) {
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 1439px) {
+    font-size: 0.75rem;
+  }
+
+  @media (max-width: 1023px) {
+    font-size: 0.875rem;
+  }
+
+  @media (max-width: 744px) {
+    font-size: 2.791vw;
+  }
+}
+
+.A_CardTitleHelios {
+  color: var(--darkGreen);
+  font-family: var(--font-helios_ext_c), serif;
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 118%;
+
+  @media (min-width: 2560px) {
+    font-size: 1.25rem;
+  }
+}
+
+.A_CardTitleVlas {
+  color: var(--darkGreen);
+  font-family: var(--font-als_vlas), sans-serif;
+  font-size: 0.75rem;
+  -webkit-text-stroke: 0.5px var(--darkGreen);
+  text-stroke: 0.5px var(--darkGreen);
+
+  @media (min-width: 2560px) {
+    font-size: 1.125rem;
+  }
+}
+
+.A_CardTitl2 {
+  color: var(--darkGreen);
+  display: block;
+  font-family: var(--font-helios_ext_c), sans-serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-decoration: none;
+
+  @media (max-width: 1439px) {
+    font-size: 0.875rem;
+  }
+}
+
+
+.A_Title2Helios {
+  color: var(--darkGreen);
+  font-family: var(--font-helios_ext_c), sans-serif;
+  font-size: 2.625rem;
+  font-weight: 900;
+
+  @media (min-width: 2560px) {
+    font-size: 3.25rem;
+  }
+
+  @media (max-width: 1439px) {
+    font-size: 1.875rem;
+  }
+
+  @media (max-width: 744px) {
+    font-size: 5.581vw;
+  }
+}
