@@ -35,6 +35,7 @@
 
 	.C_TegCloud {
 		column-gap: 12px;
+		max-width: none;
 		row-gap: 8px;
 
 		@media (max-width: 1439px) {
@@ -42,10 +43,10 @@
 			row-gap: 1.172vw;
 		}
 
-		@media (max-width: 744px) {
+	/*	@media (max-width: 743px) {
 			column-gap: 3.953vw;
 			row-gap: 2.791vw;
-		}
+		}*/
 	}
 
 	img {

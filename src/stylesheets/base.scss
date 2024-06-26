@@ -22,7 +22,7 @@ body,
 
 .S_Main {
   .W_RecipeCardL {
-    padding: 94px 0 65px;
+    padding: 44px 0 65px;
 
     @media (min-width: 1920px) {
       padding: 174px 0 65px;
@@ -38,6 +38,10 @@ body,
 
     @media (max-width: 1023px) {
       padding: 67px 36px 54px;
+    }
+
+    @media (max-width: 743px) {
+      padding: 45px 30px 54px;
     }
   }
 }

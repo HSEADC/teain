@@ -2,6 +2,7 @@ import './index.css'
 import anime from 'animejs'
 
 document.addEventListener('DOMContentLoaded', function () {
+
   // const cursor = document.querySelector('.A_Cursor1')
   // const section = document.querySelector('.W_QuoteLBack')
   // section.addEventListener('mouseenter', () => {
@@ -25,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
   //   cursor.classList.add('click')
   //   setTimeout(() => cursor.classList.remove('click'), 150)
   // })
+  const isTouchDevice = window.matchMedia('(hover: none)').matches;
 
   const cards = document.querySelectorAll('.A_TeaTypeCard')
 
@@ -32,36 +34,47 @@ document.addEventListener('DOMContentLoaded', function () {
     card.addEventListener('click', function () {
       window.location.href = this.getAttribute('data-href')
     })
-    card.addEventListener('mouseenter', function () {
-      const targets = this.querySelectorAll('.A_CardTitl2')
-      const targetsReversed = Array.from(targets).reverse()
+    if (isTouchDevice ) {
+      card.addEventListener('mouseenter', function () {
+        const targets = this.querySelectorAll('.A_CardTitl2')
+        const targetsReversed = Array.from(targets).reverse()
 
-      targetsReversed.forEach((target, index) => {
-        anime({
-          targets: target,
-          translateY: [30, 0],
-          opacity: [0, 1],
-          delay: index * 100,
-          duration: 1000,
-          easing: 'easeOutExpo'
+        targetsReversed.forEach((target, index) => {
+          anime({
+            targets: target,
+            translateY: [30, 0],
+            opacity: [0, 1],
+            delay: index * 100,
+            duration: 1000,
+            easing: 'easeOutExpo'
+          })
         })
       })
-    })
 
-    card.addEventListener('mouseleave', function () {
-      const targets = this.querySelectorAll('.A_CardTitl2')
-      const targetsReversed = Array.from(targets).reverse()
-      targetsReversed.forEach((target, index) => {
-        anime({
-          targets: target,
-          translateY: [0, 30],
-          opacity: [1, 0],
-          delay: index * 100,
-          duration: 1000,
-          easing: 'easeOutExpo'
+      card.addEventListener('mouseleave', function () {
+        const targets = this.querySelectorAll('.A_CardTitl2')
+        const targetsReversed = Array.from(targets).reverse()
+        targetsReversed.forEach((target, index) => {
+          anime({
+            targets: target,
+            translateY: [0, 30],
+            opacity: [1, 0],
+            delay: index * 100,
+            duration: 1000,
+            easing: 'easeOutExpo'
+          })
         })
       })
-    })
+    } else  {
+      const targets = card.querySelectorAll('.A_CardTitl2')
+      targets.forEach((target) => {
+        target.style.opacity = 1;
+      })
+    }
+
+
+
+
   })
 
   const recipesCards = document.querySelectorAll('.O_RecipeCardS')
@@ -70,5 +83,9 @@ document.addEventListener('DOMContentLoaded', function () {
     card.addEventListener('click', function () {
       window.location.href = this.getAttribute('data-href')
     })
+
   })
+
+
+
 })

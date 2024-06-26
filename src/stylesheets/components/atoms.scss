@@ -55,15 +55,16 @@
     max-width: 306px;
   }
 
-  @media (max-width: 744px) {
-    gap: 3.488vw;
-    max-width: 75.116vw;
-  }
+  //@media (max-width: 743px) {
+  //  gap: 16px;
+  //  max-width: 306px;
+  //}
 }
 
 .A_QuoteText {
   font-size: 1.5rem;
   font-weight: 900;
+  line-height: 118%;
   @media (min-width: 1920px) {
     line-height: 122%;
   }
@@ -75,9 +76,13 @@
   @media (max-width: 1439px) {
     font-size: 1.063rem;
   }
-  @media (max-width: 744px) {
-    font-size: 4.186vw;
+
+  @media (max-width: 1023px) {
+    font-size: 1.125rem ;
   }
+  //@media (max-width: 743px) {
+  //  font-size: 4.186vw;
+  //}
 }
 
 .A_QuoteTxt {
@@ -85,6 +90,7 @@
   font-family: var(--font-helios_ext_c);
   font-size: 1.5rem;
   font-weight: 400;
+  line-height: normal;
 
   @media (min-width: 2560px) {
     font-size: 1.75rem;
@@ -94,9 +100,9 @@
     font-size: 1rem;
   }
 
-  @media (max-width: 744px) {
-    font-size: 4.186vw;
-  }
+  //@media (max-width: 743px) {
+  //  font-size: 1.063rem;
+  //}
 }
 
 .A_QuoteAuthor {
@@ -113,9 +119,14 @@
     font-size: 0.75rem;
   }
 
-  @media (max-width: 744px) {
-    font-size: 3.256vw;
+  @media (max-width: 743px) {
+    font-size: 0.875rem ;
+
   }
+
+  //@media (max-width: 743px) {
+  //  font-size: 3.256vw;
+  //}
 }
 
 .A_chapter {
@@ -150,15 +161,19 @@
     font-size: 1.875rem;
   }
 
-  @media (max-width: 744px) {
-    font-size: 5.581vw;
+  @media (max-width: 743px) {
+    font-size:  1.5rem;
   }
+
+  //@media (max-width: 743px) {
+  //  font-size: 5.581vw;
+  //}
 }
 
 .A_Title2Vlas {
   color: var(--darkGreen);
   font-family: var(--font-als_vlas), sans-serif;
-  font-size: 1.75rem;
+  font-size: 1.875rem;
   -webkit-text-stroke: 1px var(--darkGreen);
   text-stroke: 1px var(--darkGreen);
   @media (min-width: 2560px) {
@@ -168,10 +183,14 @@
     font-size: 1.313rem;
     line-height: 142%;
   }
+  @media (max-width: 743px) {
+    font-size: 1.125rem;
 
-  @media (max-width: 744px) {
-    font-size: 4.186vw;
   }
+
+  //@media (max-width: 743px) {
+  //  font-size: 4.186vw;
+  //}
 }
 
 .A_Title3Vlas {
@@ -184,7 +203,7 @@
 
 .A_Text {
   color: var(--darkGreen);
-  font-family: var(--gramatika);
+  font-family: var(--gramatika), sans-serif;
   font-size: 1.125rem;
   font-weight: 400;
 
@@ -200,9 +219,9 @@
     font-size: 0.875rem;
   }
 
-  @media (max-width: 744px) {
-    font-size: 2.791vw;
-  }
+  //@media (max-width: 743px) {
+  //  font-size: 2.791vw;
+  //}
 }
 
 .A_Link {
@@ -222,9 +241,13 @@
     font-size: 0.75rem;
   }
 
-  @media (max-width: 744px) {
-    font-size: 2.791vw;
+  @media (max-width: 743px) {
+    font-size: 0.875rem;
   }
+
+  //@media (max-width: 743px) {
+  //  font-size: 2.791vw;
+  //}
 }
 
 .A_PreImg {
@@ -252,69 +275,69 @@
     max-width: none;
     width: 100%;
   }
-  @media (max-width: 744px) {
+  @media (max-width: 743px) {
     max-width: 41.86vw;
   }
 }
 
-.A_Tag {
-  align-items: center;
-  background: transparent;
-  border: 1px solid var(--green);
-  display: flex;
-  justify-content: center;
-  padding: 3px 10px;
-  scale: 0.9;
-  text-decoration: none;
-
-  width: fit-content;
-
-  @media (min-width: 2560px) {
-    padding: 6px 17px;
-  }
-
-  @media (max-width: 1439px) {
-    padding: 2px 7px;
-  }
-
-  @media (max-width: 744px) {
-    padding: 0.465vw 1.628vw;
-  }
-
-  span {
-    color: var(--darkGreen);
-    font-family: var(--gramatika);
-    font-size: 0.75rem;
-    line-height: 172%;
-    text-align: justify;
-    @media (min-width: 2560px) {
-      font-size: 1rem;
-    }
-    @media (max-width: 1439px) {
-      font-size: 0.625rem;
-    }
-    @media (max-width: 744px) {
-      font-size: 2.326vw;
-    }
-  }
-
-  &:hover {
-    transform: scale(1.1);
-  }
-
-  &:not(:active) {
-    scale: 1;
-    transition: transform 0.3s ease-in-out;
-  }
-
-  &.active {
-    background-color: var(--green);
-    border: 1px solid var(--green);
-    span {
-      color: var(--beige-l);
-    }
-  }
-}
+//.A_Tag {
+//  align-items: center;
+//  background: transparent;
+//  border: 1px solid var(--green);
+//  display: flex;
+//  justify-content: center;
+//  padding: 3px 10px;
+//  scale: 0.9;
+//  text-decoration: none;
+//
+//  width: fit-content;
+//
+//  @media (min-width: 2560px) {
+//    padding: 6px 17px;
+//  }
+//
+//  @media (max-width: 1439px) {
+//    padding: 2px 7px;
+//  }
+//
+//  @media (max-width: 743px) {
+//    padding: 0.465vw 1.628vw;
+//  }
+//
+//  span {
+//    color: var(--darkGreen);
+//    font-family: var(--gramatika);
+//    font-size: 0.75rem;
+//    line-height: 172%;
+//    text-align: justify;
+//    @media (min-width: 2560px) {
+//      font-size: 1rem;
+//    }
+//    @media (max-width: 1439px) {
+//      font-size: 0.625rem;
+//    }
+//    @media (max-width: 743px) {
+//      font-size: 2.326vw;
+//    }
+//  }
+//
+//  &:hover {
+//    transform: scale(1.1);
+//  }
+//
+//  &:not(:active) {
+//    scale: 1;
+//    transition: transform 0.3s ease-in-out;
+//  }
+//
+//  &.active {
+//    background-color: var(--green);
+//    border: 1px solid var(--green);
+//    span {
+//      color: var(--beige-l);
+//    }
+//  }
+//}
 
 .A_Tag_Cloud {
   background: transparent;
@@ -327,6 +350,10 @@
   padding: 6px 20px;
   scale: 0.9;
   text-align: justify;
+
+  @media (max-width: 743px) {
+
+  }
 
   span {
     color: var(--green);
@@ -351,7 +378,7 @@
 }
 
 .A_ImgRecipeL {
-  grid-column: -7/ -1;
+  grid-column: span 7;
 
   @media (max-width: 1023px) {
     grid-column: 1/-1;
@@ -392,9 +419,9 @@
     font-size: 1rem;
   }
 
-  @media (max-width: 744px) {
-    font-size: 4.186vw;
-  }
+  //@media (max-width: 743px) {
+  //  font-size: 4.186vw;
+  //}
 }
 
 .A_TeaTypeCard {
@@ -402,7 +429,6 @@
   background-size: contain;
   cursor: pointer;
   display: flex;
-
 
   flex-direction: column;
   gap: 256px;
@@ -432,6 +458,26 @@
     min-height: 284px;
     padding: 35px 15px 17px;
   }
+
+
+  @media (max-width: 1023px) {
+    gap: 175px;
+    max-width: 330px;
+    min-height: 460px;
+    padding: 35px 15px 17px;
+  }
+
+  @media (max-width: 743px) {
+    max-width: none;
+    width: 100%;
+
+  }
+
+  .W_CardTitle {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
 }
 
 .A_CardTitl1 {
@@ -446,7 +492,12 @@
   }
 
   @media (max-width: 1439px) {
-    font-size: 14px;
+    font-size: 0.875rem;
+  }
+
+  @media (max-width: 1023px ) {
+    font-size: 1.125rem;
+
   }
 }
 
@@ -465,6 +516,10 @@
 
   @media (max-width: 1439px) {
     font-size: 12px;
+  }
+
+  @media (max-width: 1023px) {
+    font-size: 0.813rem;
   }
 }
 
@@ -527,8 +582,9 @@
   text-decoration: none;
 
   @media (max-width: 1439px) {
-    font-size: 0.875rem;
+    font-size: 1.25rem;
   }
+
 }
 
 .A_Title1 {

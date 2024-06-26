@@ -21,10 +21,10 @@
     background-size: cover;
   }
 
-  @media (max-width: 744px) {
-    background-position: 79% 80%;
-    background-size: cover;
-  }
+  //@media (max-width: 743px) {
+  //  background-position: 79% 80%;
+  //  background-size: cover;
+  //}
 }
 
 .Q_TitleImage {
@@ -36,7 +36,7 @@
 .Q_BurgerIcon {
   display: none;
 
-  @media (max-width: 744px) {
+  @media (max-width: 743px) {
     display: block;
   }
 }

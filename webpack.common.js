@@ -10,6 +10,7 @@ const CopyPlugin = require('copy-webpack-plugin')
 module.exports = {
   entry: {
     index: './src/index.js',
+    indexJSX: './src/index.jsx',
     fermentation: './src/js/typesoftee/fermentation.js',
     typesoftea: './src/typesoftea.jsx',
     recipes: './src/recipes.jsx',
@@ -132,7 +133,8 @@ module.exports = {
 
     new HtmlWebpackPlugin({
       template: './src/index.html',
-      filename: './index.html'
+      filename: './index.html',
+      chunks: ['index', 'indexJSX']
     }),
 
     // Section

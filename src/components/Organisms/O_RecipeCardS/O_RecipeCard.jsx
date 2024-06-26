@@ -4,6 +4,7 @@ import A_Tag from '../../Atoms/A_Tag/A_Tag'
 import img from '../../../images/recipe_card.png'
 import bigImg from '../../../images/index/A_ImgRecipeL.png'
 
+
 const O_RecipeCard = ({  recipe, toggleTagSelection, activeTags }) => {
   const tagsTranslatedArray = recipe.translated_tag_names || [];
   const tagsArray = recipe.tag_names || [];
@@ -25,8 +26,7 @@ const O_RecipeCard = ({  recipe, toggleTagSelection, activeTags }) => {
         <ul className="C_TegCloud">
           {tagsArray.map((tag, index) => (
             <li key={index}>
-              <A_Tag active={activeTags.includes(tagsArray[index])} key={index} onClick={() => {
-
+              <A_Tag active={activeTags && activeTags.includes(tagsArray[index])} key={index} onClick={() => {
                 return toggleTagSelection(tagsArray[index])
               }}>
                 {tagsTranslatedArray[index]}
@@ -50,7 +50,7 @@ const O_RecipeCard = ({  recipe, toggleTagSelection, activeTags }) => {
           </div>
           <div className="C_TegCloud">
             {tagsTranslatedArray.map((tag, index) => (
-              <A_Tag active={activeTags.includes(tagsArray[index])} key={index} onClick={() => {
+              <A_Tag active={activeTags && activeTags.includes(tagsArray[index])} key={index} onClick={() => {
 
                 return toggleTagSelection(tagsArray[index])
               }}>

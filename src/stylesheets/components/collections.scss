@@ -39,21 +39,25 @@
     gap: 12px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    max-width: none;
-    padding: 0 36px;
+    max-width: 744px;
+    padding: 40px 36px 0;
   }
-  @media (max-width: 744px) {
-    flex-wrap: wrap;
-    gap: 2vw;
-    max-width: 86.047vw;
+
+  @media (max-width: 743px) {
+    padding: 30px 30px 0;
   }
+  //@media (max-width: 743px) {
+  //  flex-wrap: wrap;
+  //  gap: 2vw;
+  //  max-width: 86.047vw;
+  //}
 }
 
 .C_TegCloud {
   column-gap: 24px;
   display: flex;
   flex-wrap: wrap;
-  max-width: 322px;
+  //max-width: 322px;
   row-gap: 12px;
 
   @media (min-width: 1920px) {
@@ -66,15 +70,15 @@
 
   @media (max-width: 1439px) {
     column-gap: 17px;
-    max-width: 280px;
+   max-width: none;
     row-gap: 12px;
   }
 
-  @media (max-width: 744px) {
-    column-gap: 3.953vw;
-    max-width: 60vw;
-    row-gap: 2.791vw;
-  }
+  //@media (max-width: 743px) {
+  //  column-gap: 3.953vw;
+  //  max-width: 60vw;
+  //  row-gap: 2.791vw;
+  //}
 }
 
 .C_TeaTypeCards {
@@ -104,7 +108,15 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    max-width: 672px;
     row-gap: 10px;
+  }
+
+  @media (max-width: 743px) {
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-template-rows: 1fr ;
+    max-width: none;
+    row-gap: 12px;
   }
 }
 
@@ -118,6 +130,9 @@
 
   .A_CardTitl2 {
     opacity: 0;
+    @media (hover: none) {
+      opacity: 1 !important;
+    }
   }
 }
 
