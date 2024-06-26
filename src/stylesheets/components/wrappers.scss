@@ -333,7 +333,8 @@
   .A_SliderButton {
     grid-column: 1 / span 2;
     position: absolute;
-    top: -19px;
+    top: 173px;
+    z-index: 2;
   }
 }
 

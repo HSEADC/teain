@@ -1,5 +1,5 @@
 import React from 'react'
-import './A_Text.css'
+import './A_Text.scss'
 
 const A_Text = ({ children, className }) => {
   return (

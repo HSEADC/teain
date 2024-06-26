@@ -8,7 +8,7 @@
   transform: translateX(-50%);
   transition: all 0.2s ease-in-out;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
 
   &:hover {
     background: var(--beige-d);
@@ -139,21 +139,6 @@
   }
 }
 
-.O_PreArticle {
-  column-gap: 24px;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  margin: 62px auto 0;
-  max-width: 1296px;
-
-  .A_Title2Helios {
-    grid-column: span 5;
-  }
-
-  .W_TextLink {
-    grid-column: -8 / -2;
-  }
-}
 
 .O_RecipeCardL {
   background: var(--beige-l);
@@ -164,7 +149,7 @@
   max-width: 1296px;
 
   .W_RecipeCardLeft {
-    grid-column: span 5;
+    grid-column: span 6;
 
     @media (max-width: 1023px) {
       grid-column: 1/-1;
@@ -294,8 +279,30 @@
 }
 
 .O_TeaCaracters {
-  .M_Title3 {
-    grid-column: 2 / span 5;
+  padding:  115px 0 0 0 ;
+
+  .O_CardStart {
+    align-items: end;
+    column-gap: 24px;
+    display: grid;
+    grid-column: span 12;
+    grid-template-columns: repeat(12, 1fr);
+
+    .M_Title3 {
+      grid-column: 2 / span 5;
+    }
+
+    .A_ImgTea_Card {
+      display: block;
+      grid-column: -6 / -2  ;
+      width: 100%;
+
+    }
+
+  }
+
+  .A_Lead {
+    margin:  60px 0;
   }
 
   .W_TeaTable {
@@ -303,49 +310,40 @@
     flex-direction: column;
     gap: 16px;
     grid-column: 2 / span 9;
-    margin-top: 35px;
+
+    .M_Title3 {
+      margin-bottom:  20px;
+    }
+
+
   }
+
+
 }
 
 .O_RecipesRec {
+  align-items: end;
   column-gap: 24px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  justify-content: end;
+  justify-items: end;
   margin: 138px auto 0;
   max-width: 1296px;
   padding-bottom: 103px;
   position: relative;
   row-gap: 30px;
 
-  .A_Tag-Active {
-    background: var(--green);
-    position: absolute;
-    right: 0;
-    text-decoration: none;
-    top: 50px;
+  .A_Tag {
+    float: right;
+    grid-column: -3 / -1;
 
-    span {
-      color: var(--beige-l);
-      font-size: 1.125rem;
-      line-height: 114%;
-      text-align: justify;
-    }
   }
 
   .M_Title3 {
-    grid-column: span 8;
+    grid-column: 1 / span 7;
   }
 
-  //.C_RecipeCardS {
-  //  display: flex;
-  //  flex-wrap: wrap;
-  //  grid-column: span 12;
-  //  grid-row: 2;
-  //  justify-content: space-between;
-  //  margin: 0 auto;
-  //  max-width: 1296px;
-  //
-  //}
 }
 
 .C_RecipeCardS {
@@ -354,7 +352,7 @@
   gap: 24px;
   grid-column: span 12;
   grid-row: 2;
-  margin: 0 auto;
+  margin: 49px auto 0;
   max-width: 1296px;
   width: 100%;
 

@@ -1,5 +1,5 @@
-@import "../../stylesheets/vars";
-@import "../../stylesheets/fonts";
+@import "../../stylesheets/vars.scss";
+@import "../../stylesheets/fonts.scss";
 
 .A_Logo {
   width: 110px;
@@ -351,7 +351,7 @@
 }
 
 .A_ImgRecipeL {
-  grid-column: -8/ -1;
+  grid-column: -7/ -1;
 
   @media (max-width: 1023px) {
     grid-column: 1/-1;
@@ -402,6 +402,7 @@
   background-size: contain;
   cursor: pointer;
   display: flex;
+
 
   flex-direction: column;
   gap: 256px;

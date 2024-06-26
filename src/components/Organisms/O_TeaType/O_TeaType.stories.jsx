@@ -1,7 +1,7 @@
 import React from 'react'
 import O_TeaType from './O_TeaType'
 
-import './O_TeaType.css'
+import './O_TeaType.scss'
 
 const mockData = [
   {

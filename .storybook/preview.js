@@ -1,4 +1,5 @@
 /** @type { import('@storybook/react').Preview } */
+
 const preview = {
   parameters: {
     controls: {
@@ -9,7 +10,7 @@ const preview = {
     }
   },
 
-  tags: ['autodocs']
+  tags: ['autodocs', 'autodocs']
 }
 
 export default preview

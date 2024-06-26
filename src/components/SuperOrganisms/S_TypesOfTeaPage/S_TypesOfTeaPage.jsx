@@ -1,39 +1,87 @@
 import React, { useEffect, useState } from 'react'
 import M_Banner from '../../Molecules/M_Banner/M_Banner'
 import base from '../../../airtable'
-import A_Text from '../../Atoms/A_Text/A_Text'
+import './S_TypesOfTeaPage.scss'
 
-base('categories')
-  .select({})
-  .eachPage(
-    function page(records, fetchNextPage) {
-      records.forEach(function (record) {
-        console.log('Retrieved', record.get('Name'))
-      })
-      fetchNextPage()
-    },
-    function done(err) {
-      if (err) {
-        console.error(err)
-      }
-    }
-  )
+import logo from '../../../images/index/logo.svg'
+import A_SearchIcon from '../../../images/index/A_SearchIcon.svg'
+import A_Text from '../../Atoms/A_Text/A_Text'
+import O_PreArticle from '../../Organisms/O_PreArticle/O_PreArticle'
+import O_TeaType from '../../Organisms/O_TeaType/O_TeaType'
+
 
 const S_TypesOfTeaPage = () => {
-  const [page, setPage] = useState('')
+
+  let category = "tea_types"
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    category = params.get('category')
+  }, [])
+
+
+
+  const [translated_name, setTranslatedName] = useState('')
+  const [right_text, setRightText] = useState('')
+  const [link, setLink] = useState('')
+  const [link_text, setLinkText] = useState('')
+  const [bottom_text, setBottomText] = useState('')
+
+  const [types, setTypes] = useState([])
 
   useEffect(() => {
-    const path = window.location.pathname
-    const page = path.split('/').pop()
-    setPage(page)
+    base('categories')
+      .select({
+        filterByFormula: `{Name} = '${category}'`,
+        fields: [
+          'translated_name',
+          'right_text',
+          'link',
+          'link_text',
+          'bottom_text'
+        ] // replace with the actual field names you want to retrieve
+      })
+      .eachPage(
+        function page(records, fetchNextPage) {
+          records.forEach(function (record) {
+            setTranslatedName(record.get('translated_name'))
+            setRightText(record.get('right_text'))
+            setLink(record.get('link'))
+            setLinkText(record.get('link_text'))
+            setBottomText(record.get('bottom_text'))
+          })
+          fetchNextPage()
+        },
+        function done(err) {
+          if (err) {
+            console.error(err)
+          }
+        }
+      )
+    base(`${category}`)
+      .select({})
+      .eachPage(
+        function page(records, fetchNextPage) {
+          records.forEach(function (record) {
+            setTypes((prev) => [...prev, record.fields])
+          })
+          fetchNextPage()
+        },
+        function done(err) {
+          if (err) {
+            console.error(err)
+          }
+        }
+      )
   }, [])
+  console.log(types)
+
   return (
     <>
       <header className="O_NavBar">
         <div className="W_NavBar">
           <div className="A_Logo">
             <a href="../index.html">
-              <img alt="" src="./images/index/logo.svg" />
+              <img alt="" src={logo} />
             </a>
           </div>
           <nav className="W_NavBarCat">
@@ -66,32 +114,31 @@ const S_TypesOfTeaPage = () => {
                 type="text"
               />
               <button aria-hidden="true" id="searchBtn">
-                <img alt="" src="./images/index/A_SearchIcon.svg" />
+                <img alt="" src={A_SearchIcon} />
               </button>
             </div>
           </nav>
         </div>
       </header>
 
-      <M_Banner imgPath={'../images/index/banner.jpg'} />
-      <div className="O_PreArticle">
-        <A_Text className="A_Title2Helios">ферментация</A_Text>
-        <div className="W_TextLink">
-          <p className="A_Text">{}</p>
-          <a className="A_Link" href="#">
-            Как правильно заваривать чай разной ферментации?
-          </a>
+      <M_Banner />
+      <O_PreArticle
+        link={link}
+        link_text={link_text}
+        right_text={right_text}
+        translated_name={translated_name}
+      />
+      {bottom_text && (
+        <div className="W_Container">
+          <A_Text className="A_Lead">{bottom_text}</A_Text>
         </div>
-      </div>
-      <div className="W_Container">
-        <p className="A_Lead">
-          Все классические чаи можно разделить только на&nbsp;пять видов
-          по&nbsp;степени ферментации. Задача организации,
-          в&nbsp;особенности&nbsp;же постоянное информационно-пропагандистское
-          обеспечение нашей деятельности позволяет оценить значение
-          соответствующий условий активизации.
-        </p>
-      </div>
+      )}
+
+      {types.map((type, index) => (
+        <div className="W_TeaType" key={index}>
+          <O_TeaType object={type} index={index}></O_TeaType>
+        </div>
+      ))}
     </>
   )
 }

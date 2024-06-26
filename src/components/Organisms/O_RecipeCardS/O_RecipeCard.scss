@@ -1,0 +1,93 @@
+.O_RecipeCardS {
+	background: var(--beige-d);
+	display: flex;
+	flex: 1 1 auto;
+	flex-direction: column;
+	gap: 24px;
+	max-width: 306px;
+	min-height: 0;
+
+	@media (min-width: 1920px) {
+		max-width: 408px;
+	}
+
+	@media (min-width: 2560px) {
+		gap: 27px;
+		max-width: 532px;
+	}
+
+	@media (max-width: 1023px) {
+		max-width: none;
+		width: 100%;
+	}
+
+	.W_RecipeCardSBottom {
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+		padding: 0 25px 25px;
+
+		@media (min-width: 2560px) {
+			gap: 46px;
+			padding: 0 25px 43px;
+		}
+	}
+
+	.C_TegCloud {
+		column-gap: 12px;
+		row-gap: 8px;
+
+		@media (max-width: 1439px) {
+			column-gap: 1.66vw;
+			row-gap: 1.172vw;
+		}
+
+		@media (max-width: 744px) {
+			column-gap: 3.953vw;
+			row-gap: 2.791vw;
+		}
+	}
+
+	img {
+		width: 100%;
+	}
+}
+
+
+.O_RecipeCardL {
+	align-items: center;
+	background: var(--beige-bckg);
+	column-gap: 24px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	padding: 94px 0 65px;
+
+	row-gap: 17px;
+
+	@media (max-width: 1023px) {
+		align-items: start;
+		background: var(--beige-d);
+		width: 100%;
+	}
+
+	@media (min-width: 1920px) {
+		padding: 174px 0 65px;
+	}
+
+	@media (min-width: 2560px) {
+		padding: 158px 0 116px;
+	}
+
+	@media (max-width: 1439px) {
+		padding: 46px 0;
+	}
+
+	@media (max-width: 1023px) {
+		padding: 67px 36px 54px;
+	}
+
+
+}
+

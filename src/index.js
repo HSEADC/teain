@@ -1,30 +1,30 @@
 import './index.css'
-import anime from 'animejs/lib/anime.es.js'
+import anime from 'animejs'
 
 document.addEventListener('DOMContentLoaded', function () {
-  const cursor = document.querySelector('.A_Cursor1')
-  const section = document.querySelector('.W_QuoteLBack')
-  section.addEventListener('mouseenter', () => {
-    cursor.style.display = 'block'
-    setTimeout(() => cursor.classList.add('active'), 10)
-  })
+  // const cursor = document.querySelector('.A_Cursor1')
+  // const section = document.querySelector('.W_QuoteLBack')
+  // section.addEventListener('mouseenter', () => {
+  //   cursor.style.display = 'block'
+  //   setTimeout(() => cursor.classList.add('active'), 10)
+  // })
 
-  section.addEventListener('mousemove', function (e) {
-    const x = e.clientX - 116
-    const y = e.clientY - 76.5
-    section.style.cursor = 'none'
-    cursor.style.transform = `translate(${x}px, ${y}px)`
-  })
-
-  section.addEventListener('mouseleave', () => {
-    cursor.classList.remove('active')
-    setTimeout(() => (cursor.style.display = 'none'), 400)
-  })
-
-  section.addEventListener('click', () => {
-    cursor.classList.add('click')
-    setTimeout(() => cursor.classList.remove('click'), 150)
-  })
+  // section.addEventListener('mousemove', function (e) {
+  //   const x = e.clientX - 116
+  //   const y = e.clientY - 76.5
+  //   section.style.cursor = 'none'
+  //   cursor.style.transform = `translate(${x}px, ${y}px)`
+  // })
+  //
+  // section.addEventListener('mouseleave', () => {
+  //   cursor.classList.remove('active')
+  //   setTimeout(() => (cursor.style.display = 'none'), 400)
+  // })
+  //
+  // section.addEventListener('click', () => {
+  //   cursor.classList.add('click')
+  //   setTimeout(() => cursor.classList.remove('click'), 150)
+  // })
 
   const cards = document.querySelectorAll('.A_TeaTypeCard')
 

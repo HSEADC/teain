@@ -1,0 +1,49 @@
+.O_NavBar {
+	background: var(--biege-transparent);
+	display: flex;
+	justify-content: center;
+	left: 50%;
+	padding: 25px 0;
+	position: fixed;
+	transform: translateX(-50%);
+	transition: all 0.2s ease-in-out;
+	width: 100%;
+	z-index: 3;
+
+	&:hover {
+		background: var(--beige-d);
+	}
+
+	@media (min-width: 2560px) {
+		padding: 41px 0;
+	}
+
+	@media (max-width: 1439px) {
+		padding: 18px 0;
+	}
+}
+.M_SearchIcon {
+	align-items: center;
+
+	display: flex;
+	gap: 10px;
+	height: 34px;
+	transition: all 0.3s ease;
+
+	button {
+		align-items: center;
+		background: transparent;
+		border: none;
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+
+		max-width: 25px;
+		padding: 0;
+	}
+
+	&.active {
+		border-bottom: 1px solid var(--darkGreen);
+		transition: all 0.5s ease;
+	}
+}

@@ -11,9 +11,9 @@ module.exports = {
   entry: {
     index: './src/index.js',
     fermentation: './src/js/typesoftee/fermentation.js',
-    typesoftea:
-      './src/typesoftea.jsx',
-    recipes: './src/js/recipes.js'
+    typesoftea: './src/typesoftea.jsx',
+    recipes: './src/recipes.jsx',
+    teaCard: './src/typesoftea/teaCard.jsx',
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -100,9 +100,9 @@ module.exports = {
       },
       {
         test: /\.(ttf|otf|woff|woff2)$/i,
-        loader: 'file-loader',
-        options: {
-          name: 'fonts/[name].[ext]'
+        type: 'asset/resource',
+        generator: {
+          filename: 'fonts/[name][ext]'
         }
       }
     ]
@@ -162,6 +162,13 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/typesoftee/fermentation/Indian_Black_Tea.html',
       filename: './typesoftee/fermentation/Indian_Black_Tea.html'
+    }),
+
+
+    new HtmlWebpackPlugin({
+      template: './src/typesoftea/teaCard.html',
+      filename: './typesoftea/teaCard.html',
+      chunks: ["teaCard"]
     }),
 
     new HtmlWebpackPlugin({

@@ -7,7 +7,8 @@ export default {
   component: A_Text,
   argTypes: {
     className: { control: 'text' },
-    children: { control: 'text' }
+    children: { control: 'text' },
+
   }
 }
 
@@ -16,5 +17,5 @@ const Template = (args) => <A_Text {...args} />
 export const Text = Template.bind({})
 Text.args = {
   children: 'Любимый чай',
-  className: 'A_Text'
+  className: 'A_Text',
 }

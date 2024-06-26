@@ -1,0 +1,16 @@
+.O_PreArticle {
+    column-gap: 24px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin: 62px auto 0;
+    max-width: 1296px;
+    width: 100%;
+
+    .A_Title2Helios {
+        grid-column: span 5;
+    }
+
+    .W_TextLink {
+        grid-column: -8 / -2;
+    }
+}
