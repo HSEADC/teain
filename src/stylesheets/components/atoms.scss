@@ -46,9 +46,9 @@
   gap: 24px;
   max-width: 431px;
 
-  @media (min-width: 2560px) {
-    max-width: 575px;
-  }
+  //@media (min-width: 2560px) {
+  //  max-width: 575px;
+  //}
 
   @media (max-width: 1439px) {
     gap: 17px;
@@ -69,9 +69,9 @@
     line-height: 122%;
   }
 
-  @media (min-width: 2560px) {
-    font-size: 2rem;
-  }
+  //@media (min-width: 2560px) {
+  //  font-size: 2rem;
+  //}
 
   @media (max-width: 1439px) {
     font-size: 1.063rem;
@@ -92,9 +92,9 @@
   font-weight: 400;
   line-height: normal;
 
-  @media (min-width: 2560px) {
-    font-size: 1.75rem;
-  }
+  //@media (min-width: 2560px) {
+  //  font-size: 1.75rem;
+  //}
 
   @media (max-width: 1439px) {
     font-size: 1rem;
@@ -111,9 +111,9 @@
   font-size: 1.125rem;
   font-weight: 700;
 
-  @media (min-width: 2560px) {
-    font-size: 1.625rem;
-  }
+  //@media (min-width: 2560px) {
+  //  font-size: 1.625rem;
+  //}
 
   @media (max-width: 1439px) {
     font-size: 0.75rem;
@@ -138,9 +138,9 @@
   text-align: right;
   text-decoration: none;
 
-  @media (min-width: 2560px) {
-    font-size: 1.5rem;
-  }
+  //@media (min-width: 2560px) {
+  //  font-size: 1.5rem;
+  //}
 
   @media (max-width: 1439px) {
     font-size: 0.75rem;
@@ -153,9 +153,9 @@
   font-size: 2.625rem;
   font-weight: 900;
 
-  @media (min-width: 2560px) {
-    font-size: 3.25rem;
-  }
+  //@media (min-width: 2560px) {
+  //  font-size: 3.25rem;
+  //}
 
   @media (max-width: 1439px) {
     font-size: 1.875rem;
@@ -176,9 +176,9 @@
   font-size: 1.875rem;
   -webkit-text-stroke: 1px var(--darkGreen);
   text-stroke: 1px var(--darkGreen);
-  @media (min-width: 2560px) {
-    font-size: 2rem;
-  }
+  //@media (min-width: 2560px) {
+  //  font-size: 2rem;
+  //}
   @media (max-width: 1439px) {
     font-size: 1.313rem;
     line-height: 142%;
@@ -207,9 +207,9 @@
   font-size: 1.125rem;
   font-weight: 400;
 
-  @media (min-width: 2560px) {
-    font-size: 1.5rem;
-  }
+  //@media (min-width: 2560px) {
+  //  font-size: 1.5rem;
+  //}
 
   @media (max-width: 1439px) {
     font-size: 0.75rem;
@@ -233,9 +233,9 @@
   text-decoration: underline;
   text-decoration-skip-ink: none;
 
-  @media (min-width: 2560px) {
-    font-size: 1.5rem;
-  }
+  //@media (min-width: 2560px) {
+  //  font-size: 1.5rem;
+  //}
 
   @media (max-width: 1439px) {
     font-size: 0.75rem;
@@ -263,9 +263,9 @@
     max-width: 408px;
   }
 
-  @media (min-width: 2560px) {
-    max-width: 448px;
-  }
+  //@media (min-width: 2560px) {
+  //  max-width: 448px;
+  //}
 
   @media (max-width: 1439px) {
     max-width: 217px;
@@ -398,11 +398,11 @@
       object-fit: cover;
     }
   }
-  @media (min-width: 2560px) {
-    img {
-      max-height: 705px;
-    }
-  }
+  //@media (min-width: 2560px) {
+  //  img {
+  //    max-height: 705px;
+  //  }
+  //}
 }
 
 .A_QuoteH {
@@ -411,9 +411,9 @@
   font-size: 1.5rem;
   font-weight: 900;
 
-  @media (min-width: 2560px) {
-    font-size: 1.875rem;
-  }
+  //@media (min-width: 2560px) {
+  //  font-size: 1.875rem;
+  //}
 
   @media (max-width: 1439px) {
     font-size: 1rem;
@@ -446,11 +446,11 @@
     min-height: 534px;
   }
 
-  @media (min-width: 2560px) {
-    gap: 505px;
-    max-width: 526px;
-    min-height: 675px;
-  }
+  //@media (min-width: 2560px) {
+  //  gap: 505px;
+  //  max-width: 526px;
+  //  min-height: 675px;
+  //}
 
   @media (max-width: 1439px) {
     gap: 175px;
@@ -487,9 +487,9 @@
   font-size: 1.25rem;
   font-weight: 900;
 
-  @media (min-width: 2560px) {
-    font-size: 1.375rem;
-  }
+  //@media (min-width: 2560px) {
+  //  font-size: 1.375rem;
+  //}
 
   @media (max-width: 1439px) {
     font-size: 0.875rem;
@@ -508,11 +508,11 @@
   font-weight: 400;
   -webkit-text-stroke: 0.5px var(--darkGreen);
   text-stroke: 0.5px var(--darkGreen);
-  @media (min-width: 2560px) {
-    font-size: 1.375rem;
-    -webkit-text-stroke: 1px var(--darkGreen);
-    text-stroke: 1px var(--darkGreen);
-  }
+  //@media (min-width: 2560px) {
+  //  font-size: 1.375rem;
+  //  -webkit-text-stroke: 1px var(--darkGreen);
+  //  text-stroke: 1px var(--darkGreen);
+  //}
 
   @media (max-width: 1439px) {
     font-size: 12px;
@@ -554,10 +554,10 @@
   padding: 6px 0;
   text-align: justify;
   text-decoration: none;
-
-  @media (min-width: 2560px) {
-    font-size: 2rem;
-  }
+  //
+  //@media (min-width: 2560px) {
+  //  font-size: 2rem;
+  //}
 
   @media (max-width: 1439px) {
     font-size: 0.875rem;
@@ -594,9 +594,9 @@
   font-weight: 900;
   line-height: 76%;
 
-  @media (min-width: 2560px) {
-    font-size: 5.313rem;
-  }
+  //@media (min-width: 2560px) {
+  //  font-size: 5.313rem;
+  //}
   @media (max-width: 1439px) {
     font-size: 4.435vw;
   }
@@ -621,10 +621,10 @@
     max-height: 657px;
     max-width: 836px;
   }
-  @media (min-width: 2560px) {
-    max-width: 1114px;
-    min-height: 876px;
-  }
+  //@media (min-width: 2560px) {
+  //  max-width: 1114px;
+  //  min-height: 876px;
+  //}
 
   @media (max-width: 1439px) {
     max-height: 34.677vw;
@@ -654,9 +654,9 @@
   font-weight: 900;
   line-height: 118%;
 
-  @media (min-width: 2560px) {
-    font-size: 1.25rem;
-  }
+  //@media (min-width: 2560px) {
+  //  font-size: 1.25rem;
+  //}
 }
 
 .A_CardTitleVlas {
@@ -666,9 +666,9 @@
   -webkit-text-stroke: 0.5px var(--darkGreen);
   text-stroke: 0.5px var(--darkGreen);
 
-  @media (min-width: 2560px) {
-    font-size: 1.125rem;
-  }
+  //@media (min-width: 2560px) {
+  //  font-size: 1.125rem;
+  //}
 }
 
 .A_SliderButton {

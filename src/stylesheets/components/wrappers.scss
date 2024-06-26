@@ -71,9 +71,9 @@
   @media (min-width: 1920px) {
     max-width: 1702px;
   }
-  @media (min-width: 2560px) {
-    max-width: 2200px;
-  }
+  //@media (min-width: 2560px) {
+  //  max-width: 2200px;
+  //}
 
   @media (max-width: 1439px) {
     max-width: 921px;
@@ -94,9 +94,9 @@
     padding: 67px 72px 0;
   }
 
-  @media (min-width: 2560px) {
-    padding: 117px 0 0;
-  }
+  //@media (min-width: 2560px) {
+  //  padding: 117px 0 0;
+  //}
 
   @media (max-width: 1439px) {
     padding: 50px 0 0;
@@ -147,9 +147,9 @@
   margin: auto;
   padding: 92px 0 78px;
 
-  @media (min-width: 2560px) {
-    padding: 143px 0 78px;
-  }
+  //@media (min-width: 2560px) {
+  //  padding: 143px 0 78px;
+  //}
 
   @media (min-width: 1920px) {
     background-image: url('/src/images/index/Q_LineCircle2560.svg');
@@ -203,9 +203,9 @@
     line-height: normal;
     max-width: 450px;
 
-    @media (min-width: 2560px) {
-      max-width: 705px;
-    }
+    //@media (min-width: 2560px) {
+    //  max-width: 705px;
+    //}
 
     @media (max-width: 1439px) {
       max-width: 357px;
@@ -218,9 +218,9 @@
     //}
   }
 
-  @media (min-width: 2560px) {
-    gap: 24px;
-  }
+  //@media (min-width: 2560px) {
+  //  gap: 24px;
+  //}
 
 
 
@@ -244,9 +244,9 @@
   justify-content: space-between;
   padding: 50px 0 38px 24px;
 
-  @media (min-width: 2560px) {
-    padding: 70px 0 77px 24px;
-  }
+  //@media (min-width: 2560px) {
+  //  padding: 70px 0 77px 24px;
+  //}
 
   @media (max-width: 1439px) {
     padding: 35.5px 0 23px 17px;
@@ -309,9 +309,9 @@
   padding: 271px 0 271px;
   text-decoration: none;
 
-  @media (min-width: 2560px) {
-    padding: 383px 0 361px;
-  }
+  //@media (min-width: 2560px) {
+  //  padding: 383px 0 361px;
+  //}
 
   @media (max-width: 1439px) {
     padding: 192px 0 186px;
@@ -365,13 +365,13 @@
     padding: 0 108px;
   }
 
-  @media (min-width: 2560px) {
-    column-gap: 32px;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    max-width: 2560px;
-    padding: 0 180px;
-  }
+  //@media (min-width: 2560px) {
+  //  column-gap: 32px;
+  //  display: grid;
+  //  grid-template-columns: repeat(12, 1fr);
+  //  max-width: 2560px;
+  //  padding: 0 180px;
+  //}
 
   @media (max-width: 1439px) {
     column-gap: 17px;
@@ -416,9 +416,9 @@
   }
 
 
-  @media (min-width: 2560px) {
-    gap: 40px;
-  }
+  //@media (min-width: 2560px) {
+  //  gap: 40px;
+  //}
 
   @media (max-width: 1439px) {
     gap: 10px;
@@ -451,10 +451,10 @@
   grid-column: 3 / span 9;
   max-width: 856px;
 
-  @media (min-width: 2560px) {
-    grid-column: 4 / span 6;
-    max-width: 1083px;
-  }
+  //@media (min-width: 2560px) {
+  //  grid-column: 4 / span 6;
+  //  max-width: 1083px;
+  //}
 
   @media (min-width: 1920px) {
     grid-column: 4 / span 9;
@@ -486,9 +486,9 @@
       max-width: 857px;
     }
 
-    @media (min-width: 2560px) {
-      max-width: 1446px;
-    }
+    //@media (min-width: 2560px) {
+    //  max-width: 1446px;
+    //}
 
     @media (max-width: 1439px) {
       line-height: 120%;
@@ -509,9 +509,9 @@
   background: var(--beige-l);
   padding: 84px 0 219px;
 
-  @media (min-width: 2560px) {
-    padding: 96px 0 192px;
-  }
+  //@media (min-width: 2560px) {
+  //  padding: 96px 0 192px;
+  //}
 
   @media (max-width: 1439px) {
     padding: 61px 0 153px;
@@ -664,10 +664,10 @@
   @media (min-width: 1920px) {
     max-width: 1704px;
   }
-
-  @media (min-width: 2560px) {
-    max-width: 2273px;
-  }
+  //
+  //@media (min-width: 2560px) {
+  //  max-width: 2273px;
+  //}
 
   @media (max-width: 1439px) {
     max-width: 921px;
@@ -675,6 +675,11 @@
 
   @media (max-width: 1023px) {
     max-width: 672px;
+  }
+
+  @media (max-width: 743px) {
+    max-width: none;
+    padding: 0 30px;
   }
 }
 
