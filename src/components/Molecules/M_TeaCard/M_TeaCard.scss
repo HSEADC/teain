@@ -1,19 +1,19 @@
+@import '../../../stylesheets/allcss';
 .M_TeaCard {
   background: var(--beige-l);
   display: flex;
   flex-direction: column;
   gap: 21px;
-  width: 100%;
-  max-width: 306px;
+  //max-width: 342px;
+  max-width: none;
   padding: 18px 18px;
   scale: 0.95;
-  /*box-sizing: content-box;*/
   text-decoration: none;
+  width: 100%;
+  /*box-sizing: content-box;*/
+  //width: 342px;
 
-  @media (min-width: 1920px) {
-    max-width: 408px;
-    padding: 18px 18px 44px;
-  }
+
 
   /*@media (min-width: 2560px) {*/
   /*  max-width: 526px;*/

@@ -25,12 +25,26 @@
     max-width: 500px;
 
     @media (max-width: 1439px) {
-      max-width: 36.523vw;
+      max-width: 385px;
     }
+
+
 
     //@media (max-width: 743px) {
     //  max-width: 86.047vw;
     //}
+  }
+
+  .A_CardTitl2 {
+    @media (max-width: 1439px) {
+      font-size: 1.25rem;
+    }
+  }
+
+  .A_Text, .A_Link {
+    @media (max-width: 1439px) {
+      font-size: 0.875rem;
+    }
   }
 
   .A_SliderButtonRight {

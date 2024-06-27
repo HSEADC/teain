@@ -1,5 +1,6 @@
 import { createRoot } from 'react-dom/client'
 import React, { Suspense } from 'react'
+import './index.css'
 // import S_Recipes from './components/SuperOrganisms/S_Recipes/S_Recipes'
 
 const S_Recipes = React.lazy((() => import('./components/SuperOrganisms/S_Recipes/S_Recipes')))

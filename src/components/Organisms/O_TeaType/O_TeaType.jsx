@@ -15,11 +15,20 @@ const O_TeaType = ({ className, object, index }) => {
       <div>
         <Swiper
           className="C_TeaCards"
-          spacebeetween={24}
-          slidesPerView={4}
+          spaceBetween={24} // Расстояние между слайдами
+          slidesPerView={4} // Количество отображаемых слайдов
+          freeMode={true}
           navigation={{
             nextEl: `.A_SliderButtonRight_${index}`,
             prevEl: `.A_SliderButtonLeft_${index}`
+          }}
+          breakpoints={{
+            1024: {
+              slidesPerView: 3.3,
+          },
+          1440: {
+              slidesPerView: 4,
+          }
           }}
           modules={[Navigation]}
           onSlideChange={() => console.log('slide change')}
@@ -32,6 +41,9 @@ const O_TeaType = ({ className, object, index }) => {
                 </SwiperSlide>
               )
             })}
+          <SwiperSlide >
+
+          </SwiperSlide>
         </Swiper>
       </div>
       <div className="W_TextLink">
@@ -120,7 +132,7 @@ const O_TeaType = ({ className, object, index }) => {
           <path
             d="M0.822529 38.4546C0.822531 17.934 22.949 1.29882 50.2433 1.29882C77.5376 1.29882 99.6641 17.934 99.6641 38.4546C99.6641 58.9752 77.5376 75.6103 50.2433 75.6103C22.949 75.6103 0.822527 58.9751 0.822529 38.4546Z"
             stroke="#CC8931"
-            stroke-width="0.721471"
+            strokeWidth="0.721471"
           />
           <path
             d="M43.6322 32.6627C43.3436 33.4131 43.0262 34.1057 42.6799 34.7406C42.3336 35.4043 41.944 36.0248 41.5111 36.602L64.7136 36.602L64.7136 40.1516L41.5111 40.1516C41.9151 40.7288 42.2903 41.3348 42.6366 41.9697C42.9829 42.6335 43.3003 43.3405 43.5889 44.0909L40.299 44.0909C38.5098 41.9842 36.5474 40.3825 34.4118 39.2858L34.4118 37.4245C36.5474 36.3855 38.5098 34.7983 40.299 32.6627L43.6322 32.6627Z"

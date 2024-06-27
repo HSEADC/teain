@@ -358,6 +358,17 @@
   .A_Lead {
     grid-column: 2 / 11;
     margin: 90px 0;
+
+    @media (min-width: 1920px) {
+      grid-column: 2 / span 7;
+      margin: 146px 0;
+    }
+
+    @media (max-width: 1439px) {
+      font-size: 1.125rem;
+      grid-column: 2 / -3;
+      margin: 57px 0 74px;
+    }
   }
 
   @media (min-width: 1920px) {
@@ -544,18 +555,46 @@
 }
 
 .W_SectionDescription {
-  padding: 10.833vw 0 4.722vw;
+  padding: 116px 0 34px;
+
+  .W_Container {
+    @media (max-width: 1023px ) {
+      row-gap: 19px;
+
+    }
+  }
+
+  @media (min-width: 1920px) {
+    padding: 176px 0 65px;
+  }
+
+
 
   .A_Title1 {
     grid-column: span 2;
   }
 
   .A_Text {
-    grid-column: 6 / -3;
+    grid-column: 4 / -4;
+    line-height: normal;
+
+    @media (min-width: 1920px) {
+      grid-column: 4 / span 4;
+    }
+
+
 
     @media (max-width: 1439px) {
-      font-size: 1.21vw;
-      grid-column: 4 / span 6;
+      font-size: 0.875rem;
+      grid-column: 5/span 6;
+    }
+
+    @media (max-width: 1023px) {
+      grid-column: 1/span 9;
+    }
+
+    @media (max-width: 743px) {
+      max-width: 340px;
     }
   }
 }
@@ -570,10 +609,60 @@
 
   .A_Text:first-child {
     grid-column: 2 / span 2;
+    line-height: normal;
+
+    @media (min-width: 1920px) {
+      grid-column: 3 / span 2;
+    }
+
+    @media (max-width: 1023px) {
+      grid-column:  1/ 4;
+    }
+
+
+
   }
 
   .A_Text:last-child {
     grid-column: -7 / -2;
+    line-height: normal;
+
+    @media (min-width: 1920px) {
+      max-width: 526px;
+    }
+
+    @media (max-width: 1023px) {
+      grid-column:  5/ -2;
+    }
+
+    @media (max-width: 743px) {
+      grid-column:  1/ -1;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    column-gap: 24px;
+    grid-template-columns: repeat(12, 1fr);
+    max-width: 1704px;
+  }
+
+  @media (max-width: 1439px) {
+    max-width: 918px;
+    padding: 34px 0 101px;
+  }
+
+  @media (max-width: 1023px) {
+    max-width: 672px;
+  }
+
+  @media (max-width: 743px) {
+    column-gap: 12px;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: none;
+    padding: 87px 30px 87px;
+    row-gap: 39px;
+    width: 100%;
+
   }
 }
 
@@ -581,7 +670,7 @@
   display: flex;
   justify-content: center;
   margin-bottom: 31px;
-  padding-left: clamp(4.5625rem, -39.592rem + 49.0605vw, 19.25rem);
+  //padding-left: clamp(4.5625rem, -39.592rem + 49.0605vw, 19.25rem);
 }
 
 .W_TeaType:last-of-type {

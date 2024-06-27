@@ -206,6 +206,7 @@
   font-family: var(--gramatika), sans-serif;
   font-size: 1.125rem;
   font-weight: 400;
+  line-height: normal;
 
   //@media (min-width: 2560px) {
   //  font-size: 1.5rem;
@@ -582,7 +583,7 @@
   text-decoration: none;
 
   @media (max-width: 1439px) {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 
 }
@@ -598,7 +599,7 @@
   //  font-size: 5.313rem;
   //}
   @media (max-width: 1439px) {
-    font-size: 4.435vw;
+    font-size: 3rem;
   }
 }
 
@@ -607,19 +608,35 @@
   background-size: cover;
   gap: initial;
   justify-content: space-between;
-  //min-height: 500px;
+  min-height: 500px;
+
+  @media (min-width: 1920px) {
+    grid-column: span 3;
+    min-height: 500px;
+  }
+
+  @media (max-width: 1439px) {
+   grid-column: span 3;
+    min-height: 285px;
+  }
+
+  @media (max-width: 1023px) {
+    grid-column: span 1;
+    min-height: 460px;
+  }
 }
 
 .A_TeaImage {
   background: url('/src/images/tea_image.png') no-repeat center;
   background-size: cover;
-  max-height: 500px;
   max-width: 636px;
   width: 100%;
 
   @media (min-width: 1920px) {
-    max-height: 657px;
-    max-width: 836px;
+    grid-column: span 6;
+    max-width: none;
+    min-height: 500px;
+
   }
   //@media (min-width: 2560px) {
   //  max-width: 1114px;
@@ -627,16 +644,25 @@
   //}
 
   @media (max-width: 1439px) {
-    max-height: 34.677vw;
-    max-width: 44.086vw;
+    grid-column: span 6;
+    min-height: 285px;
+  }
+
+  @media (max-width: 1023px) {
+    display: none;
   }
 }
 
 .A_TeaImageSlim {
   max-width: 306px;
 
+  @media (min-width: 1920px) {
+    grid-column: span 3;
+    max-width: none;
+  }
+
   @media (max-width: 1439px) {
-    max-width: 21.237vw;
+    grid-column: span 3;
   }
 }
 
@@ -645,6 +671,7 @@
   font-family: var(--gramatika);
   font-size: 1.875rem;
   font-weight: 400;
+  line-height: normal;
 }
 
 .A_CardTitleHelios {
@@ -653,6 +680,10 @@
   font-size: 1rem;
   font-weight: 900;
   line-height: 118%;
+
+  @media (max-width: 1439px) {
+    font-size: 0.875rem;
+  }
 
   //@media (min-width: 2560px) {
   //  font-size: 1.25rem;
@@ -666,9 +697,9 @@
   -webkit-text-stroke: 0.5px var(--darkGreen);
   text-stroke: 0.5px var(--darkGreen);
 
-  //@media (min-width: 2560px) {
-  //  font-size: 1.125rem;
-  //}
+  @media (max-width: 1439px) {
+    font-size: 0.688rem;
+  }
 }
 
 .A_SliderButton {
