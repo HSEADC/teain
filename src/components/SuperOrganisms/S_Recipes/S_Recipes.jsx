@@ -1,10 +1,10 @@
 import './S_Recipes.scss'
 import React, { useEffect, useState } from 'react'
-import { Header } from '../../Organisms/O_NavBar/O_NavBar.stories'
 import A_Text from '../../Atoms/A_Text/A_Text'
 import base from '../../../airtable'
 import A_Tag from '../../Atoms/A_Tag/A_Tag'
 import O_RecipeCard from '../../Organisms/O_RecipeCardS/O_RecipeCard'
+import O_NavBar from '../../Organisms/O_NavBar/O_NavBar'
 
 const S_Recipes = () => {
   const [recipes, setRecipes] = useState([])
@@ -88,7 +88,7 @@ const S_Recipes = () => {
 
   return (
     <>
-      <Header />
+      <O_NavBar />
       <div className="M_SectionDescription">
         <A_Text className="A_Title1">рецепты</A_Text>
         <A_Text className="A_Text">

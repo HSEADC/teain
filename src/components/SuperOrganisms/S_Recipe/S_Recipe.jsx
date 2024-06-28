@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { Header } from '../../Organisms/O_NavBar/O_NavBar.stories'
 import base from '../../../airtable'
 import '../../../stylesheets/allcss.scss'
 import A_Text from '../../Atoms/A_Text/A_Text'
 import A_Tag from '../../Atoms/A_Tag/A_Tag'
 import img from '../../../images/index/A_PreImg.png'
+import O_NavBar from '../../Organisms/O_NavBar/O_NavBar'
 
 const S_Recipe = () => {
 
@@ -44,7 +44,7 @@ const S_Recipe = () => {
 
   return (
     <>
-      <Header />
+      <O_NavBar />
       <div className="M_RecipeInf">
         <div className="W_Container">
           <div className="M_RecipeTitleLead">

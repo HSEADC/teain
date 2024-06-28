@@ -1,3 +1,4 @@
+/*
 .O_NavBar {
 	background: var(--biege-transparent);
 	display: flex;
@@ -46,4 +47,102 @@
 		border-bottom: 1px solid var(--darkGreen);
 		transition: all 0.5s ease;
 	}
+
+	@media (max-width: 743px) {
+		display: none;
+	}
 }
+*/
+
+
+/* Стили для бургер-меню */
+.bm-burger-button {
+	height: 14px;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	width: 36px;
+
+
+}
+
+.bm-burger-bars {
+	background: #373a47;
+}
+
+.bm-burger-bars:nth-child(2) {
+	display: none;
+	opacity: 0;
+}
+
+.bm-cross-button {
+	height: 24px !important;
+	position: absolute;
+	right: 32px !important;
+	top: 28px !important;
+	transform: scale(3) !important;
+	width: 24px !important;
+}
+
+.bm-cross {
+	background: var(--darkGreen) ;
+}
+
+.bm-menu-wrap {
+	height: 100vh !important ;
+	position: fixed;
+	top: 0;
+	width: 100vw !important;
+}
+
+.bm-menu {
+	background: var(--beige-d);
+	font-size: 1.15em;
+	padding: 48vh 13vw 0;
+}
+
+.bm-morph-shape {
+	fill: #373a47;
+}
+
+.bm-item-list {
+	padding: 0;
+}
+
+.bm-item {
+	color: var(--darkGreen);
+	display: inline-block;
+	font-size: 1.75rem;
+	margin-bottom: 10px;
+	text-decoration: none;
+}
+
+.bm-item:hover {
+	color: white;
+}
+
+/* Стили для адаптивной навигации */
+//.W_NavBar {
+//	align-items: center;
+//	display: flex;
+//	justify-content: space-between;
+//}
+//
+//.W_NavBarCat {
+//	display: none; /* Скрываем навигацию для мобильных устройств */
+//}
+//
+//.Q_BurgerIcon {
+//	display: block;
+//}
+//
+///* Стили для десктопной версии */
+//@media (min-width: 768px) {
+//	.W_NavBarCat {
+//		display: flex;
+//	}
+//
+//	.Q_BurgerIcon {
+//		display: none; /* Скрываем бургер-иконку для десктопа */
+//	}
+//}

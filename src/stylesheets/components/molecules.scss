@@ -39,6 +39,10 @@
   height: 34px;
   transition: all 0.3s ease;
 
+  @media (max-width: 743px) {
+    display: none;
+  }
+
   button {
     align-items: center;
     background: transparent;

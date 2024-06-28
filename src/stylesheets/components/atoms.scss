@@ -2,12 +2,20 @@
 @import "../../stylesheets/fonts.scss";
 
 .A_Logo {
-  width: 110px;
+  box-sizing: content-box;
+  padding: 0 34px;
+  width: 158px;
+  img {
+    width: 100%;
+  }
 
   @media (max-width: 1439px) {
-    img {
-      width: 78px;
-    }
+    padding: 0 24px;
+      width: 113px;
+  }
+
+  @media (max-width: 1023px) {
+    padding: 0;
   }
 }
 
