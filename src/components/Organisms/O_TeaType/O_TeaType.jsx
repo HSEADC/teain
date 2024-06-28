@@ -16,19 +16,28 @@ const O_TeaType = ({ className, object, index }) => {
         <Swiper
           className="C_TeaCards"
           spaceBetween={24} // Расстояние между слайдами
-          slidesPerView={4} // Количество отображаемых слайдов
+          slidesPerView={1.2} // Количество отображаемых слайдов
           freeMode={true}
           navigation={{
             nextEl: `.A_SliderButtonRight_${index}`,
             prevEl: `.A_SliderButtonLeft_${index}`
           }}
           breakpoints={{
+            475: {
+              slidesPerView: 1.6,
+            },
+            744: {
+              slidesPerView: 2.3,
+            },
             1024: {
               slidesPerView: 3.3,
           },
           1440: {
               slidesPerView: 4,
-          }
+          },
+          1920: {
+              slidesPerView: 5,
+          },
           }}
           modules={[Navigation]}
           onSlideChange={() => console.log('slide change')}

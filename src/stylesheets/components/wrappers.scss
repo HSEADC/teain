@@ -131,7 +131,7 @@
   gap: 12px;
 
   @media (max-width: 1439px) {
-    gap: 1.172vw;
+    gap: 8px;
   }
   //@media (max-width: 743px) {
   //  gap: 1.86vw;
@@ -197,6 +197,10 @@
   .A_Title2Vlas {
     white-space: nowrap;
     z-index: 2;
+
+    @media (max-width: 460px) {
+      white-space: normal;
+    }
   }
 
   .A_Text {
@@ -254,7 +258,7 @@
 
   @media (max-width: 1023px) {
     gap: 122px;
-    padding: 56px 18px 56px;
+    padding: 46px 18px 49px;
   }
 
   @media (max-width: 743px) {
@@ -351,8 +355,8 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   margin: 0 auto;
-  max-width: 1439px;
-  padding: 0 72px;
+  max-width: 1296px;
+  //padding: 0 72px;
   position: relative;
 
   .A_Lead {
@@ -369,11 +373,20 @@
       grid-column: 2 / -3;
       margin: 57px 0 74px;
     }
+
+    @media (max-width: 1023px) {
+      grid-column: 1 / -1;
+      margin: 48px 0 83px;
+    }
+
+    @media (max-width: 743px) {
+      margin: 30px 0 55px ;
+    }
   }
 
   @media (min-width: 1920px) {
-    max-width: 1920px;
-    padding: 0 108px;
+    max-width: 1704px;
+    padding: 0 ;
   }
 
   //@media (min-width: 2560px) {
@@ -445,6 +458,27 @@
   padding: 0 72px;
   position: relative;
 
+  @media (min-width: 1920px) {
+    max-width: 1704px;
+    padding: 0 ;
+  }
+
+  @media (max-width: 1439px) {
+    max-width: 921px;
+    padding: 0;
+  }
+
+  @media (max-width: 1023px) {
+    max-width: 672px;
+    padding: 0;
+  }
+
+  @media (max-width: 743px) {
+    column-gap: 12px;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0 30px;
+  }
+
   .A_Lead {
     grid-column: 2 / 11;
     margin: 96px 0;
@@ -455,6 +489,24 @@
     position: absolute;
     top: 173px;
     z-index: 2;
+
+    @media (max-width: 1439px) {
+      top: 127px;
+    }
+    @media (max-width: 743px) {
+      grid-column:span 1;
+      left: 30px;
+      top: 68.953vw;
+      width: 84px;
+      svg {
+        height: auto;
+        width: 100%;
+      }
+    }
+    
+    @media (max-width: 400px) {
+      top: 30vw;
+    }
   }
 }
 
@@ -571,11 +623,19 @@
 
 
   .A_Title1 {
-    grid-column: span 2;
+    grid-column: span 3;
+
+    @media (max-width: 1023px) {
+      grid-column: span 4;
+    }
+
+    @media (max-width: 743px) {
+      font-size: 1.5rem;
+    }
   }
 
   .A_Text {
-    grid-column: 4 / -4;
+    grid-column: 5 / span 5;
     line-height: normal;
 
     @media (min-width: 1920px) {
@@ -594,6 +654,8 @@
     }
 
     @media (max-width: 743px) {
+      font-size: 0.875rem;
+      grid-column: 1 / -1;
       max-width: 340px;
     }
   }
@@ -684,13 +746,92 @@
   margin: 0 auto;
   max-width: 1296px;
   padding: 116px 0 166px;
+  row-gap: 18px;
+
+  @media (min-width: 1920px) {
+    max-width: 1704px;
+
+  }
+
+  @media (max-width: 1439px) {
+    column-gap: 17px;
+    max-width: 919px;
+
+  }
+
+  @media (max-width: 1023px) {
+    column-gap: 12px;
+    max-width: 672px;
+    row-gap: 14px;
+  }
+
+  @media (max-width: 743px) {
+    column-gap: 12px;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 84px 30px 86px;
+
+  }
+
+  .A_Text {
+    @media (max-width: 1439px) {
+      font-size: 0.875rem;
+    }
+  }
 
   .A_Text:first-child {
     grid-column: span 5;
+
+	  @media (min-width: 1920px) {
+      grid-column: 3 / span 3 ;
+    }
+
+    @media (max-width: 1439px) {
+      grid-column: 2/ span 5;
+
+    }
+
+    @media (max-width: 1023px) {
+      grid-column: 1/ span 4;
+    }
+
+    @media (max-width: 743px) {
+      grid-column: 1/ -1;
+    }
   }
 
-  .A_Text:last-child {
+  .A_Text:nth-child(2) {
+
+
     grid-column: -7 / span 5;
+
+    @media (min-width: 1920px) {
+      grid-column: 7 / span 4 ;
+    }
+
+
+    @media (max-width: 1023px) {
+      grid-column: 5/ -2;
+    }
+
+    @media (max-width: 743px) {
+      grid-column: 1/ -1;
+    }
+
+  }
+  .A_Text:nth-child(3) {
+    grid-column: -7 / span 5;
+
+    @media (min-width: 1920px) {
+      grid-column: 7 / span 4 ;
+    }
+
+    @media (max-width: 1023px) {
+      grid-column: 5/ -2;
+    }
+    @media (max-width: 743px) {
+    grid-column: 1/ -1;
+  }
+
   }
 }
 
@@ -718,28 +859,120 @@
 }
 
 .W_RecipeButton {
+  margin-bottom: 164px;
+
+  @media (max-width: 1439px) {
+    margin-bottom: 97px;
+  }
+
+  @media (max-width: 743px) {
+    margin-bottom: 75px;
+  }
+
   .A_Describe {
     grid-column: 6 / -4;
     margin-top: 37px;
     max-width: 377px;
+
+    @media (min-width: 1920px) {
+      grid-column: 7 / -4;
+    }
+
+    @media (max-width: 1439px) {
+      font-size: 1.25rem;
+      grid-column: -7 / -2;
+      padding: 17px 39px;
+
+    }
+
+    @media (max-width: 1023px) {
+      grid-column: 3 / 10;
+    }
+
+    @media (max-width: 743px) {
+      font-size: 0.688rem;
+      grid-column: 1/ span 3;
+    }
   }
 }
 
 .W_Fact {
   background-color: var(--beige-d);
+  column-gap: 24px;
+  display: grid;
   grid-column: -1 / -7;
-  padding: 45px 110px;
+  grid-template-columns: repeat(6, 1fr);
+  padding: 45px 0;
+
+  @media (min-width: 1920px) {
+    grid-column: -6 / -1;
+    grid-template-columns: repeat(5, 1fr);
+
+  }
+
+  @media (max-width: 1439px) {
+    column-gap: 17px;
+    grid-column: -9/-1;
+    grid-template-columns: repeat(9, 1fr);
+    padding: 74px 0;
+  }
+
+  @media (max-width: 1023px) {
+    grid-column: 4 / -1;
+    grid-template-columns: repeat(9, 1fr);
+    padding: 47px 0;
+  }
+
+  @media (max-width: 743px) {
+    grid-column:  2 / -1;
+    padding: 34px 0;
+  }
+
+  @media (max-width: 405px) {
+    grid-column: 1 / -1;
+  }
 }
 
 .W_ArticleText {
-  column-gap: 24px;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  margin: 71px auto 0;
-  max-width: 1296px;
+  padding: 71px 0 123px;
+
+  @media (min-width: 1920px) {
+    padding: 83px 0 123px;
+
+  }
+
+  @media (max-width: 1439px) {
+    padding: 110px 0 186px ;
+  }
+
+  @media (max-width: 1023px) {
+    padding: 50px 0 112px;
+  }
+
+  @media (max-width: 743px) {
+    padding: 57px 30px 100px;
+
+  }
 
   .A_Text {
     grid-column: 1 / span 5;
+
+    @media (min-width: 1920px) {
+      grid-column: 1 / span 6;
+
+    }
+
+    @media (max-width: 1439px) {
+      grid-column: span 6;
+    }
+
+    @media (max-width: 1023px) {
+      grid-column: span 9;
+    }
+
+    @media (max-width: 743px) {
+      grid-column: 1 / -1;
+    }
   }
 }
 
@@ -779,5 +1012,25 @@
 
   @media (max-width: 1439px) {
     gap: 4px;
+  }
+}
+
+.W_RecipeTitleLead {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @media (max-width: 743px) {
+    gap: 12px;
+  }
+
+  .A_Title2Helios {
+    @media (max-width: 1439px) {
+      font-size: 2.125rem;
+    }
+
+    @media (max-width: 743px) {
+      font-size:  1.5rem;
+    }
   }
 }

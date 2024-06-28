@@ -3,6 +3,7 @@ import A_Text from '../../Atoms/A_Text/A_Text'
 import A_Tag from '../../Atoms/A_Tag/A_Tag'
 import img from '../../../images/recipe_card.png'
 import bigImg from '../../../images/index/A_ImgRecipeL.png'
+import './O_RecipeCard.scss'
 
 
 const O_RecipeCard = ({  recipe, toggleTagSelection, activeTags }) => {

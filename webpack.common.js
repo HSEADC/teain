@@ -15,6 +15,8 @@ module.exports = {
     typesoftea: './src/typesoftea.jsx',
     recipes: './src/recipes.jsx',
     teaCard: './src/typesoftea/teaCard.jsx',
+    recipe: './src/recipes/recipe.jsx',
+    article: './src/media/article.jsx'
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -180,13 +182,15 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/articles/recipes/thyme_and_apricots.html',
-      filename: './articles/recipes/thyme_and_apricots.html'
+      template: './src/recipes/recipe.html',
+      filename: './recipes/recipe.html',
+      chunks: ['recipe']
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/media/puerh.html',
-      filename: './media/puerh.html'
+      template: './src/media/article.html',
+      filename: './media/article.html',
+      chunks: ['article']
     }),
 
     // Partials

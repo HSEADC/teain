@@ -50,7 +50,7 @@ const S_TeaCard = () => {
     if (bottom_tag) {
       base('recipes')
         .select({
-          filterByFormula: `FIND('${bottom_tag}', ARRAYJOIN(tags, ',')) > 0`,
+          filterByFormula: `AND(FIND('${bottom_tag}', ARRAYJOIN(tags, ',')) > 0, NOT(flavour_of_the_week))`,
           maxRecords: 4,
         })
         .eachPage(

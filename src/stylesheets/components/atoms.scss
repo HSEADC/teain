@@ -199,6 +199,13 @@
   font-size: 1.625rem;
   -webkit-text-stroke: 1px var(--darkGreen);
   text-stroke: 1px var(--darkGreen);
+  @media (max-width: 1439px) {
+    font-size: 1.125rem ;
+  }
+
+  @media (max-width: 743px) {
+    font-size: 1rem;
+  }
 }
 
 .A_Text {
@@ -682,7 +689,7 @@
   line-height: 118%;
 
   @media (max-width: 1439px) {
-    font-size: 0.875rem;
+    font-size: 0.75rem;
   }
 
   //@media (min-width: 2560px) {
@@ -727,6 +734,14 @@
   font-size: 2.25rem;
   font-weight: 900;
   line-height: 135%;
+
+  @media (max-width: 1439px) {
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 743px) {
+    font-size: 1.375rem;
+  }
 }
 
 .A_Table1 {
@@ -734,6 +749,10 @@
   font-family: var(--gramatika);
   font-size: 1.375rem;
   font-weight: 700;
+
+  @media (max-width: 1439px) {
+    font-size: 0.875rem ;
+  }
 }
 
 .A_Table2 {
@@ -741,6 +760,10 @@
   font-family: var(--gramatika);
   font-size: 1.375rem;
   font-weight: 400;
+
+  @media (max-width: 1439px) {
+    font-size: 0.875rem ;
+  }
 }
 
 .A_SearchResult {
@@ -763,15 +786,34 @@
 }
 
 .A_Socials {
+  align-items: center;
   background-color: var(--caramel);
   color: var(--beige-l);
+  display: flex;
   font-family: var(--font-helios_ext_c);
   font-size: 1rem;
   font-weight: 900;
+  justify-content: center;
   line-height: 129%;
   padding: 14px 42px;
   text-align: justify;
   text-decoration: none;
+
+  @media (min-width: 1920px) {
+    width: 100%;
+
+  }
+
+  @media (max-width: 1439px) {
+    font-size: 0.875rem;
+    padding: 14px 22px;
+    width: 100%;
+
+  }
+
+  @media (max-width: 405px) {
+
+  }
 }
 
 .A_TeaCardTitle {

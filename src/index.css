@@ -1,4 +1,5 @@
 @import 'stylesheets/reset.scss';
+@import "animate.css";
 @import 'stylesheets/fonts.scss';
 @import 'stylesheets/vars.scss';
 @import 'stylesheets/base.scss';

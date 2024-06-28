@@ -61,8 +61,7 @@
   row-gap: 12px;
 
   @media (min-width: 1920px) {
-    column-gap: 39px;
-    max-width: 602px;
+    max-width: 520px;
   }
 
   //
@@ -72,8 +71,12 @@
 
   @media (max-width: 1439px) {
     column-gap: 17px;
-   max-width: none;
+    max-width: none;
     row-gap: 12px;
+  }
+
+  @media (max-width: 1023px) {
+    max-width: 358px;
   }
 
   //@media (max-width: 743px) {
@@ -188,6 +191,23 @@
   margin: 0 auto;
   max-width: 1296px;
   row-gap: 12px;
+
+  @media (max-width: 1439px) {
+    max-width: 919px;
+  }
+
+  @media (max-width: 1023px) {
+    max-width: 672px;
+  }
+
+  @media (max-width: 743px) {
+    column-gap: 15px;
+    padding: 0 30px;
+  }
+
+  @media (max-width: 430px) {
+    justify-content: flex-start;
+  }
 }
 
 .C_MediaCardCouple {
@@ -199,15 +219,51 @@
 
 .C_ArticleCont {
   display: flex;
-  gap: 24px;
+  gap: 19px;
+
+  @media (max-width: 743px) {
+    flex-direction: column;
+
+  }
+
+  .A_Text {
+    font-size: 1.125rem;
+    @media (max-width: 1439px) {
+      font-size: 0.875rem;
+
+    }
+  }
 }
 
 .C_ArticlePic {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
   margin: 72px auto 0;
-  max-width: 1296px;
+
+
+  @media (min-width: 1920px) {
+    margin: 83px auto 0;
+
+  }
+  @media (max-width: 1439px) {
+    margin: 213px auto 0;
+    row-gap: 17px ;
+
+  }
+
+  @media (max-width: 1023px) {
+    margin-top: 252px;
+  }
+
+  @media (max-width: 743px) {
+    margin-top: 50px  ;
+  }
+
+  .A_PreImg {
+    @media (max-width: 743px) {
+      max-width: none;
+    }
+
+  }
+
 }
 
 .C_Authors {
@@ -239,5 +295,18 @@
   }
   @media (max-width: 1439px) {
     gap: 17px;
+  }
+}
+
+
+.C_PreImjsRecipe {
+  padding-bottom: 163px;
+
+  .A_PreImg {
+    width: 100%;
+    img {
+      width: 100%;
+
+    }
   }
 }
