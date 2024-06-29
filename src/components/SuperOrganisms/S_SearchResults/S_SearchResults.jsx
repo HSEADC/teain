@@ -36,7 +36,9 @@ const SearchResults = () => {
           });
 
           // Load recipes data
-          await base('recipes').select({}).eachPage((records, fetchNextPage) => {
+          await base('recipes').select({
+            filterByFormula: 'NOT({flavour_of_the_week})',
+          }).eachPage((records, fetchNextPage) => {
             records.forEach(record => {
               console.log(record);
               const fields = record.fields;

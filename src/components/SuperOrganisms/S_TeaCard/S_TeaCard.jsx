@@ -177,14 +177,14 @@ const S_TeaCard = () => {
           <A_Text className="A_Title3Helios">{obj.cta}</A_Text>
           <A_Text className="A_Title3Vlas">рецепты</A_Text>
         </h2>
-        <A_Tag href={`${bottom_tag}`} active={true} size={'l'}>
+        <A_Tag href={`../recipes.html?tags=${bottom_tag}`} active={true} size={'l'}>
           {bottom_translated_tag_name}
         </A_Tag>
 
         <ul className="C_RecipeCardS">
           {recipes.map((recipe, index) => (
             <li key={index}>
-              <O_RecipeCard key={index} recipe={recipe} />
+              <O_RecipeCard href={`../recipes/recipe.html?recipe=${recipe.Name}`} key={index} recipe={recipe} />
             </li>
           ))}
         </ul>
