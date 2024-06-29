@@ -31,9 +31,8 @@ const O_NavBar = () => {
               {showSearch && <SearchBar />}
             </div>
             <a className="A_Text" href="../../../typesoftea.html?category=tea_types">чай</a>
-            <a className="A_Text" href="../../../recipes.html">рецепты</a>
-            <a className="A_Text" href="../../../media.html">медиа</a>
-            <a className="A_Text" href="../../../media.html">поиск</a>
+            <a className="A_Text" href="../../../recipes.html" style={{pointerEvents: 'none'}}>рецепты</a>
+            <a className="A_Text" href="../../../media.html" style={{pointerEvents: 'none'}}>медиа</a>
 
           </Menu>
         </div>
@@ -43,19 +42,19 @@ const O_NavBar = () => {
               <a className="A_chapter" href="../../../typesoftea.html?category=tea_types">чай</a>
             </li>
             <li>
-              <a className="A_chapter" href="../../../recipes.html">рецепты</a>
+              <a className="A_chapter" href="../../../recipes.html" style={{pointerEvents: 'none'}}>рецепты</a>
             </li>
             <li>
-              <a className="A_chapter" href="../../../media.html">медиа</a>
+              <a className="A_chapter" href="../../../media.html" style={{pointerEvents: 'none'}}>медиа</a>
             </li>
 
           </ul>
-          <div  className={`M_SearchIcon ${showSearch ? 'active' : ''}`}>
+          {/*<div  className={`M_SearchIcon ${showSearch ? 'active' : ''}`}>
             <button aria-hidden="true" id="searchBtn" onClick={toggleSearch}>
               <img alt="search" src={A_SearchIcon} />
             </button>
             {showSearch && <SearchBar />}
-          </div>
+          </div>*/}
         </nav>
       </div>
     </header>
