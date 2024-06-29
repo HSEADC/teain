@@ -42,7 +42,7 @@ const M_TeaCard = ({ className, id, imgPathStor, top_nameS, bottom_nameS }) => {
   }
 
   return (
-    <a href={`../../../typesoftea/teaCard.html?item=${name}`} className={classNames('M_TeaCard', className, isNew && 'M_TeaCard-new')}>
+    <a href={`typesoftea/teaCard.html?item=${name}`} className={classNames('M_TeaCard', className, isNew && 'M_TeaCard-new')}>
       <img alt={top_name} src={imgPath} onError={(e) => e.target.src = img} />
       <W_CardTitle>
         <A_Text className={'A_CardTitleHelios'}>{top_name}</A_Text>
