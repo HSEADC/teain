@@ -63,4 +63,11 @@ body,
 }
 
 
+.loader-container {
+  align-items: center;
+  display: flex;
+  height: 100vh; /* Высота на весь экран */
+  justify-content: center;
+}
+
 

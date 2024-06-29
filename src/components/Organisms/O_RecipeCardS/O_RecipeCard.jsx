@@ -64,7 +64,7 @@ const O_RecipeCard = ({ recipe, toggleTagSelection, activeTags, href }) => {
         </div>
       </div>
       <div className="A_ImgRecipeL">
-        <img alt="" src={imageBig} onError={(e) => e.target.src = bigImg} />
+        <img alt="" src={image} onError={(e) => e.target.src = bigImg} />
       </div>
     </a>
   );
