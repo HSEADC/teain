@@ -1,12 +1,13 @@
 .S_Media {
   background-color: var(--beige-l);
-}
 
+  .media {
+    color: var(--caramel);
+  }
+}
 
 .S_TeaCard {
   background-color: var(--beige-l);
-
-
 
   .O_RecipeCardS {
     background: var(--beige-d);
@@ -19,18 +20,12 @@
 
 .S_Puerh {
   background-color: var(--beige-l);
-
 }
 
 .O_RecipeCardS {
   background: var(--beige-l);
 }
 .S_Main {
-
-
-
-
-
   .A_Cursor1Interactive {
     display: none;
     @media (min-width: 1024px) {
