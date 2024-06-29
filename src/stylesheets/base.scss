@@ -50,18 +50,23 @@ body,
   background-color: #fcf6ee;
   overflow-x: hidden;
   position: relative;
+
+  .tea_types {
+    color: var(--caramel);
+  }
 }
 
-.body-recepies {
+.S_Recepies {
   background-color: var(--beige-d);
 
   .O_RecipeCardS {
     background: var(--beige-l);
   }
 
-
+  .recepies {
+    color: var(--caramel);
+  }
 }
-
 
 .loader-container {
   align-items: center;
@@ -69,5 +74,3 @@ body,
   height: 100vh; /* Высота на весь экран */
   justify-content: center;
 }
-
-

@@ -535,7 +535,7 @@ if (true) {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "" + chunkId + "." + {"62":"f11bab68648f1f7ab4bd","421":"9bec959d333d32bfe5f5","808":"4d69b99b371daf8ff727","997":"9cccdb68c46d6f02f57c"}[chunkId] + ".js";
+/******/ 			return "" + chunkId + "." + {"62":"f11bab68648f1f7ab4bd","802":"0aa7d9191a4624360c37","997":"9cccdb68c46d6f02f57c"}[chunkId] + ".js";
 /******/ 		};
 /******/ 	})();
 /******/ 	
@@ -708,11 +708,11 @@ if (true) {
 /******/ 		}
 /******/ 		// object to store loaded CSS chunks
 /******/ 		var installedCssChunks = {
-/******/ 			354: 0
+/******/ 			201: 0
 /******/ 		};
 /******/ 		
 /******/ 		__webpack_require__.f.miniCss = (chunkId, promises) => {
-/******/ 			var cssChunks = {"808":1};
+/******/ 			var cssChunks = {"802":1};
 /******/ 			if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 			else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 				promises.push(installedCssChunks[chunkId] = loadStylesheet(chunkId).then(() => {
@@ -739,7 +739,7 @@ if (true) {
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			354: 0
+/******/ 			201: 0
 /******/ 		};
 /******/ 		
 /******/ 		__webpack_require__.f.j = (chunkId, promises) => {
@@ -828,10 +828,10 @@ var __webpack_exports__ = {};
 
 
 
-var S_Article3 = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_1__.lazy)(function () {
-  return Promise.all(/* import() */[__webpack_require__.e(997), __webpack_require__.e(62), __webpack_require__.e(421), __webpack_require__.e(808)]).then(__webpack_require__.bind(__webpack_require__, 7587));
+var O_NavBar = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.lazy(function () {
+  return Promise.all(/* import() */[__webpack_require__.e(997), __webpack_require__.e(62), __webpack_require__.e(802)]).then(__webpack_require__.bind(__webpack_require__, 7427));
 });
-var root = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_0__/* .createRoot */ .H)(document.querySelector('#app'));
-root.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react__WEBPACK_IMPORTED_MODULE_1__.Suspense, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(S_Article3, null)));
+var O_NavBarRoot = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_0__/* .createRoot */ .H)(document.querySelector('#O_NavBar'));
+O_NavBarRoot.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react__WEBPACK_IMPORTED_MODULE_1__.Suspense, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(O_NavBar, null)));
 /******/ })()
 ;

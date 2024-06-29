@@ -535,7 +535,7 @@ if (true) {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "" + chunkId + "." + {"62":"f11bab68648f1f7ab4bd","67":"d2cc4ad6d2d80042f00f","421":"9bec959d333d32bfe5f5","442":"67cdf3f00721f18b83f3","605":"a60dbafd9216f09b2b7c","699":"eb8deceb94d02d3ba1df","829":"709458491a47964e8f3d","997":"9cccdb68c46d6f02f57c"}[chunkId] + ".js";
+/******/ 			return "" + chunkId + "." + {"62":"f11bab68648f1f7ab4bd","117":"60579ef69994af5f677e","421":"ba2f124397cd8d9f1e8b","442":"67cdf3f00721f18b83f3","997":"9cccdb68c46d6f02f57c"}[chunkId] + ".js";
 /******/ 		};
 /******/ 	})();
 /******/ 	
@@ -544,7 +544,7 @@ if (true) {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.miniCssF = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "" + chunkId + "." + {"442":"31d6cfe0d16ae931b73c","605":"25d30f65d6d9fa4e8f7d","699":"d7f8351241bfb4514832","829":"31d6cfe0d16ae931b73c"}[chunkId] + ".css";
+/******/ 			return "" + chunkId + "." + {"117":"093d7b33412b3f6cfafd","442":"31d6cfe0d16ae931b73c"}[chunkId] + ".css";
 /******/ 		};
 /******/ 	})();
 /******/ 	
@@ -708,11 +708,11 @@ if (true) {
 /******/ 		}
 /******/ 		// object to store loaded CSS chunks
 /******/ 		var installedCssChunks = {
-/******/ 			41: 0
+/******/ 			141: 0
 /******/ 		};
 /******/ 		
 /******/ 		__webpack_require__.f.miniCss = (chunkId, promises) => {
-/******/ 			var cssChunks = {"442":1,"605":1,"699":1,"829":1};
+/******/ 			var cssChunks = {"117":1,"442":1};
 /******/ 			if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 			else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 				promises.push(installedCssChunks[chunkId] = loadStylesheet(chunkId).then(() => {
@@ -739,7 +739,7 @@ if (true) {
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			41: 0
+/******/ 			141: 0
 /******/ 		};
 /******/ 		
 /******/ 		__webpack_require__.f.j = (chunkId, promises) => {
@@ -751,7 +751,7 @@ if (true) {
 /******/ 					if(installedChunkData) {
 /******/ 						promises.push(installedChunkData[2]);
 /******/ 					} else {
-/******/ 						if(!/^(442|699|829)$/.test(chunkId)) {
+/******/ 						if(442 != chunkId) {
 /******/ 							// setup Promise in chunk cache
 /******/ 							var promise = new Promise((resolve, reject) => (installedChunkData = installedChunks[chunkId] = [resolve, reject]));
 /******/ 							promises.push(installedChunkData[2] = promise);
@@ -827,12 +827,11 @@ var __webpack_exports__ = {};
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6540);
 
 
-// import S_TypesOfTeaPage from './components/SuperOrganisms/S_TypesOfTeaPage/S_TypesOfTeaPage'
 
-var S_TypesOfTeaPage = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.lazy(function () {
-  return Promise.all(/* import() */[__webpack_require__.e(997), __webpack_require__.e(62), __webpack_require__.e(67), __webpack_require__.e(421), __webpack_require__.e(442), __webpack_require__.e(699), __webpack_require__.e(829), __webpack_require__.e(605)]).then(__webpack_require__.bind(__webpack_require__, 7518));
+var S_Recipe = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_1__.lazy)(function () {
+  return Promise.all(/* import() */[__webpack_require__.e(997), __webpack_require__.e(62), __webpack_require__.e(421), __webpack_require__.e(442), __webpack_require__.e(117)]).then(__webpack_require__.bind(__webpack_require__, 5171));
 });
 var root = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_0__/* .createRoot */ .H)(document.querySelector('#app'));
-root.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react__WEBPACK_IMPORTED_MODULE_1__.Suspense, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(S_TypesOfTeaPage, null)));
+root.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react__WEBPACK_IMPORTED_MODULE_1__.Suspense, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(S_Recipe, null)));
 /******/ })()
 ;

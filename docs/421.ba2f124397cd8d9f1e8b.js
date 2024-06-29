@@ -148,7 +148,7 @@ var SearchBar = function SearchBar() {
             case 17:
               _context.prev = 17;
               _context.t0 = _context["catch"](7);
-              console.error("Error loading data:", _context.t0);
+              console.error('Error loading data:', _context.t0);
             case 20:
             case "end":
               return _context.stop();
@@ -195,7 +195,7 @@ var SearchBar = function SearchBar() {
     }
   };
   var handleResultClick = function handleResultClick(query) {
-    window.location.href = "searchResult.html?query=".concat(query);
+    window.location.href = "/zavarka/searchResult.html?query=".concat(query);
   };
   return /*#__PURE__*/react.createElement("div", {
     className: "O_SearchBar"
@@ -265,26 +265,26 @@ var O_NavBar = function O_NavBar() {
     alt: "search",
     src: A_SearchIcon_namespaceObject
   })), showSearch && /*#__PURE__*/react.createElement(O_SearchBar, null)), /*#__PURE__*/react.createElement("a", {
-    className: "A_chapter",
+    className: "A_chapter tea_types",
     href: "/zavarka/typesoftea.html?category=tea_types"
   }, "\u0447\u0430\u0439"), /*#__PURE__*/react.createElement("a", {
-    className: "A_chapter",
+    className: "A_chapter recipes",
     href: "/zavarka/recipes.html"
   }, "\u0440\u0435\u0446\u0435\u043F\u0442\u044B"), /*#__PURE__*/react.createElement("a", {
-    className: "A_chapter",
+    className: "A_chapter media",
     href: "/zavarka/media.html"
   }, "\u043C\u0435\u0434\u0438\u0430"))), /*#__PURE__*/react.createElement("nav", {
     className: "W_NavBarCat"
   }, /*#__PURE__*/react.createElement("ul", {
     className: "C_NavBarCat"
   }, /*#__PURE__*/react.createElement("li", null, /*#__PURE__*/react.createElement("a", {
-    className: "A_chapter",
+    className: "A_chapter tea_types",
     href: "/zavarka/typesoftea.html?category=tea_types"
   }, "\u0447\u0430\u0439")), /*#__PURE__*/react.createElement("li", null, /*#__PURE__*/react.createElement("a", {
-    className: "A_chapter",
+    className: "A_chapter recepies",
     href: "/zavarka/recipes.html"
   }, "\u0440\u0435\u0446\u0435\u043F\u0442\u044B")), /*#__PURE__*/react.createElement("li", null, /*#__PURE__*/react.createElement("a", {
-    className: "A_chapter",
+    className: "A_chapter media",
     href: "/zavarka/media.html"
   }, "\u043C\u0435\u0434\u0438\u0430"))), /*#__PURE__*/react.createElement("div", {
     className: "M_SearchIcon ".concat(showSearch ? 'active' : '')

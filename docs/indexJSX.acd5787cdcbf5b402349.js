@@ -535,7 +535,7 @@ if (true) {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "" + chunkId + "." + {"62":"f11bab68648f1f7ab4bd","117":"60579ef69994af5f677e","421":"9bec959d333d32bfe5f5","442":"67cdf3f00721f18b83f3","997":"9cccdb68c46d6f02f57c"}[chunkId] + ".js";
+/******/ 			return "" + chunkId + "." + {"62":"f11bab68648f1f7ab4bd","442":"67cdf3f00721f18b83f3","665":"cf0b8173a28a446defd3","685":"a5d2ba21fcdd848b3e8a","699":"eb8deceb94d02d3ba1df","802":"0aa7d9191a4624360c37","829":"709458491a47964e8f3d","997":"9cccdb68c46d6f02f57c"}[chunkId] + ".js";
 /******/ 		};
 /******/ 	})();
 /******/ 	
@@ -544,7 +544,7 @@ if (true) {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.miniCssF = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "" + chunkId + "." + {"117":"6ed490c52c40377a8aa6","442":"31d6cfe0d16ae931b73c"}[chunkId] + ".css";
+/******/ 			return "" + chunkId + "." + {"442":"31d6cfe0d16ae931b73c","685":"d3736651ed35f219a6f2","699":"dc537e7a32083bc2f113","802":"fec973b4d39711c48798","829":"31d6cfe0d16ae931b73c"}[chunkId] + ".css";
 /******/ 		};
 /******/ 	})();
 /******/ 	
@@ -708,11 +708,11 @@ if (true) {
 /******/ 		}
 /******/ 		// object to store loaded CSS chunks
 /******/ 		var installedCssChunks = {
-/******/ 			141: 0
+/******/ 			872: 0
 /******/ 		};
 /******/ 		
 /******/ 		__webpack_require__.f.miniCss = (chunkId, promises) => {
-/******/ 			var cssChunks = {"117":1,"442":1};
+/******/ 			var cssChunks = {"442":1,"685":1,"699":1,"802":1,"829":1};
 /******/ 			if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 			else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 				promises.push(installedCssChunks[chunkId] = loadStylesheet(chunkId).then(() => {
@@ -739,7 +739,7 @@ if (true) {
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			141: 0
+/******/ 			872: 0
 /******/ 		};
 /******/ 		
 /******/ 		__webpack_require__.f.j = (chunkId, promises) => {
@@ -751,7 +751,7 @@ if (true) {
 /******/ 					if(installedChunkData) {
 /******/ 						promises.push(installedChunkData[2]);
 /******/ 					} else {
-/******/ 						if(442 != chunkId) {
+/******/ 						if(!/^(442|699|829)$/.test(chunkId)) {
 /******/ 							// setup Promise in chunk cache
 /******/ 							var promise = new Promise((resolve, reject) => (installedChunkData = installedChunks[chunkId] = [resolve, reject]));
 /******/ 							promises.push(installedChunkData[2] = promise);
@@ -826,12 +826,22 @@ var __webpack_exports__ = {};
 /* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5338);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6540);
 
+// import S_TeaCard from '../components/SuperOrganisms/S_TeaCard/S_TeaCard'
 
-
-var S_Recipe = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_1__.lazy)(function () {
-  return Promise.all(/* import() */[__webpack_require__.e(997), __webpack_require__.e(62), __webpack_require__.e(421), __webpack_require__.e(442), __webpack_require__.e(117)]).then(__webpack_require__.bind(__webpack_require__, 5171));
+var W_RecipeCardL = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.lazy(function () {
+  return Promise.all(/* import() */[__webpack_require__.e(997), __webpack_require__.e(442), __webpack_require__.e(829), __webpack_require__.e(685)]).then(__webpack_require__.bind(__webpack_require__, 748));
 });
-var root = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_0__/* .createRoot */ .H)(document.querySelector('#app'));
-root.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react__WEBPACK_IMPORTED_MODULE_1__.Suspense, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(S_Recipe, null)));
+var O_NavBar = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.lazy(function () {
+  return Promise.all(/* import() */[__webpack_require__.e(997), __webpack_require__.e(62), __webpack_require__.e(802)]).then(__webpack_require__.bind(__webpack_require__, 7427));
+});
+var C_Teas = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.lazy(function () {
+  return Promise.all(/* import() */[__webpack_require__.e(997), __webpack_require__.e(442), __webpack_require__.e(699), __webpack_require__.e(665)]).then(__webpack_require__.bind(__webpack_require__, 6032));
+});
+var root = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_0__/* .createRoot */ .H)(document.querySelector('#recipes'));
+root.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react__WEBPACK_IMPORTED_MODULE_1__.Suspense, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(W_RecipeCardL, null)));
+var O_NavBarRoot = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_0__/* .createRoot */ .H)(document.querySelector('#O_NavBar'));
+O_NavBarRoot.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react__WEBPACK_IMPORTED_MODULE_1__.Suspense, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(O_NavBar, null)));
+var W_TeaTypeCards = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_0__/* .createRoot */ .H)(document.querySelector('#W_TeaTypeCards'));
+W_TeaTypeCards.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react__WEBPACK_IMPORTED_MODULE_1__.Suspense, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(C_Teas, null)));
 /******/ })()
 ;
