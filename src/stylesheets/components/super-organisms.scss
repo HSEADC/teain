@@ -2,11 +2,13 @@
   background-color: var(--beige-l);
 }
 
-.S_Tea {
-  background-color: var(--beige-l);
-}
+
 .S_TeaCard {
   background-color: var(--beige-l);
+
+  .O_RecipeCardS {
+    background: var(--beige-d);
+  }
 }
 
 .S_Recipe {
@@ -18,11 +20,11 @@
 
 }
 
-
+.O_RecipeCardS {
+  background: var(--beige-l);
+}
 .S_Main {
-  .O_RecipeCardS {
-    background: var(--beige-l);
-  }
+
 
 
 

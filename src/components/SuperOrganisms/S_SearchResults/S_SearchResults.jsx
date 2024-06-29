@@ -4,9 +4,8 @@ import base from '../../../airtable'
 import M_TeaCard from '../../Molecules/M_TeaCard/M_TeaCard'
 import O_RecipeCard from '../../Organisms/O_RecipeCardS/O_RecipeCard'
 import A_Text from '../../Atoms/A_Text/A_Text'
-import O_NavBar from '../../Organisms/O_NavBar/O_NavBar' // Импортируйте вашу базу Airtable
+import O_NavBar from '../../Organisms/O_NavBar/O_NavBar'
 import './S_SearchResults.scss'
-
 
 const SearchResults = () => {
   const [results, setResults] = useState([]);
@@ -23,20 +22,28 @@ const SearchResults = () => {
         const recipesData = [];
 
         try {
-          // Загрузка данных чая
+          // Load tea data
           await base('tea').select({}).eachPage((records, fetchNextPage) => {
             records.forEach(record => {
+              console.log(record);
               const fields = record.fields;
-              teaData.push(fields);
+              teaData.push({
+                ...fields,
+                id: record.id // Add id from record
+              });
             });
             fetchNextPage();
           });
 
-          // Загрузка данных рецептов
+          // Load recipes data
           await base('recipes').select({}).eachPage((records, fetchNextPage) => {
             records.forEach(record => {
+              console.log(record);
               const fields = record.fields;
-              recipesData.push(fields);
+              recipesData.push({
+                ...fields,
+                id: record.id // Add id from record
+              });
             });
             fetchNextPage();
           });
@@ -47,15 +54,16 @@ const SearchResults = () => {
               top_name: item.top_name,
               bottom_name: item.bottom_name,
               translated_type_name: item.translated_type_name,
-              id: item.id, // добавьте идентификатор для чая
+              id: item.id, // id is now correctly set
               image: item.image
             })),
             ...recipesData.map(item => ({
               type: 'recipe',
+              name: item.Name,
               translated_name: item.translated_name,
               translated_tag_names: item.translated_tag_names,
               tag_names: item.tag_names,
-              id: item.id, // добавьте идентификатор для рецепта
+              id: item.id, // id is now correctly set
               description: item.description,
               image: item.image,
               flavour_of_the_week: item.flavour_of_the_week
@@ -93,35 +101,33 @@ const SearchResults = () => {
         <A_Text className="A_Title1">Результаты поиска</A_Text>
       </div>
       <div className="W_Container">
+        {teaResults.length > 0 && <A_Text className="A_Title2Helios"> Чай</A_Text>}
+        <div className="grid-container">
+          {teaResults.map((item, index) => (
+            <div key={index} className="grid-item">
+              <M_TeaCard
+                className=""
+                id={item.id}
+                imgPathStor={item.image ? item.image[0].url : null}
+                top_nameS={item.top_name}
+                bottom_nameS={item.bottom_name}
+              />
+            </div>
+          ))}
+        </div>
 
-        {teaResults.length > 0 &&  <A_Text className="A_Title2Helios"> Чай</A_Text>}
-      <div className="grid-container">
-        {teaResults.map((item, index) => (
-          <div key={index} className="grid-item">
-            <M_TeaCard
-              className=""
-              id={item.id}
-              imgPathStor={item.image ? item.image[0].url : null}
-              top_nameS={item.top_name}
-              bottom_nameS={item.bottom_name}
-            />
-          </div>
-        ))}
-      </div>
-
-        {recipeResults.length > 0 &&       <A_Text className="A_Title2Helios"> Рецепты</A_Text>}
-      <div className="grid-container">
-        {recipeResults.map((item, index) => (
-          <div key={index} className="grid-item">
-            <O_RecipeCard
-              recipe={item}
-              toggleTagSelection={() => {
-              }}
-              activeTags={[]}
-            />
-          </div>
-        ))}
-      </div>
+        {recipeResults.length > 0 && <A_Text className="A_Title2Helios"> Рецепты</A_Text>}
+        <div className="grid-container">
+          {recipeResults.map((item, index) => (
+            <div key={index} className="grid-item">
+              <O_RecipeCard
+                recipe={item}
+                href={`../../../recipes/recipe.html?recipe=${item.name}`}
+                toggleTagSelection={() => {}}
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );

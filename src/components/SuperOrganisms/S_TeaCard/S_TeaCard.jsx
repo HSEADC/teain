@@ -6,7 +6,7 @@ import O_RecipeCard from '../../Organisms/O_RecipeCardS/O_RecipeCard'
 import O_NavBar from '../../Organisms/O_NavBar/O_NavBar'
 
 const S_TeaCard = () => {
-  const [item, setItem] = useState('assam');
+  const [item, setItem] = useState('');
   const [obj, setObj] = useState({});
   const [image, setImage] = useState('');
   const [teaType, setTeaType] = useState('');
@@ -68,21 +68,12 @@ const S_TeaCard = () => {
     }
   }, [bottom_tag]);
 
-  useEffect(() => {
-    console.log('Recipes:', recipes);
-    console.log('Bottom Tag:', bottom_tag);
-    console.log('Object:', obj);
-  }, [obj, recipes]);
-
-
-
   return (
     <div>
-      <O_NavBar/>
-
+      <O_NavBar />
 
       <div className="W_LeadContainer">
-        <a className="A_SliderButton" href="fermentation.html">
+        <button className="A_SliderButton" onClick={() => {window.history.back()}}>
           <svg
             fill="none"
             height="85"
@@ -123,8 +114,7 @@ const S_TeaCard = () => {
               strokeWidth="0.721471"
             />
           </svg>
-        </a>
-
+        </button>
       </div>
 
       <div className="O_TeaCaracters">
@@ -135,7 +125,6 @@ const S_TeaCard = () => {
               <A_Text className="A_Title3Vlas">{obj.bottom_name}</A_Text>
             </h2>
             <img alt="" className="A_ImgTea_Card" src={image} />
-
           </div>
           <A_Text className="A_Lead">
             {obj.description}
@@ -146,51 +135,62 @@ const S_TeaCard = () => {
               <A_Text className="A_Title3Helios">{obj.sub_title}</A_Text>
               <A_Text className="A_Title3Vlas">характеристики</A_Text>
             </h2>
-            <div className="M_TableRow">
-              <A_Text className="A_Table1">что используют</A_Text>
-              <A_Text className="A_Table2" >{obj.what_use}</A_Text>
-            </div>
-            <div className="M_TableRow">
-              <A_Text className="A_Table1">полезные вещества</A_Text>
-              <A_Text className="A_Table2">{obj.useful}</A_Text>
-            </div>
-            <div className="M_TableRow">
-              <A_Text className="A_Table1">t заварки </A_Text>
-              <A_Text className="A_Table2" >{obj.temperature}</A_Text>
-            </div>
-            <div className="M_TableRow">
-              <A_Text className="A_Table1">цвет чая </A_Text>
-              <A_Text className="A_Table2">{obj.color}</A_Text>
-            </div>
-            <div className="M_TableRow">
-              <A_Text className="A_Table1">вкус </A_Text>
-              <A_Text className="A_Table2"
-              >{obj.taste}</A_Text
-              >
-            </div>
+            {obj.what_use && (
+              <div className="M_TableRow">
+                <A_Text className="A_Table1">что используют</A_Text>
+                <A_Text className="A_Table2">{obj.what_use}</A_Text>
+              </div>
+            )}
+            {obj.useful && (
+              <div className="M_TableRow">
+                <A_Text className="A_Table1">полезные вещества</A_Text>
+                <A_Text className="A_Table2">{obj.useful}</A_Text>
+              </div>
+            )}
+
+            {obj.temperature && (
+              <div className="M_TableRow">
+                <A_Text className="A_Table1">t заварки </A_Text>
+                <A_Text className="A_Table2">{obj.temperature}</A_Text>
+              </div>
+            )}
+
+            {obj.color && (
+              <div className="M_TableRow">
+                <A_Text className="A_Table1">цвет чая </A_Text>
+                <A_Text className="A_Table2">{obj.color}</A_Text>
+              </div>
+            )}
+
+            {obj.taste && (
+              <div className="M_TableRow">
+                <A_Text className="A_Table1">вкус </A_Text>
+                <A_Text className="A_Table2">{obj.taste}</A_Text>
+              </div>
+            )}
           </div>
         </div>
       </div>
 
       <div className="O_RecipesRec">
-
         <h2 className="M_Title3">
           <A_Text className="A_Title3Helios">{obj.cta}</A_Text>
           <A_Text className="A_Title3Vlas">рецепты</A_Text>
         </h2>
-        <A_Tag href={`${bottom_tag}`} active={true} size={"l"} >{bottom_translated_tag_name}</A_Tag>
+        <A_Tag href={`${bottom_tag}`} active={true} size={'l'}>
+          {bottom_translated_tag_name}
+        </A_Tag>
 
         <ul className="C_RecipeCardS">
           {recipes.map((recipe, index) => (
-            <li key={index} >
+            <li key={index}>
               <O_RecipeCard key={index} recipe={recipe} />
             </li>
           ))}
-
         </ul>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default S_TeaCard
+export default S_TeaCard;

@@ -91,6 +91,7 @@
   //}
 }
 
+
 .C_TeaTypeCards {
   display: flex;
   justify-content: space-between;
@@ -127,6 +128,18 @@
     grid-template-rows: 1fr ;
     max-width: none;
     row-gap: 12px;
+  }
+}
+
+.C_Teas {
+  gap: 23px;
+
+  @media (max-width: 1439px) {
+    gap: 17px;
+  }
+
+  @media (max-width: 1023px) {
+    gap: 12px;
   }
 }
 

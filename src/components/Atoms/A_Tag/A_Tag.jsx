@@ -8,6 +8,8 @@ const A_Tag = ({ children, className, active, href, size = "s", green, onClick }
     if (onClick) {
       e.preventDefault();
       onClick();
+    } else if (href) {
+      window.location.href = href;
     }
   };
 

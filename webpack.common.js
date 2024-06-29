@@ -208,6 +208,12 @@ module.exports = {
         location: 'analytics',
         template_filename: '*',
         priority: 'replace'
+      },
+      {
+        path: path.join(__dirname, './src/partials/O_Footer.html'),
+        location: 'footer',
+        template_filename: '*',
+        priority: 'replace'
       }
     ])
   ],

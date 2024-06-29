@@ -11,6 +11,7 @@ const M_TeaCard = ({ className, id, imgPathStor, top_nameS, bottom_nameS }) => {
   const [bottom_name, setBottomName] = useState(bottom_nameS)
   const [imgPath, setImgPath] = useState(imgPathStor)
   const [name, setName] = useState('')
+  const [isNew, setIsNew] = useState(false)
 
   useEffect(() => {
     if (id) {
@@ -20,11 +21,16 @@ const M_TeaCard = ({ className, id, imgPathStor, top_nameS, bottom_nameS }) => {
           return;
         }
 
+        console.log(record)
+
 
         setTopName(record.get('top_name'))
         setBottomName(record.get('bottom_name'))
         setImgPath(record.get('image')[0].url)
         setName(record.get('name'))
+        setIsNew(record.get('new'))
+
+        console.log(record.get('new'))
       });
     }
   }, [id])
@@ -36,7 +42,7 @@ const M_TeaCard = ({ className, id, imgPathStor, top_nameS, bottom_nameS }) => {
   }
 
   return (
-    <a href={`../../../typesoftea/teaCard.html?item=${name}`} className={classNames('M_TeaCard', className)}>
+    <a href={`../../../typesoftea/teaCard.html?item=${name}`} className={classNames('M_TeaCard', className, isNew && 'M_TeaCard-new')}>
       <img alt={top_name} src={imgPath} onError={(e) => e.target.src = img} />
       <W_CardTitle>
         <A_Text className={'A_CardTitleHelios'}>{top_name}</A_Text>

@@ -1,4 +1,4 @@
-import Teas from './С_Teas'
+import Teas from './C_Teas'
 
 const meta = {
   component: Teas

@@ -92,7 +92,7 @@ const S_Recipe = () => {
       </div>
 
       <div className="W_Container W_RecipeButton">
-        <button className="A_Describe">распечатать рецепт</button>
+        <button onClick={() => {window.print(   )}} className="A_Describe">распечатать рецепт</button>
       </div>
 
 

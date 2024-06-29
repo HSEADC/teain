@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Fuse from 'fuse.js'
-import base from '../../../airtable' // Импортируйте вашу базу Airtable
+import base from '../../../airtable'
 import './O_SearchBar.scss'
 
 const SearchBar = () => {
@@ -18,20 +18,26 @@ const SearchBar = () => {
         const recipesData = [];
 
         try {
-          // Загрузка данных чая
+          // Load tea data
           await base('tea').select({}).eachPage((records, fetchNextPage) => {
             records.forEach(record => {
               const fields = record.fields;
-              teaData.push(fields);
+              teaData.push({
+                ...fields,
+                id: record.id // Add id from record
+              });
             });
             fetchNextPage();
           });
 
-          // Загрузка данных рецептов
+          // Load recipes data
           await base('recipes').select({}).eachPage((records, fetchNextPage) => {
             records.forEach(record => {
               const fields = record.fields;
-              recipesData.push(fields);
+              recipesData.push({
+                ...fields,
+                id: record.id // Add id from record
+              });
             });
             fetchNextPage();
           });
@@ -42,11 +48,19 @@ const SearchBar = () => {
               top_name: item.top_name,
               bottom_name: item.bottom_name,
               translated_type_name: item.translated_type_name,
+              id: item.id,
+              image: item.image
             })),
             ...recipesData.map(item => ({
               type: 'recipe',
+              name: item.Name,
               translated_name: item.translated_name,
               translated_tag_names: item.translated_tag_names,
+              tag_names: item.tag_names,
+              id: item.id, // Add id for recipe
+              description: item.description,
+              image: item.image,
+              flavour_of_the_week: item.flavour_of_the_week
             })),
           ];
 
@@ -109,7 +123,7 @@ const SearchBar = () => {
           {results.map((item, index) => (
             <li key={index} onClick={() => handleResultClick(query)}>
               {item.type === 'tea'
-                ? `Чай: ${item.top_name} ${item.bottom_name} `
+                ? `Чай: ${item.top_name} ${item.bottom_name}`
                 : `Рецепт: ${item.translated_name}`}
             </li>
           ))}

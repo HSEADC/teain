@@ -22,6 +22,11 @@ const C_Teas = () => {
   }, []);
 
 
+  useEffect(() => {
+    console.log(teas)
+  }, [teas])
+
+
 
   return (
     <div className="C_Teas C_TeaTypeCards">
