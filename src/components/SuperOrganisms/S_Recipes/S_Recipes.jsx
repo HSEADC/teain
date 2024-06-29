@@ -119,7 +119,7 @@ const S_Recipes = () => {
       <ul className="C_RecipeCardS">
         {sortedRecipes.map((recipe, index) => (
           <li key={index}>
-            <O_RecipeCard href={`../../../recipes/recipe.html?recipe=${recipe.Name}`}  activeTags={activeTags} recipe={recipe} toggleTagSelection={toggleTagSelection} />
+            <O_RecipeCard href={`recipes/recipe.html?recipe=${recipe.Name}`}  activeTags={activeTags} recipe={recipe} toggleTagSelection={toggleTagSelection} />
           </li>
         ))}
       </ul>

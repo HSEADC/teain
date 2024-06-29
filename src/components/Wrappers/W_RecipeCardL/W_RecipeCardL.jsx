@@ -39,7 +39,7 @@ const W_RecipeCardL = () => {
       {flavourOfTheWeek && <O_RecipeCard recipe={flavourOfTheWeek}   /> }
 
       <div className={'W_BottomLink'}>
-        <A_Link href={"./recipes.html"}>Открыть все рецепты</A_Link>
+        <A_Link href={"recipes.html"}>Открыть все рецепты</A_Link>
       </div>
 
 

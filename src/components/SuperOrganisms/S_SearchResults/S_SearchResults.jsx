@@ -122,7 +122,7 @@ const SearchResults = () => {
             <div key={index} className="grid-item">
               <O_RecipeCard
                 recipe={item}
-                href={`../../../recipes/recipe.html?recipe=${item.name}`}
+                href={`recipes/recipe.html?recipe=${item.name}`}
                 toggleTagSelection={() => {}}
               />
             </div>
