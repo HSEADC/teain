@@ -21,7 +21,7 @@ const M_TeaCard = ({ className, id, imgPathStor, top_nameS, bottom_nameS }) => {
           return;
         }
 
-        console.log(record)
+        console.log(record.get('new'))
 
 
         setTopName(record.get('top_name'))

@@ -8,10 +8,10 @@ const C_Teas = () => {
 
   useEffect(() => {
     base('tea').select({
-      filterByFormula: '{new} = TRUE()', // Фильтрация по полю new
-      maxRecords: 4, // Ограничение на количество записей
+      filterByFormula: '{new} = TRUE()', 
+      maxRecords: 4,
     }).eachPage((records, fetchNextPage) => {
-      const loadedTeas = records.map(record => record.fields);
+      const loadedTeas = records.map(record => record);
       setTeas(prev => [...prev, ...loadedTeas]);
       fetchNextPage();
     }, (err) => {
@@ -31,7 +31,7 @@ const C_Teas = () => {
   return (
     <div className="C_Teas C_TeaTypeCards">
       {teas.map((tea, index) =>
-      <M_TeaCard key={index} imgPathStor={tea.image[0].url} bottom_nameS={tea.bottom_name} top_nameS={tea.top_name} />
+      <M_TeaCard key={index} imgPathStor={tea.fields.image[0].url} bottom_nameS={tea.fields.bottom_name} top_nameS={tea.fields.top_name}  id={tea.id} />
       )}
     </div>
   )

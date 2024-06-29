@@ -11,7 +11,6 @@ module.exports = {
   entry: {
     index: './src/index.js',
     indexJSX: './src/index.jsx',
-    fermentation: './src/js/typesoftee/fermentation.js',
     typesoftea: './src/typesoftea.jsx',
     recipes: './src/recipes.jsx',
     teaCard: './src/typesoftea/teaCard.jsx',
@@ -153,11 +152,6 @@ module.exports = {
       chunks: ['media']
     }),
 
-    new HtmlWebpackPlugin({
-      template: './src/typesoftee/fermentation.html',
-      filename: './typesoftee/fermentation.html',
-      chunks: ['fermentation']
-    }),
 
     new HtmlWebpackPlugin({
       template: './src/typesoftea.html',
@@ -166,10 +160,7 @@ module.exports = {
     }),
 
     // Article
-    new HtmlWebpackPlugin({
-      template: './src/typesoftee/fermentation/Indian_Black_Tea.html',
-      filename: './typesoftee/fermentation/Indian_Black_Tea.html'
-    }),
+
 
 
     new HtmlWebpackPlugin({
