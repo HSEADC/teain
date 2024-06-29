@@ -13,6 +13,10 @@ const S_Recipes = () => {
   const [activeTags, setActiveTags] = useState(['all'])
 
   useEffect(() => {
+    console.log(recipes)
+  }, [recipes])
+
+  useEffect(() => {
     base('recipes')
       .select({})
       .eachPage(
@@ -93,8 +97,7 @@ const S_Recipes = () => {
       <div className="M_SectionDescription">
         <A_Text className="A_Title1">рецепты</A_Text>
         <A_Text className="A_Text">
-          Все о&nbsp;регионах, процессах ферментации и&nbsp;способах заварки,
-          от&nbsp;культурных традиций до&nbsp;экспериментальных сортов.
+          Делюсь с&nbsp;вами любимыми и&nbsp;лучшими рецептами на&nbsp;основе чая, которые помогут стать спокойнее, счастливее или как вы&nbsp;сами хотите!
         </A_Text>
       </div>
 
@@ -116,7 +119,7 @@ const S_Recipes = () => {
       <ul className="C_RecipeCardS">
         {sortedRecipes.map((recipe, index) => (
           <li key={index}>
-            <O_RecipeCard href="../../../recipes/recipe.html"  activeTags={activeTags} recipe={recipe} toggleTagSelection={toggleTagSelection} />
+            <O_RecipeCard href={`../../../recipes/recipe.html?recipe=${recipe.Name}`}  activeTags={activeTags} recipe={recipe} toggleTagSelection={toggleTagSelection} />
           </li>
         ))}
       </ul>
@@ -125,7 +128,8 @@ const S_Recipes = () => {
         <A_Text className="A_Text">
           Платформа для всех, кто хочет разбираться в&nbsp;чае, уважает культуру
           чаепития или любит готовить напитки в&nbsp;кругу близких и&nbsp;наедине
-          с&nbsp;собой.        </A_Text>
+          с&nbsp;собой.
+        </A_Text>
         <A_Text className="A_Text">
 
           Все о&nbsp;регионах, процессах ферментации и&nbsp;способах заварки,
