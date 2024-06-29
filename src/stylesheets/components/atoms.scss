@@ -1,7 +1,22 @@
-@import '/src/stylesheets/vars';
+@import "../../stylesheets/vars.scss";
+@import "../../stylesheets/fonts.scss";
 
 .A_Logo {
-  width: 110px;
+  box-sizing: content-box;
+  padding: 0 34px;
+  width: 158px;
+  img {
+    width: 100%;
+  }
+
+  @media (max-width: 1439px) {
+    padding: 0 24px;
+      width: 113px;
+  }
+
+  @media (max-width: 1023px) {
+    padding: 0;
+  }
 }
 
 .A_SearchInput {
@@ -32,16 +47,50 @@
 }
 
 .A_quote {
+  color: var(--darkGreen);
   display: flex;
   flex-direction: column;
   font-family: var(--font-helios_ext_c);
   gap: 24px;
   max-width: 431px;
+
+  //@media (min-width: 2560px) {
+  //  max-width: 575px;
+  //}
+
+  @media (max-width: 1439px) {
+    gap: 17px;
+    max-width: 306px;
+  }
+
+  //@media (max-width: 743px) {
+  //  gap: 16px;
+  //  max-width: 306px;
+  //}
 }
 
 .A_QuoteText {
   font-size: 1.5rem;
   font-weight: 900;
+  line-height: 118%;
+  @media (min-width: 1920px) {
+    line-height: 122%;
+  }
+
+  //@media (min-width: 2560px) {
+  //  font-size: 2rem;
+  //}
+
+  @media (max-width: 1439px) {
+    font-size: 1.063rem;
+  }
+
+  @media (max-width: 1023px) {
+    font-size: 1.125rem ;
+  }
+  //@media (max-width: 743px) {
+  //  font-size: 4.186vw;
+  //}
 }
 
 .A_QuoteTxt {
@@ -49,6 +98,19 @@
   font-family: var(--font-helios_ext_c);
   font-size: 1.5rem;
   font-weight: 400;
+  line-height: normal;
+
+  //@media (min-width: 2560px) {
+  //  font-size: 1.75rem;
+  //}
+
+  @media (max-width: 1439px) {
+    font-size: 1rem;
+  }
+
+  //@media (max-width: 743px) {
+  //  font-size: 1.063rem;
+  //}
 }
 
 .A_QuoteAuthor {
@@ -56,6 +118,23 @@
   font-family: var(--font-helios_ext_c);
   font-size: 1.125rem;
   font-weight: 700;
+
+  //@media (min-width: 2560px) {
+  //  font-size: 1.625rem;
+  //}
+
+  @media (max-width: 1439px) {
+    font-size: 0.75rem;
+  }
+
+  @media (max-width: 743px) {
+    font-size: 0.875rem ;
+
+  }
+
+  //@media (max-width: 743px) {
+  //  font-size: 3.256vw;
+  //}
 }
 
 .A_chapter {
@@ -66,21 +145,60 @@
   line-height: 112%;
   text-align: right;
   text-decoration: none;
+
+  //@media (min-width: 2560px) {
+  //  font-size: 1.5rem;
+  //}
+
+  @media (max-width: 1439px) {
+    font-size: 0.75rem;
+  }
 }
 
 .A_Title2Helios {
   color: var(--darkGreen);
-  font-family: var(--font-helios_ext_c);
+  font-family: var(--font-helios_ext_c), sans-serif;
   font-size: 2.625rem;
   font-weight: 900;
+
+  //@media (min-width: 2560px) {
+  //  font-size: 3.25rem;
+  //}
+
+  @media (max-width: 1439px) {
+    font-size: 1.875rem;
+  }
+
+  @media (max-width: 743px) {
+    font-size:  1.5rem;
+  }
+
+  //@media (max-width: 743px) {
+  //  font-size: 5.581vw;
+  //}
 }
 
 .A_Title2Vlas {
   color: var(--darkGreen);
-  font-family: var(--font-als_vlas);
-  font-size: 1.75rem;
+  font-family: var(--font-als_vlas), sans-serif;
+  font-size: 1.875rem;
   -webkit-text-stroke: 1px var(--darkGreen);
   text-stroke: 1px var(--darkGreen);
+  //@media (min-width: 2560px) {
+  //  font-size: 2rem;
+  //}
+  @media (max-width: 1439px) {
+    font-size: 1.313rem;
+    line-height: 142%;
+  }
+  @media (max-width: 743px) {
+    font-size: 1.125rem;
+
+  }
+
+  //@media (max-width: 743px) {
+  //  font-size: 4.186vw;
+  //}
 }
 
 .A_Title3Vlas {
@@ -89,86 +207,218 @@
   font-size: 1.625rem;
   -webkit-text-stroke: 1px var(--darkGreen);
   text-stroke: 1px var(--darkGreen);
+  @media (max-width: 1439px) {
+    font-size: 1.125rem ;
+  }
+
+  @media (max-width: 743px) {
+    font-size: 1rem;
+  }
 }
 
 .A_Text {
   color: var(--darkGreen);
-  font-family: var(--gramatika);
+  font-family: var(--gramatika), sans-serif;
   font-size: 1.125rem;
   font-weight: 400;
+  line-height: normal;
+
+  //@media (min-width: 2560px) {
+  //  font-size: 1.5rem;
+  //}
+
+  @media (max-width: 1439px) {
+    font-size: 0.75rem;
+  }
+
+  @media (max-width: 1023px) {
+    font-size: 0.875rem;
+  }
+
+  //@media (max-width: 743px) {
+  //  font-size: 2.791vw;
+  //}
 }
 
 .A_Link {
   color: var(--caramel);
   font-family: var(--gramatika);
+  font-size: 1.125rem;
   font-weight: 400;
   line-height: 159%;
   text-decoration: underline;
   text-decoration-skip-ink: none;
+
+  //@media (min-width: 2560px) {
+  //  font-size: 1.5rem;
+  //}
+
+  @media (max-width: 1439px) {
+    font-size: 0.75rem;
+  }
+
+  @media (max-width: 743px) {
+    font-size: 0.875rem;
+  }
+
+  //@media (max-width: 743px) {
+  //  font-size: 2.791vw;
+  //}
 }
 
 .A_PreImg {
   max-width: 306px;
 
   img {
+    display: block;
+    height: auto;
     width: 100%;
   }
-}
 
-.A_Tag {
-  align-items: center;
-  background: transparent;
-  border: 1px solid var(--green);
-  display: flex;
-  justify-content: center;
-  padding: 3px 10px;
-  scale: 0.9;
-  text-decoration: none;
-
-  width: fit-content;
-
-  span {
-    color: var(--darkGreen);
-    font-family: var(--gramatika);
-    font-size: 0.75rem;
-    line-height: 172%;
-    text-align: justify;
+  @media (min-width: 1920px) {
+    max-width: 408px;
   }
 
-  &:hover {
-    transform: scale(
-      1.1
-    ); /* Используйте свойство transform для масштабирования */
+  //@media (min-width: 2560px) {
+  //  max-width: 448px;
+  //}
+
+  @media (max-width: 1439px) {
+    max-width: 217px;
   }
 
-  &:not(:active) {
-    scale: 1; /* Используйте свойство transform для масштабирования */
-    transition: transform 0.2s ease-in-out; /* Перенесите сюда свойство transition */
+  @media (max-width: 1023px) {
+    max-width: none;
+    width: 100%;
+  }
+  @media (max-width: 743px) {
+    max-width: 41.86vw;
   }
 }
+
+//.A_Tag {
+//  align-items: center;
+//  background: transparent;
+//  border: 1px solid var(--green);
+//  display: flex;
+//  justify-content: center;
+//  padding: 3px 10px;
+//  scale: 0.9;
+//  text-decoration: none;
+//
+//  width: fit-content;
+//
+//  @media (min-width: 2560px) {
+//    padding: 6px 17px;
+//  }
+//
+//  @media (max-width: 1439px) {
+//    padding: 2px 7px;
+//  }
+//
+//  @media (max-width: 743px) {
+//    padding: 0.465vw 1.628vw;
+//  }
+//
+//  span {
+//    color: var(--darkGreen);
+//    font-family: var(--gramatika);
+//    font-size: 0.75rem;
+//    line-height: 172%;
+//    text-align: justify;
+//    @media (min-width: 2560px) {
+//      font-size: 1rem;
+//    }
+//    @media (max-width: 1439px) {
+//      font-size: 0.625rem;
+//    }
+//    @media (max-width: 743px) {
+//      font-size: 2.326vw;
+//    }
+//  }
+//
+//  &:hover {
+//    transform: scale(1.1);
+//  }
+//
+//  &:not(:active) {
+//    scale: 1;
+//    transition: transform 0.3s ease-in-out;
+//  }
+//
+//  &.active {
+//    background-color: var(--green);
+//    border: 1px solid var(--green);
+//    span {
+//      color: var(--beige-l);
+//    }
+//  }
+//}
 
 .A_Tag_Cloud {
   background: transparent;
   border: 1px solid var(--green);
+  cursor: pointer;
   display: flex;
   font-size: 1.125rem;
   font-weight: 400;
   line-height: 114%;
-  padding: 3px 10px;
+  padding: 6px 20px;
+  scale: 0.9;
   text-align: justify;
+
+  @media (max-width: 743px) {
+
+  }
 
   span {
     color: var(--green);
     font-family: var(--gramatika);
   }
+
+  &.active {
+    background-color: var(--green);
+    border: 1px solid var(--green);
+    span {
+      color: var(--beige-l);
+    }
+  }
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:not(:active) {
+    scale: 1;
+    transition: transform 0.5s ease-in-out;
+  }
 }
 
 .A_ImgRecipeL {
-  grid-column: -8/ -1;
+  grid-column: span 7;
+
+  @media (max-width: 1023px) {
+    grid-column: 1/-1;
+  }
 
   img {
     width: 100%;
   }
+
+  @media (min-width: 1920px) {
+    grid-column: -8/ -1;
+
+    width: 100%;
+
+    img {
+      max-height: 512px;
+      object-fit: cover;
+    }
+  }
+  //@media (min-width: 2560px) {
+  //  img {
+  //    max-height: 705px;
+  //  }
+  //}
 }
 
 .A_QuoteH {
@@ -176,6 +426,18 @@
   font-family: var(--font-helios_ext_c);
   font-size: 1.5rem;
   font-weight: 900;
+
+  //@media (min-width: 2560px) {
+  //  font-size: 1.875rem;
+  //}
+
+  @media (max-width: 1439px) {
+    font-size: 1rem;
+  }
+
+  //@media (max-width: 743px) {
+  //  font-size: 4.186vw;
+  //}
 }
 
 .A_TeaTypeCard {
@@ -192,6 +454,46 @@
   position: relative;
   text-decoration: none;
   width: 100%;
+
+  @media (min-width: 1920px) {
+    background-size: cover;
+    gap: 370px;
+    max-width: 408px;
+    min-height: 534px;
+  }
+
+  //@media (min-width: 2560px) {
+  //  gap: 505px;
+  //  max-width: 526px;
+  //  min-height: 675px;
+  //}
+
+  @media (max-width: 1439px) {
+    gap: 175px;
+    max-width: 217px;
+    min-height: 284px;
+    padding: 35px 15px 17px;
+  }
+
+
+  @media (max-width: 1023px) {
+    gap: 175px;
+    max-width: 330px;
+    min-height: 460px;
+    padding: 35px 15px 17px;
+  }
+
+  @media (max-width: 743px) {
+    max-width: none;
+    width: 100%;
+
+  }
+
+  .W_CardTitle {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
 }
 
 .A_CardTitl1 {
@@ -200,6 +502,19 @@
   font-family: var(--font-helios_ext_c);
   font-size: 1.25rem;
   font-weight: 900;
+
+  //@media (min-width: 2560px) {
+  //  font-size: 1.375rem;
+  //}
+
+  @media (max-width: 1439px) {
+    font-size: 0.875rem;
+  }
+
+  @media (max-width: 1023px ) {
+    font-size: 1.125rem;
+
+  }
 }
 
 .A_CardTitle2 {
@@ -209,6 +524,19 @@
   font-weight: 400;
   -webkit-text-stroke: 0.5px var(--darkGreen);
   text-stroke: 0.5px var(--darkGreen);
+  //@media (min-width: 2560px) {
+  //  font-size: 1.375rem;
+  //  -webkit-text-stroke: 1px var(--darkGreen);
+  //  text-stroke: 1px var(--darkGreen);
+  //}
+
+  @media (max-width: 1439px) {
+    font-size: 12px;
+  }
+
+  @media (max-width: 1023px) {
+    font-size: 0.813rem;
+  }
 }
 
 .A_CardArrow {
@@ -219,6 +547,10 @@
   img {
     max-width: 40px;
     width: 100%;
+
+    @media (max-width: 1439px) {
+      max-width: 20px;
+    }
   }
 }
 
@@ -235,32 +567,26 @@
   justify-content: center;
   line-height: 103%;
   min-height: 56px;
-  padding: 6px 18px;
+  padding: 6px 0;
   text-align: justify;
+  text-decoration: none;
+  //
+  //@media (min-width: 2560px) {
+  //  font-size: 2rem;
+  //}
+
+  @media (max-width: 1439px) {
+    font-size: 0.875rem;
+    min-height: 40px;
+    padding: 4px 29px;
+  }
 }
 
 .A_Cursor1 {
   background: url('/src/images/index/Cursor_Default.svg') no-repeat center;
   background-size: cover;
-  display: none;
   height: 153px;
-  opacity: 0;
-  pointer-events: none;
-  position: fixed;
-  transform: translate(-50%, -50%);
-  transition:
-    opacity 0.4s ease,
-    transform 0.1s ease;
   width: 232px;
-  z-index: 1000;
-
-  &.active {
-    opacity: 1;
-  }
-
-  &.click {
-    background: url('/src/images/index/Cursor_Click.svg') no-repeat center;
-  }
 }
 
 .A_CardTitl2 {
@@ -270,6 +596,11 @@
   font-size: 1.5rem;
   font-weight: 900;
   text-decoration: none;
+
+  @media (max-width: 1439px) {
+    font-size: 1rem;
+  }
+
 }
 
 .A_Title1 {
@@ -278,16 +609,36 @@
   font-size: 4rem;
   font-weight: 900;
   line-height: 76%;
+
+  //@media (min-width: 2560px) {
+  //  font-size: 5.313rem;
+  //}
+  @media (max-width: 1439px) {
+    font-size: 3rem;
+  }
 }
 
 .A_TeaTypeCardSlim {
   background-position: 60% 50%;
   background-size: cover;
   gap: initial;
-  height: 63vh;
   justify-content: space-between;
-  min-height: 0;
-  //min-height: 500px;
+  min-height: 500px;
+
+  @media (min-width: 1920px) {
+    grid-column: span 3;
+    min-height: 500px;
+  }
+
+  @media (max-width: 1439px) {
+   grid-column: span 3;
+    min-height: 285px;
+  }
+
+  @media (max-width: 1023px) {
+    grid-column: span 1;
+    min-height: 460px;
+  }
 }
 
 .A_TeaImage {
@@ -295,19 +646,39 @@
   background-size: cover;
   max-width: 636px;
   width: 100%;
+
+  @media (min-width: 1920px) {
+    grid-column: span 6;
+    max-width: none;
+    min-height: 500px;
+
+  }
+  //@media (min-width: 2560px) {
+  //  max-width: 1114px;
+  //  min-height: 876px;
+  //}
+
+  @media (max-width: 1439px) {
+    grid-column: span 6;
+    min-height: 285px;
+  }
+
+  @media (max-width: 1023px) {
+    display: none;
+  }
 }
 
 .A_TeaImageSlim {
   max-width: 306px;
-}
 
-.M_Banner {
-  background-image: url('/src/images/tea_image.png');
-  background-position: left;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 440px;
-  width: 100%;
+  @media (min-width: 1920px) {
+    grid-column: span 3;
+    max-width: none;
+  }
+
+  @media (max-width: 1439px) {
+    grid-column: span 3;
+  }
 }
 
 .A_Lead {
@@ -315,6 +686,7 @@
   font-family: var(--gramatika);
   font-size: 1.875rem;
   font-weight: 400;
+  line-height: normal;
 }
 
 .A_CardTitleHelios {
@@ -323,6 +695,14 @@
   font-size: 1rem;
   font-weight: 900;
   line-height: 118%;
+
+  @media (max-width: 1439px) {
+    font-size: 0.75rem;
+  }
+
+  //@media (min-width: 2560px) {
+  //  font-size: 1.25rem;
+  //}
 }
 
 .A_CardTitleVlas {
@@ -331,6 +711,10 @@
   font-size: 0.75rem;
   -webkit-text-stroke: 0.5px var(--darkGreen);
   text-stroke: 0.5px var(--darkGreen);
+
+  @media (max-width: 1439px) {
+    font-size: 0.688rem;
+  }
 }
 
 .A_SliderButton {
@@ -358,6 +742,14 @@
   font-size: 2.25rem;
   font-weight: 900;
   line-height: 135%;
+
+  @media (max-width: 1439px) {
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 743px) {
+    font-size: 1.375rem;
+  }
 }
 
 .A_Table1 {
@@ -365,6 +757,10 @@
   font-family: var(--gramatika);
   font-size: 1.375rem;
   font-weight: 700;
+
+  @media (max-width: 1439px) {
+    font-size: 0.875rem ;
+  }
 }
 
 .A_Table2 {
@@ -372,6 +768,10 @@
   font-family: var(--gramatika);
   font-size: 1.375rem;
   font-weight: 400;
+
+  @media (max-width: 1439px) {
+    font-size: 0.875rem ;
+  }
 }
 
 .A_SearchResult {
@@ -385,18 +785,75 @@
   margin-top: 47px;
 }
 
-@media (max-width: 1440px) {
-  .A_quote {
-    max-width: 395px;
+.A_List {
+  color: var(--darkGreen);
+  font-family: var(--gramatika);
+  font-size: 1.375rem;
+  font-weight: 900;
+  list-style-type: disc;
+}
 
-    .A_QuoteText {
-      font-size: 1.375rem;
-      line-height: 118%;
-    }
+.A_Socials {
+  align-items: center;
+  background-color: var(--caramel);
+  color: var(--beige-l);
+  display: flex;
+  font-family: var(--font-helios_ext_c);
+  font-size: 1rem;
+  font-weight: 900;
+  justify-content: center;
+  line-height: 129%;
+  padding: 14px 42px;
+  text-align: justify;
+  text-decoration: none;
 
-    .A_QuoteAuthor {
-      font-size: 1rem;
-      font-weight: 700;
-    }
+  @media (min-width: 1920px) {
+    width: 100%;
+
+  }
+
+  @media (max-width: 1439px) {
+    font-size: 0.875rem;
+    padding: 14px 22px;
+    width: 100%;
+
+  }
+
+  @media (max-width: 405px) {
+
+  }
+}
+
+.A_TeaCardTitle {
+  color: var(--beige-l);
+  font-family: var(--font-helios_ext_c);
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 118%;
+
+  @media (max-width: 1439px) {
+    font-size: 0.75rem;
+  }
+}
+
+.A_FooterText {
+  color: var(--beige-l);
+  font-family: var(--font-helios_ext_c);
+  font-size: 0.75rem;
+  font-weight: 900;
+  line-height: 118%;
+  @media (max-width: 1439px) {
+    font-size: 0.5rem;
+  }
+}
+
+.A_Cursor {
+  bottom: -30vw;
+  max-width: 41.628vw;
+  position: absolute;
+  right: 5.814vw;
+
+  img {
+    width: 100%;
   }
 }

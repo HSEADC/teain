@@ -3,9 +3,9 @@ body {
   font-smooth: never;
   -webkit-font-smoothing: antialiased;
   height: 100%;
+  min-width: 320px;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
-
   text-rendering: optimizeLegibility;
 }
 
@@ -20,13 +20,33 @@ body,
   box-sizing: border-box;
 }
 
-.body-index {
+.S_Main {
   .W_RecipeCardL {
-    padding: 94px 0 65px;
+    padding: 44px 0 65px;
+
+    @media (min-width: 1920px) {
+      padding: 174px 0 65px;
+    }
+
+    //@media (min-width: 2560px) {
+    //  padding: 158px 0 116px;
+    //}
+
+    @media (max-width: 1439px) {
+      padding: 46px 0;
+    }
+
+    @media (max-width: 1023px) {
+      padding: 67px 36px 54px;
+    }
+
+    @media (max-width: 743px) {
+      padding: 45px 30px 54px;
+    }
   }
 }
 
-.body-fermentation {
+.S_Fermentation {
   background-color: #fcf6ee;
   overflow-x: hidden;
   position: relative;
@@ -39,18 +59,8 @@ body,
     background: var(--beige-l);
   }
 
-  .W_RecipeCardL {
-    padding: 49px 0 0;
-  }
 
-  .C_RecipeCardS {
-    padding: 49px 0 0;
-  }
 }
 
-.body-Indian_Black_Tea {
-  .C_PreImjs {
-    margin-top: 164px;
-    padding-bottom: 164px;
-  }
-}
+
+

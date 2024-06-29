@@ -10,8 +10,14 @@ const CopyPlugin = require('copy-webpack-plugin')
 module.exports = {
   entry: {
     index: './src/index.js',
-    fermentation: './src/js/typesoftee/fermentation.js',
-    recipes: './src/js/recipes.js'
+    indexJSX: './src/index.jsx',
+    typesoftea: './src/typesoftea.jsx',
+    recipes: './src/recipes.jsx',
+    teaCard: './src/typesoftea/teaCard.jsx',
+    recipe: './src/recipes/recipe.jsx',
+    article: './src/media/article.jsx',
+    searchResult: './src/searchResult.jsx',
+    media: './src/media.jsx'
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -98,9 +104,9 @@ module.exports = {
       },
       {
         test: /\.(ttf|otf|woff|woff2)$/i,
-        loader: 'file-loader',
-        options: {
-          name: 'fonts/[name].[ext]'
+        type: 'asset/resource',
+        generator: {
+          filename: 'fonts/[name][ext]'
         }
       }
     ]
@@ -130,7 +136,8 @@ module.exports = {
 
     new HtmlWebpackPlugin({
       template: './src/index.html',
-      filename: './index.html'
+      filename: './index.html',
+      chunks: ['index', 'indexJSX']
     }),
 
     // Section
@@ -141,19 +148,25 @@ module.exports = {
 
     new HtmlWebpackPlugin({
       template: './src/media.html',
-      filename: './media.html'
+      filename: './media.html',
+      chunks: ['media']
     }),
 
+
     new HtmlWebpackPlugin({
-      template: './src/typesoftee/fermentation.html',
-      filename: './typesoftee/fermentation.html',
-      chunks: ['fermentation']
+      template: './src/typesoftea.html',
+      filename: './typesoftea.html',
+      chunks: ['typesoftea']
     }),
 
     // Article
+
+
+
     new HtmlWebpackPlugin({
-      template: './src/typesoftee/fermentation/Indian_Black_Tea.html',
-      filename: './typesoftee/fermentation/Indian_Black_Tea.html'
+      template: './src/typesoftea/teaCard.html',
+      filename: './typesoftea/teaCard.html',
+      chunks: ["teaCard"]
     }),
 
     new HtmlWebpackPlugin({
@@ -163,8 +176,20 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/articles/recipes/thyme_and_apricots.html',
-      filename: './articles/recipes/thyme_and_apricots.html'
+      template: './src/recipes/recipe.html',
+      filename: './recipes/recipe.html',
+      chunks: ['recipe']
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/searchResult.html',
+      filename: './searchResult.html',
+      chunks: ['searchResult']
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/media/article.html',
+      filename: './media/article.html',
+      chunks: ['article']
     }),
 
     // Partials
@@ -172,6 +197,12 @@ module.exports = {
       {
         path: path.join(__dirname, './src/partials/analytics.html'),
         location: 'analytics',
+        template_filename: '*',
+        priority: 'replace'
+      },
+      {
+        path: path.join(__dirname, './src/partials/O_Footer.html'),
+        location: 'footer',
         template_filename: '*',
         priority: 'replace'
       }

@@ -1,0 +1,86 @@
+.O_SearchBar {
+	background: transparent;
+	border: none;
+	position: relative;
+	width: 300px;
+
+	@media (max-width: 1439px) {
+		font-size: 0.825rem;
+		width: 250px;
+	}
+
+	@media (max-width: 1023px) {
+		font-size: 0.75rem;
+		width: 200px;
+	}
+	@media (max-width: 743px) {
+		font-size: 0.75rem;
+		width: 500px;
+	}
+
+	input {
+		background: transparent;
+		border: none;
+		font-family: 'Gramatika', sans-serif;
+		font-size: 1rem;
+		outline: none;
+		padding: 10px;
+		width: 100%;
+
+
+		@media (max-width: 1439px) {
+			font-size: 0.825rem;
+		}
+		@media (max-width: 1023px) {
+		font-size: 0.75rem;
+	}
+
+		@media (max-width: 743px) {
+			font-size: 1.75rem;
+		}
+
+
+	}
+}
+
+.C_SearchResults {
+	background: white;
+	border: 1px solid #ddd;
+	list-style-type: none;
+	margin: 0;
+	max-height: 400px;
+	overflow-y: auto;
+	padding: 0;
+	position: absolute;
+	width: 100%;
+	z-index: 1000;
+}
+
+.C_SearchResults li {
+	background-color: var(--beige-l);
+	border-bottom: 1px solid #eee;
+	cursor: pointer;
+	font-family: 'Gramatika', sans-serif;
+	font-size: 1rem;
+	padding: 10px;
+
+	@media (max-width: 1439px) {
+		font-size: 0.825rem;
+	}
+	@media (max-width: 1023px) {
+		font-size: 0.75rem;
+	}
+
+	@media (max-width: 743px) {
+		background-color: var(--green);
+		color: var(--white);
+		font-size: 1.25rem;
+
+	}
+
+
+}
+
+.C_SearchResults li:hover {
+	background-color: var(--white);
+}

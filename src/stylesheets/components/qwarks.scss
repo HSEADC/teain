@@ -1,19 +1,42 @@
-.Q_Line {
-  background-color: var(--black);
-  height: 2px;
-  width: 100%;
-}
-
 .Q_dgimg {
   background-image: url('/src/images/index/hero-image.png');
   background-position: 70% 50%;
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media (min-width: 1920px) {
+    background-position: 70% 64%;
+  }
+  //@media (min-width: 2560px) {
+  //  background-position: 56% 64%;
+  //  background-size: 110%;
+  //}
+
+  @media (max-width: 1439px) {
+    background-position: 73% 58%;
+    background-size: 100%;
+  }
+
+  @media (max-width: 1023px) {
+    background-size: cover;
+  }
+
+  //@media (max-width: 743px) {
+  //  background-position: 79% 80%;
+  //  background-size: cover;
+  //}
 }
 
-@media (max-width: 1440px) {
-  .Q_dgimg {
-    background-position: 50% 62%;
-    background-size: 102%;
+.Q_TitleImage {
+  img {
+    width: 100%;
+  }
+}
+
+.Q_BurgerIcon {
+  display: none;
+
+  @media (max-width: 743px) {
+    display: block;
   }
 }

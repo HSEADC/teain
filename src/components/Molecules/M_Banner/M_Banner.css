@@ -1,0 +1,16 @@
+.M_Banner {
+  background-image: url("../../../images/index/Banner_Img.png");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 440px;
+  width: 100%;
+
+  @media (min-width: 1920px) {
+    height: 619px;
+  }
+
+  @media (max-width: 1439px) {
+    height: 313px;
+  }
+}

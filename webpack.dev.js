@@ -6,9 +6,14 @@ module.exports = merge(common, {
   mode: 'development',
   devtool: 'inline-source-map',
   devServer: {
-    static: './dev_build'
+    static: './dev_build',
+    client: {
+      overlay: false
+    }
+
   },
   watch: true,
+
   output: {
     filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'dev_build')

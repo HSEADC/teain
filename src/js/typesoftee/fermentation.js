@@ -1,10 +1,14 @@
 import '/src/index.css'
 import Swiper from 'swiper'
-import * as $ from 'jquery'
 import anime from 'animejs'
 import { Navigation } from 'swiper/modules'
 
-$(function () {
+document.addEventListener('DOMContentLoaded', function () {
+  const S_Fermentation = document.querySelector('.S_Fermentation')
+  if (!S_Fermentation) {
+    return
+  }
+
   const sliderButtons = document.querySelectorAll('.A_SliderButton')
 
   sliderButtons.forEach(function (item) {
@@ -98,60 +102,78 @@ $(function () {
       disabledClass: 'A_SliderButton_Disabled'
     }
   })
-  $('#searchBtn').mouseenter(() => {
-    $('.M_SearchIcon').addClass('active').focus()
-    $('.A_SearchInput').addClass('active')
+
+  const searchBtn = document.getElementById('searchBtn')
+  const M_SearchIcon = document.querySelector('.M_SearchIcon')
+  const A_SearchInput = document.querySelector('.A_SearchInput')
+  const W_TeaType = document.querySelectorAll('.W_TeaType')
+  const O_PreArticle = document.querySelector('.O_PreArticle')
+  const W_TextLink = document.querySelector('.W_TextLink')
+  const A_Lead = document.querySelector('.A_Lead')
+  const O_SearchResult = document.querySelector('.O_SearchResult')
+
+  const M_TeaCards = document.querySelectorAll('.M_TeaCard')
+
+  searchBtn.addEventListener('mouseenter', () => {
+    M_SearchIcon.classList.add('active')
+    M_SearchIcon.focus()
+    A_SearchInput.classList.add('active')
   })
-  $('.M_SearchIcon').mouseleave(function () {
-    if ($('.A_SearchInput').val().trim() === '') {
-      $('.M_SearchIcon').removeClass('active')
-      $('.A_SearchInput').removeClass('active').blur()
-      $('.W_TeaType').show()
-      $('.O_PreArticle').show()
-      $('.W_TextLink').show()
-      $('.A_Lead').show()
-      $('.O_SearchResult').hide()
+
+  M_SearchIcon.addEventListener('mouseleave', function () {
+    if (A_SearchInput.value.trim() === '') {
+      M_SearchIcon.classList.remove('active')
+      A_SearchInput.classList.remove('active')
+      A_SearchInput.blur()
+      W_TeaType.forEach((item) => {
+        item.style.display = 'initial'
+      })
+      O_PreArticle.style.display = 'grid'
+      W_TextLink.style.display = 'initial'
+      A_Lead.style.display = 'initial'
+      O_SearchResult.style.display = 'none'
     }
   })
-  $('.A_SearchInput').on('input', function () {
-    $('.W_TeaType').hide()
-    $('.O_PreArticle').hide()
-    $('.W_TextLink').hide()
-    $('.A_Lead').hide()
-    $('.O_SearchResult').show()
-    var searchText = $(this).val().toLowerCase().trim()
-    var searchWords = searchText.split(/\s+/)
-    var found = false
+  A_SearchInput.addEventListener('input', function () {
+    W_TeaType.forEach((item) => {
+      item.style.display = 'none'
+    })
+    O_PreArticle.style.display = 'none'
+    W_TextLink.style.display = 'none'
+    A_Lead.style.display = 'none'
+    O_SearchResult.style.display = 'initial'
+    const searchText = this.value.toLowerCase().trim()
+    const searchWords = searchText.split(/\s+/)
+    let found = false
 
-    $('.M_TeaCard').each(function () {
-      var cardText =
-        $(this).find('.A_CardTitleHelios').text().toLowerCase() +
+    M_TeaCards.forEach(function (card) {
+      const cardText =
+        card.querySelector('.A_CardTitleHelios').textContent.toLowerCase() +
         ' ' +
-        $(this).find('.A_CardTitleVlas').text().toLowerCase()
-      var cardWords = cardText.split(/\s+/)
-      var allWordsFound = searchWords.every(function (searchWord) {
+        card.querySelector('.A_CardTitleVlas').textContent.toLowerCase()
+      const cardWords = cardText.split(/\s+/)
+      const allWordsFound = searchWords.every(function (searchWord) {
         return cardWords.some(function (cardWord) {
           return cardWord.startsWith(searchWord)
         })
       })
 
       if (allWordsFound && searchWords.length > 0) {
-        $(this).show()
+        card.style.display = 'block'
         found = true
       } else {
-        $(this).hide()
+        card.style.display = 'none'
       }
     })
+    const searchResult = document.querySelector('.A_SearchResult')
     if (found) {
-      $('.A_SearchResult').html(
+      searchResult.innerHTML =
         'по запросу "<span id="searchText">' + searchText + '</span>":'
-      )
     } else {
-      $('.A_SearchResult').html(
+      searchResult.innerHTML =
         'по запросу "<span id="searchText">' +
-          searchText +
-          '</span>" ничего не найдено'
-      )
+        searchText +
+        '</span>" ничего не найдено'
     }
   })
 })

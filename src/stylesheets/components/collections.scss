@@ -4,6 +4,21 @@
   gap: 36px;
   justify-content: space-between;
   max-width: 419px;
+
+  //@media (min-width: 2560px) {
+  //  gap: 106px;
+  //  max-width: 588px;
+  //}
+
+  @media (max-width: 1439px) {
+    gap: 25px;
+    max-width: 221px;
+  }
+  @media (max-width: 743px) {
+    display: none;
+  }
+  
+  
 }
 
 .C_PreImjs {
@@ -11,21 +26,121 @@
   justify-content: space-between;
   margin: auto;
   max-width: 1296px;
+  width: 100%;
+
+  @media (min-width: 1920px) {
+    max-width: 1704px;
+  }
+  //@media (min-width: 2560px) {
+  //  max-width: 1884px;
+  //}
+
+  @media (max-width: 1439px) {
+    max-width: 921px;
+  }
+
+  @media (max-width: 1023px) {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    max-width: 744px;
+    padding: 40px 36px 0;
+  }
+
+  @media (max-width: 743px) {
+    padding: 30px 30px 0;
+  }
+  //@media (max-width: 743px) {
+  //  flex-wrap: wrap;
+  //  gap: 2vw;
+  //  max-width: 86.047vw;
+  //}
 }
 
 .C_TegCloud {
   column-gap: 24px;
   display: flex;
   flex-wrap: wrap;
-  max-width: 322px;
+  //max-width: 322px;
   row-gap: 12px;
+
+  @media (min-width: 1920px) {
+    max-width: 520px;
+  }
+
+  //
+  //@media (min-width: 2560px) {
+  //  max-width: 602px;
+  //}
+
+  @media (max-width: 1439px) {
+    column-gap: 17px;
+    max-width: none;
+    row-gap: 12px;
+  }
+
+  @media (max-width: 1023px) {
+    max-width: 358px;
+  }
+
+  //@media (max-width: 743px) {
+  //  column-gap: 3.953vw;
+  //  max-width: 60vw;
+  //  row-gap: 2.791vw;
+  //}
 }
+
 
 .C_TeaTypeCards {
   display: flex;
   justify-content: space-between;
   margin: auto;
   max-width: 1296px;
+
+  .M_TeaCard {
+    background: var(--beige-d);
+  }
+
+  @media (min-width: 1920px) {
+    max-width: 1704px;
+  }
+
+  //@media (min-width: 2560px) {
+  //  max-width: 2200px;
+  //}
+
+  @media (max-width: 1439px) {
+    max-width: 921px;
+  }
+
+  @media (max-width: 1023px) {
+    column-gap: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    max-width: 672px;
+    row-gap: 10px;
+  }
+
+  @media (max-width: 743px) {
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-template-rows: 1fr ;
+    max-width: none;
+    row-gap: 12px;
+  }
+}
+
+.C_Teas {
+  gap: 23px;
+
+  @media (max-width: 1439px) {
+    gap: 17px;
+  }
+
+  @media (max-width: 1023px) {
+    gap: 12px;
+  }
 }
 
 .C_CardTitl2 {
@@ -38,6 +153,9 @@
 
   .A_CardTitl2 {
     opacity: 0;
+    @media (hover: none) {
+      opacity: 1 !important;
+    }
   }
 }
 
@@ -48,8 +166,40 @@
   margin: 0 auto;
   max-width: 1296px;
   row-gap: 40px;
-}
 
+  @media (min-width: 1920px) {
+    max-width: 1703px;
+  }
+
+  //@media (min-width: 2560px) {
+  //  max-width: 2270px;
+  //}
+
+  @media (min-width: 1920px) {
+    column-gap: 24px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    max-width: 1704px;
+  }
+
+  @media (max-width: 1439px) {
+    display: grid;
+    gap: 17px;
+    grid-template-columns: repeat(12, 1fr);
+    max-width: 918px;
+  }
+
+  @media (max-width: 1023px) {
+    column-gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    max-width: 672px ;
+  }
+
+  @media (max-width: 743px) {
+    max-width: none;
+    padding: 0 30px;
+  }
+}
 
 .C_TagCloudBig {
   column-gap: 24px;
@@ -59,12 +209,122 @@
   margin: 0 auto;
   max-width: 1296px;
   row-gap: 12px;
-}
 
+  @media (max-width: 1439px) {
+    max-width: 919px;
+  }
+
+  @media (max-width: 1023px) {
+    max-width: 672px;
+  }
+
+  @media (max-width: 743px) {
+    column-gap: 15px;
+    padding: 0 30px;
+  }
+
+  @media (max-width: 430px) {
+    justify-content: flex-start;
+  }
+}
 
 .C_MediaCardCouple {
   display: flex;
   flex-direction: column;
   gap: 48px;
   padding-bottom: 113px;
+}
+
+.C_ArticleCont {
+  display: flex;
+  gap: 19px;
+
+  @media (max-width: 743px) {
+    flex-direction: column;
+
+  }
+
+  .A_Text {
+    font-size: 1.125rem;
+    @media (max-width: 1439px) {
+      font-size: 0.875rem;
+
+    }
+  }
+}
+
+.C_ArticlePic {
+  margin: 72px auto 0;
+
+
+  @media (min-width: 1920px) {
+    margin: 83px auto 0;
+
+  }
+  @media (max-width: 1439px) {
+    margin: 213px auto 0;
+    row-gap: 17px ;
+
+  }
+
+  @media (max-width: 1023px) {
+    margin-top: 252px;
+  }
+
+  @media (max-width: 743px) {
+    margin-top: 50px  ;
+  }
+
+  .A_PreImg {
+    @media (max-width: 743px) {
+      max-width: none;
+    }
+
+  }
+
+}
+
+.C_Authors {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+
+  @media (max-width: 1439px) {
+    gap: 23px;
+  }
+}
+
+.C_Socials {
+  align-items: center;
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+
+  .Q_Telegram {
+    @media (max-width: 1439px) {
+      max-width: 26px;
+    }
+  }
+
+  .Q_Vk {
+    @media (max-width: 1439px) {
+      max-width: 36px;
+    }
+  }
+  @media (max-width: 1439px) {
+    gap: 17px;
+  }
+}
+
+
+.C_PreImjsRecipe {
+  padding-bottom: 163px;
+
+  .A_PreImg {
+    width: 100%;
+    img {
+      width: 100%;
+
+    }
+  }
 }
