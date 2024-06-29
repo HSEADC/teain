@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import logo from '../../../images/index/logo.svg'
 import base from '../../../airtable'
 import A_Text from '../../Atoms/A_Text/A_Text'
 import A_Tag from '../../Atoms/A_Tag/A_Tag'
 import O_RecipeCard from '../../Organisms/O_RecipeCardS/O_RecipeCard'
+import O_NavBar from '../../Organisms/O_NavBar/O_NavBar'
 
 const S_TeaCard = () => {
   const [item, setItem] = useState('assam');
@@ -78,37 +78,7 @@ const S_TeaCard = () => {
 
   return (
     <div>
-      <header className="O_NavBar">
-        <div className="W_NavBar">
-          <div className="A_Logo">
-            <a href="/teain">
-              <img alt="" src={logo} />
-            </a>
-          </div>
-          <nav className="W_NavBarCat">
-            <ul className="C_NavBarCat">
-              <li>
-                <a className="A_chapter" href="#">о нас</a>
-              </li>
-              <li>
-                <a className="A_chapter" href="#">чай</a>
-              </li>
-              <li>
-                <a className="A_chapter" href="#">рецепты</a>
-              </li>
-              <li>
-                <a className="A_chapter" href="#">медиа</a>
-              </li>
-            </ul>
-            <div className="M_SearchIcon">
-              <input className="A_SearchInput" placeholder="поиск" type="text" />
-              <button aria-hidden="true" id="searchBtn">
-                <img alt="" src="../images/index/A_SearchIcon.svg" />
-              </button>
-            </div>
-          </nav>
-        </div>
-      </header>
+      <O_NavBar/>
 
 
       <div className="W_LeadContainer">

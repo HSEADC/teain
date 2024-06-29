@@ -2,12 +2,10 @@ import React, { useEffect, useState } from 'react'
 import M_Banner from '../../Molecules/M_Banner/M_Banner'
 import base from '../../../airtable'
 import './S_TypesOfTeaPage.scss'
-
-import logo from '../../../images/index/logo.svg'
-import A_SearchIcon from '../../../images/index/A_SearchIcon.svg'
 import A_Text from '../../Atoms/A_Text/A_Text'
 import O_PreArticle from '../../Organisms/O_PreArticle/O_PreArticle'
 import O_TeaType from '../../Organisms/O_TeaType/O_TeaType'
+import O_NavBar from '../../Organisms/O_NavBar/O_NavBar'
 
 
 const S_TypesOfTeaPage = () => {
@@ -77,49 +75,7 @@ const S_TypesOfTeaPage = () => {
 
   return (
     <>
-      <header className="O_NavBar">
-        <div className="W_NavBar">
-          <div className="A_Logo">
-            <a href="../index.html">
-              <img alt="" src={logo} />
-            </a>
-          </div>
-          <nav className="W_NavBarCat">
-            <ul className="C_NavBarCat">
-              <li>
-                <a className="A_chapter" href="#">
-                  о нас
-                </a>
-              </li>
-              <li>
-                <a className="A_chapter" href="#">
-                  чай
-                </a>
-              </li>
-              <li>
-                <a className="A_chapter" href="#">
-                  рецепты
-                </a>
-              </li>
-              <li>
-                <a className="A_chapter" href="#">
-                  медиа
-                </a>
-              </li>
-            </ul>
-            <div className="M_SearchIcon">
-              <input
-                className="A_SearchInput"
-                placeholder="поиск"
-                type="text"
-              />
-              <button aria-hidden="true" id="searchBtn">
-                <img alt="" src={A_SearchIcon} />
-              </button>
-            </div>
-          </nav>
-        </div>
-      </header>
+      <O_NavBar/>
 
       <M_Banner />
       <O_PreArticle

@@ -16,7 +16,9 @@ module.exports = {
     recipes: './src/recipes.jsx',
     teaCard: './src/typesoftea/teaCard.jsx',
     recipe: './src/recipes/recipe.jsx',
-    article: './src/media/article.jsx'
+    article: './src/media/article.jsx',
+    searchResult: './src/searchResult.jsx',
+    media: './src/media.jsx'
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -147,7 +149,8 @@ module.exports = {
 
     new HtmlWebpackPlugin({
       template: './src/media.html',
-      filename: './media.html'
+      filename: './media.html',
+      chunks: ['media']
     }),
 
     new HtmlWebpackPlugin({
@@ -185,6 +188,11 @@ module.exports = {
       template: './src/recipes/recipe.html',
       filename: './recipes/recipe.html',
       chunks: ['recipe']
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/searchResult.html',
+      filename: './searchResult.html',
+      chunks: ['searchResult']
     }),
 
     new HtmlWebpackPlugin({

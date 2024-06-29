@@ -115,6 +115,11 @@
 	font-size: 1.75rem;
 	margin-bottom: 10px;
 	text-decoration: none;
+
+	@media (max-width: 734px) {
+		display: flex !important;
+
+	}
 }
 
 .bm-item:hover {
