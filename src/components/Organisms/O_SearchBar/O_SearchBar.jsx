@@ -142,9 +142,19 @@ const SearchBar = () => {
         <ul className="C_SearchResults">
           {results.map((item, index) => (
             <li key={index} onClick={() => handleResultClick(query)}>
-              {item.type === 'tea'
-                ? `Чай: ${item.top_name} ${item.bottom_name}`
-                : `Рецепт: ${item.translated_name}`}
+              {item.type === 'tea' ? (
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: `Чай: ${item.top_name} ${item.bottom_name}`
+                  }}
+                ></span>
+              ) : (
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: `Рецепт: ${item.translated_name}`
+                  }}
+                ></span>
+              )}
             </li>
           ))}
         </ul>
