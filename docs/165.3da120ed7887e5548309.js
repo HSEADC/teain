@@ -1,4 +1,4 @@
-(self["webpackChunkstatic_site_08"] = self["webpackChunkstatic_site_08"] || []).push([[685],{
+(self["webpackChunkstatic_site_08"] = self["webpackChunkstatic_site_08"] || []).push([[165],{
 
 /***/ 4165:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
@@ -39,7 +39,7 @@ var A_Text = function A_Text(_ref) {
 
 /***/ }),
 
-/***/ 748:
+/***/ 6948:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -199,25 +199,6 @@ var O_RecipeCard = function O_RecipeCard(_ref) {
   }
 };
 /* harmony default export */ const O_RecipeCardS_O_RecipeCard = (O_RecipeCard);
-;// CONCATENATED MODULE: ./src/components/Atoms/A_Link/A_Link.jsx
-
-
-
-var A_Link = function A_Link(_ref) {
-  var className = _ref.className,
-    children = _ref.children,
-    href = _ref.href,
-    blank = _ref.blank;
-  return /*#__PURE__*/react.createElement("a", {
-    href: href,
-    target: blank ? '_blank' : '_self',
-    className: classnames_default()('A_Link', className),
-    dangerouslySetInnerHTML: {
-      __html: children
-    }
-  });
-};
-/* harmony default export */ const A_Link_A_Link = (A_Link);
 ;// CONCATENATED MODULE: ./src/components/Wrappers/W_RecipeCardL/W_RecipeCardL.jsx
 function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -225,7 +206,6 @@ function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) 
 function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
 function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
 function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
-
 
 
 
@@ -256,11 +236,7 @@ var W_RecipeCardL = function W_RecipeCardL() {
   }, [flavourOfTheWeek]);
   return /*#__PURE__*/react.createElement(react.Fragment, null, flavourOfTheWeek && /*#__PURE__*/react.createElement(O_RecipeCardS_O_RecipeCard, {
     recipe: flavourOfTheWeek
-  }), /*#__PURE__*/react.createElement("div", {
-    className: 'W_BottomLink'
-  }, /*#__PURE__*/react.createElement(A_Link_A_Link, {
-    href: "./recipes.html"
-  }, "\u041E\u0442\u043A\u0440\u044B\u0442\u044C \u0432\u0441\u0435 \u0440\u0435\u0446\u0435\u043F\u0442\u044B")));
+  }));
 };
 /* harmony default export */ const W_RecipeCardL_W_RecipeCardL = (W_RecipeCardL);
 
