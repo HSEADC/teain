@@ -80,7 +80,7 @@
 	position: absolute;
 	right: 32px !important;
 	top: 28px !important;
-	transform: scale(3) !important;
+	transform: scale(2.5) !important;
 	width: 24px !important;
 }
 
@@ -112,7 +112,7 @@
 .bm-item {
 	color: var(--darkGreen);
 	display: inline-block;
-	font-size: 1.75rem;
+	font-size: 1.75rem !important;
 	margin-bottom: 10px;
 	text-decoration: none;
 

@@ -101,12 +101,12 @@ const SearchBar = () => {
 
   const handleKeyPress = (event) => {
     if (event.key === 'Enter' && query.length > 2) {
-      window.location.href = `../../../searchResult.html?query=${query}`;
+      window.location.href = `searchResult.html?query=${query}`;
     }
   };
 
   const handleResultClick = (query) => {
-    window.location.href = `../../../searchResult.html?query=${query}`;
+    window.location.href = `searchResult.html?query=${query}`;
   };
 
   return (

@@ -25,7 +25,7 @@ const O_RecipeCard = ({ recipe, toggleTagSelection, activeTags, href }) => {
     if (isRecipesPage) {
       toggleTagSelection(tag);
     } else {
-      window.location.href = `../../../recipes.html?tags=${tag}`;
+      window.location.href = `recipes.html?tags=${tag}`;
     }
   };
 
