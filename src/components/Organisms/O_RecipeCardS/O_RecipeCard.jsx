@@ -8,6 +8,7 @@ import './O_RecipeCard.scss'
 const O_RecipeCard = ({ recipe, toggleTagSelection, activeTags, href }) => {
   const tagsTranslatedArray = recipe.translated_tag_names || [];
   const tagsArray = recipe.tag_names || [];
+
   const image = recipe.image && recipe.image[0] && recipe.image[0].url ? recipe.image[0].url : img;
   const imageBig = recipe.imageBig && recipe.imageBig[0] && recipe.imageBig[0].url ? recipe.imageBig[0].url : bigImg;
   const description = recipe.description;
@@ -16,6 +17,7 @@ const O_RecipeCard = ({ recipe, toggleTagSelection, activeTags, href }) => {
   if (flavour_of_the_week) {
     size = 'l';
   }
+
 
   const isRecipesPage = window.location.pathname.includes('recipes');
 
@@ -64,7 +66,7 @@ const O_RecipeCard = ({ recipe, toggleTagSelection, activeTags, href }) => {
         </div>
       </div>
       <div className="A_ImgRecipeL">
-        <img alt="" src={imageBig} onError={(e) => e.target.src = bigImg} />
+        <img alt="" src={image} onError={(e) => e.target.src = bigImg} />
       </div>
     </a>
   );
