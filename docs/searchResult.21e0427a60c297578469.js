@@ -4099,14 +4099,17 @@ var O_NavBar = function O_NavBar() {
     href: "../../../typesoftea.html?category=tea_types"
   }, "\u0447\u0430\u0439"), /*#__PURE__*/react.createElement("a", {
     className: "A_Text",
-    href: "../../../recipes.html"
+    href: "../../../recipes.html",
+    style: {
+      pointerEvents: 'none'
+    }
   }, "\u0440\u0435\u0446\u0435\u043F\u0442\u044B"), /*#__PURE__*/react.createElement("a", {
     className: "A_Text",
-    href: "../../../media.html"
-  }, "\u043C\u0435\u0434\u0438\u0430"), /*#__PURE__*/react.createElement("a", {
-    className: "A_Text",
-    href: "../../../media.html"
-  }, "\u043F\u043E\u0438\u0441\u043A"))), /*#__PURE__*/react.createElement("nav", {
+    href: "../../../media.html",
+    style: {
+      pointerEvents: 'none'
+    }
+  }, "\u043C\u0435\u0434\u0438\u0430"))), /*#__PURE__*/react.createElement("nav", {
     className: "W_NavBarCat"
   }, /*#__PURE__*/react.createElement("ul", {
     className: "C_NavBarCat"
@@ -4115,20 +4118,17 @@ var O_NavBar = function O_NavBar() {
     href: "../../../typesoftea.html?category=tea_types"
   }, "\u0447\u0430\u0439")), /*#__PURE__*/react.createElement("li", null, /*#__PURE__*/react.createElement("a", {
     className: "A_chapter",
-    href: "../../../recipes.html"
+    href: "../../../recipes.html",
+    style: {
+      pointerEvents: 'none'
+    }
   }, "\u0440\u0435\u0446\u0435\u043F\u0442\u044B")), /*#__PURE__*/react.createElement("li", null, /*#__PURE__*/react.createElement("a", {
     className: "A_chapter",
-    href: "../../../media.html"
-  }, "\u043C\u0435\u0434\u0438\u0430"))), /*#__PURE__*/react.createElement("div", {
-    className: "M_SearchIcon ".concat(showSearch ? 'active' : '')
-  }, /*#__PURE__*/react.createElement("button", {
-    "aria-hidden": "true",
-    id: "searchBtn",
-    onClick: toggleSearch
-  }, /*#__PURE__*/react.createElement("img", {
-    alt: "search",
-    src: A_SearchIcon_namespaceObject
-  })), showSearch && /*#__PURE__*/react.createElement(O_SearchBar, null)))));
+    href: "../../../media.html",
+    style: {
+      pointerEvents: 'none'
+    }
+  }, "\u043C\u0435\u0434\u0438\u0430"))))));
 };
 /* harmony default export */ const O_NavBar_O_NavBar = (O_NavBar);
 

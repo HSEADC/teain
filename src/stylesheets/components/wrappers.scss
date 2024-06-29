@@ -570,22 +570,22 @@
 
 .W_TeaTypeCards {
   background: var(--beige-l);
-  padding: 84px 0 219px;
+  padding: 84px 0 80px;
 
   //@media (min-width: 2560px) {
   //  padding: 96px 0 192px;
   //}
 
   @media (max-width: 1439px) {
-    padding: 61px 0 153px;
+    padding: 61px 0 60px;
   }
 
   @media (max-width: 1023px) {
-    padding: 53px 0 113px;
+    padding: 53px 0 50px;
   }
 
   @media (max-width: 743px) {
-    padding: 53px 30px 113px;
+    padding: 53px 30px 30px;
   }
 
 }
