@@ -16,6 +16,9 @@ module.exports = {
     teaCard: './src/typesoftea/teaCard.jsx',
     recipe: './src/recipes/recipe.jsx',
     article: './src/media/article.jsx',
+    article2: './src/media/article2.jsx',
+    article3: './src/media/article3.jsx',
+    article4: './src/media/article4.jsx',
     searchResult: './src/searchResult.jsx',
     media: './src/media.jsx'
   },
@@ -76,6 +79,13 @@ module.exports = {
       },
       {
         test: /\.png/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'images/[hash][ext][query]'
+        }
+      },
+      {
+        test: /\.jpe?g/,
         type: 'asset/resource',
         generator: {
           filename: 'images/[hash][ext][query]'
@@ -190,6 +200,24 @@ module.exports = {
       template: './src/media/article.html',
       filename: './media/article.html',
       chunks: ['article']
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/media/article2.html',
+      filename: './media/article2.html',
+      chunks: ['article2']
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/media/article3.html',
+      filename: './media/article3.html',
+      chunks: ['article3']
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/media/article4.html',
+      filename: './media/article4.html',
+      chunks: ['article4']
     }),
 
     // Partials

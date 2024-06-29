@@ -30,10 +30,9 @@ const O_NavBar = () => {
               </button>
               {showSearch && <SearchBar />}
             </div>
-            <a className="A_Text" href="/zavarka/typesoftea.html?category=tea_types">чай</a>
-            <a className="A_Text" href="/zavarka/recipes.html">рецепты</a>
-            <a className="A_Text" href="/zavarka/media.html">медиа</a>
-            <a className="A_Text" href="/zavarka/media.html">поиск</a>
+            <a className="A_chapter" href="/zavarka/typesoftea.html?category=tea_types">чай</a>
+            <a className="A_chapter" href="/zavarka/recipes.html">рецепты</a>
+            <a className="A_chapter" href="/zavarka/media.html">медиа</a>
 
           </Menu>
         </div>

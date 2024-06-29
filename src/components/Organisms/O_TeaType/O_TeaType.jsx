@@ -3,7 +3,6 @@ import classNames from 'classnames'
 import A_Text from '../../Atoms/A_Text/A_Text'
 import M_TeaCard from '../../Molecules/M_TeaCard/M_TeaCard'
 import './O_TeaType.scss'
-import A_Link from '../../Atoms/A_Link/A_Link'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from 'swiper/modules'
 import 'swiper/css'
@@ -60,9 +59,9 @@ const O_TeaType = ({ className, object, index }) => {
           <A_Text className="A_Text">{object.description}</A_Text>
         )}
 
-        <A_Link href={object.link} blank>
+      {/*  <A_Link href={object.link} blank>
           {object.link_text}
-        </A_Link>
+        </A_Link>*/}
       </div>
 
       <button

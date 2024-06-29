@@ -79,14 +79,14 @@ const S_TypesOfTeaPage = () => {
 
       <M_Banner />
       <O_PreArticle
-        link={link}
+        link={"media/article.html"}
         link_text={link_text}
         right_text={right_text}
         translated_name={translated_name}
       />
       {bottom_text && (
         <div className="W_Container">
-          <A_Text className="A_Lead">{bottom_text}</A_Text>
+          <A_Text className="A_Lead">Чай&nbsp;&mdash; это не&nbsp;просто напиток, а&nbsp;целая культура, богатая разнообразием вкусов и&nbsp;ароматов. От&nbsp;древних китайских сортов, с&nbsp;каждым листочком раскрывающих свою уникальную историю, до&nbsp;современных экзотических вариантов, собранных с&nbsp;самых отдаленных уголков планеты.</A_Text>
         </div>
       )}
 

@@ -145,6 +145,11 @@
   line-height: 112%;
   text-align: right;
   text-decoration: none;
+  transition: color 0.1s ease-in-out;
+
+  &:hover {
+    color: var(--green);
+  }
 
   //@media (min-width: 2560px) {
   //  font-size: 1.5rem;
@@ -248,6 +253,7 @@
   line-height: 159%;
   text-decoration: underline;
   text-decoration-skip-ink: none;
+  transition: color 0.1s ease-in-out;
 
   //@media (min-width: 2560px) {
   //  font-size: 1.5rem;
@@ -259,6 +265,10 @@
 
   @media (max-width: 743px) {
     font-size: 0.875rem;
+  }
+
+  &:hover {
+    color: var(--darkGreen);
   }
 
   //@media (max-width: 743px) {
@@ -570,6 +580,13 @@
   padding: 6px 0;
   text-align: justify;
   text-decoration: none;
+  transition: background 0.1s ease-in-out;
+
+  &:hover {
+    background: var(--caramel);
+  }
+
+
   //
   //@media (min-width: 2560px) {
   //  font-size: 2rem;
@@ -855,5 +872,9 @@
 
   img {
     width: 100%;
+  }
+
+  &hover {
+    color: inherit;
   }
 }
